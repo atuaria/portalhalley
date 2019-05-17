@@ -1,12 +1,12 @@
 # Portal Halley
 
-[![Build Status](https://travis-ci.org/ligadecienciasatuariais/portalhalley.svg?branch=master)](https://travis-ci.org/ligadecienciasatuariais/portalhalley)
+[![Build Status](https://travis-ci.org/atuaria/portalhalley.svg?branch=master)](https://travis-ci.org/atuaria/portalhalley)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 ## Portal Halley de Educação Atuarial
 
 Este repositório contém todos os arquivos
-necessários para gerar a página do portal, disponível em: https://ligadecienciasatuariais.github.io/portalhalley/
+necessários para gerar a página do portal, disponível em: https://atuaria.github.io/portalhalley/
 
 ### Para gerar o site
 
