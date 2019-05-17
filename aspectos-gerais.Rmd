@@ -1,0 +1,49 @@
+---
+title: "Planejamento de experimentos: aspectos gerais"
+---
+
+```{r setup, include=FALSE}
+source("setup_knitr.R")
+```
+
+# Considerações gerais
+
+Experimentos, ao contrário de pesquisas amostrais, envolvem
+pesquisadores manipulando situações. Ao aplicar tratamentos, o o bjetivo
+é tirar conclusões sobre o que suas manipulações causaram.
+
+## Própositos básicos da experimentação
+
+- Fornecer comparações válidas dos efeitos de tratamentos
+- Forncer informações válidas sobre o relacionamento entre variáveis de
+- interesse
+
+## Requisitos básicos
+
+- As condições experimentais devem representar a situação do problema de
+interesse
+- A comparação de tratamentos deve ser livre de outras explicações
+devido à presença de outras variáveis (**confundimento**)
+- A comparação de tratamentos deve ser feita com a menor influência
+possível de fatores aleatórios
+- O nível de incerteza nas conclusões deve ser acessível
+- O experimento deve o mais simples possível
+
+## Definições de termos chave
+
+- **Fator**: a variável explicativa manipulada ou fixada pelo
+pesquisador
+- **Níveis do fator**: os valores que um fator individual pode assumir
+- **Tratamento**: as combinações dos níveis dos fatores, aplicadas às
+unidades experimentais
+- **Unidade observacional**: a entidade física que fornece um único
+valor da variável resposta
+- **Unidade experimental**: a unidade (que pode ser uma coleção de
+                                       unidades observacionais), à qual
+um único tratamento é aleatoriamente aplicado
+
+# Os três princípios básicos da experimentação
+
+Os três princípios estatísticos básicos da experimentação, introduzidos
+por RA Fisher em 1935 são: **replicação**, **aleatorização**, e
+**blocagem**.

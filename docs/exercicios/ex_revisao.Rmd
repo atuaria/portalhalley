@@ -1,0 +1,51 @@
+---
+title: "Revisão de conhecimento"
+author: "CE074 - Controle de Processos Industriais"
+date: "2017/2"
+fontsize: 11pt
+header-includes:
+  - \usepackage{mathpazo}
+output: pdf_document
+---
+
+1. Quais as suposições de um experimento inteiramente casualizado?
+1. Quais as suposições de um experimento em blocos ao acaso?
+1. O que é um experimento em blocos incompletos?
+1. O que é um experimento em blocos incompletos balanceado?
+1. Por que agrupamos unidades experimentais (UEs) em blocos?
+1. Como se espera que sejam as UEs dentro de um bloco?
+1. Por que aleatorizamos os níveis do fator às UE?
+1. Em experimentos agricolas é comum não se colher a bordadura das
+parcelas. Em experimentos médicos, médicos e pacientes não sabem que
+níveis do fator foram administrados. Nas pesquisas de opinião, evita-se
+que uma pessoa conheça a avaliação das demais. Por que são adotados tais
+procedimentos?
+1. (**Descreva**) Como é a aleatorização dos níveis em um experimento
+inteiramente casualizado? (**Use o R**) Como você faria se tivesse um
+fator com 3 níveis (A, B, C), e quisesse fazer 4 repetições para cada
+nível do fator?
+1. (**Descreva**) Como é a aleatorização dos níveis em um experimento de
+blocos ao acaso? (**Use o R**) Suponha que temos um experimento com 4
+blocos, e um fator com 6 níveis para ser avaliado. Como seria a
+aleatorização?
+1. O que é um experimento fatorial $2^k$?
+1. (**Descreva**) Estendendo a ideia: como é a aleatorização de um
+experimento inteiramente ao acaso (DIC) no esquema fatorial $2^k$?
+(**Use o R**) Suponha que temos um experimento em DIC com 2 níveis do
+fator A ($a$), 2 níveis do fator B ($b$), e sem repetições ($r$), ou
+seja, um fatorial $2^2$. Como seria a aleatorização? E se houvessem 4
+repetições ($r$) de cada nível do fator?
+1. Einsten deseja avaliar a qualidade do café processado de duas
+maneiras diferentes (A e B). No sábado ele recebeu a visita de 4 amigos
+e serviu o café A para eles registrando as avaliações feitas. No
+domingo, sua esposa recebeu a visita de 5 amigas e serviu o café B para
+elas registrando as avaliações. Existem problemas com o experimento de
+Einsten? Identifique-os. Aconselhe-o de como realizar o experimento para
+investigar sua hipótese.
+1. O que são variáveis *dummy*?
+1. Qual a diferença na matriz do modelo entre um modelo de regressão
+(fatores de níveis métricos) e modelo de experimento (fatores de níveis
+categóricos)?
+1. Por que precisamos adotar uma restrição paramétrica nos modelos com
+fator de nível categórico?
+1. Por que fazemos análise dos resíduos?

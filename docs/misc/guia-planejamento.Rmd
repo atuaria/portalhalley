@@ -1,0 +1,69 @@
+---
+title: "Controle de Processos Industriais - CE074"
+author: "Nome 1, Nome 2"
+date: "Novembro, 2017"
+output: html_document
+---
+
+# Título do experimento
+
+1. **Objetivos do experimento**
+	- Deve ser específico, mensurável, e com consequências práticas
+2. **Conhecimento relevante sobre o problema**
+	- Sobre a variável resposta e os fatores envolvidos:
+		- Relações teóricas
+		- Conhecimento empírico (ou de algum especialista)
+		- Experimentos prévios
+3. **Variável resposta**
+     - Listar as possíveis variáveis respostas (se houver mais de uma),
+       e indicar qual delas será utilizada no experimento
+     - Indicar os níveis normais de operação dessa variável
+     - Indicar os níveis que podem ser de fato medidos (e como)
+4. **Variáveis explicativas (fatores controláveis)**
+	- Listar todas as possíveis variáveis que possam ter efeito sobre a
+    variável resposta
+	- Listar as variávies explicativas que de fato serão controladas no
+    experimento
+	- Indicar os níveis normais de operação para cada variável que será
+    controlada, e a amplitude normal de operação
+	- Indicar a faixa de valores que cada variável controlada pode ser
+    medida, e qual a precisão da medição
+	- A proposta inícial de valores fixados para cada variável no
+    experimento
+	- O efeito esperado (mesmo que seja qualitativo) que os valores
+      propostos devem causar na variável resposta
+5. **Fatores mantidos constante**
+	- Listar todos os fatores que serão considerados como fixos
+    (mantidos constante) no experimento
+	- Indicar o nível (médio) desejado de cada fator fixo, e a amplitude
+    de variação permitida
+	- Indicar a faixa de valores que cada fator fixo pode ser medido (e
+    como)
+	- Indicar como cada fator será controlado
+	- Indicar o efeito esperado (se algum) de cada fator fixo na
+      variável resposta
+6. **Fatores *nuisance* **
+	- Listar todos os possíveis fatores que podem interferir no
+      experimento, mas que não serão controlados e nem considerados
+      constantes
+	- Indicar a estratégia que será utilizada para minimizar os efeitos
+    destes fatores. Por exemplo: blocagem, randomização, etc.
+	- Indicar os possíveis efeitos destes fatores na variável resposta
+7. **Interações**
+	- Listar as possíveis interações (conhecidas ou que haja suspeita de
+      que existam)
+8. **Restrições do experimento**
+	- Indicar as possíveis dificuldades que podem ser encontradas
+      (aquisição de dados, material, controle de fatores, etc)
+	- Indicar as limitações gerais do experimento (impacto do
+      experimento, limitações quanto ao universo amostral, etc)
+9. **Desenho experimental inicial**
+	- Indicar o tipo de experimento, e os motivos pela escolha,
+      incluindo porque fazer randomização, blocagem (quando houver), etc
+10. **Análise e apresentação dos dados**
+	- Propor uma análise inicial dos dados (ANOVA, regressão, testes de
+    hipótese, etc), e as técnicas de representação dos resultados e do
+    experimento
+11. **Experimento piloto**
+	- Indicar se um experimento piloto deverá ser conduzido. Sim ou não
+      e porque.

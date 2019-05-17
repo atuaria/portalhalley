@@ -1,0 +1,39 @@
+---
+title: "Introdução às Ciências Atuariais"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+source("setup_knitr.R")
+```
+
+<br></br>
+
+Notas de aula do curso de Introdução às Ciências Atuariais da Universidade Federal de Alfenas, elaboradas pelo professor Matheus Saraiva Alcino.
+
+<br></br>
+
+#### Introdução
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_INTRODUCAO.pdf"target="_blank">**Introdução**</a>
+
+#### Riscos
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_RISCO.pdf"target="_blank">**Riscos**</a>
+
+#### Seguros
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_SEGUROS.pdf"target="_blank">**Seguros**</a>
+
+#### Introdução à Demografia
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_Demografia.pdf"target="_blank">**Introdução à Demografia**</a>
+
+<br></br>
+<br></br>
+
+
+
+

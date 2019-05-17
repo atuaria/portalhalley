@@ -1,0 +1,38 @@
+---
+title: "Referências Bibliográficas"
+output:
+  html_document:
+    toc: false
+---
+
+## Referências básicas
+
+- AFONSO, Luís Eduardo. Previdência social e fundos de pensão. <b>Caderno de seguros</b>. Julho, 1996.
+
+- AGUIAR, João Paulo de Vasconcelos. História da previdência no brasil: As origens do sistema público de aposentadoria brasileiro. Politize! Junho, 2017. Disponível [aqui](http://www.politize.com.br/historia-da-previdencia-no-brasil/); Acesso em: 14/12/17 às 22:50.
+
+- ALVES, José Eustáquio Diniz. O fim do bônus demográfico e o processo de envelhecimento no Brasil. Revista Portal, v V, n 45, p 6- 17, junho – agosto 2015. BLUME. Bruno André. Reforma da previdência: entenda os principais pontos. Politize! Maio, 2016.
+
+- CAMARANO, A. KANSO, S. FERNANDES, D. Novo Regime Demográfico uma nova relação entre população e desenvolvimento? Instituto de Pesquisa Econômica Aplicada (IPEA). Rio de Janeiro, p. 81-82, 2014.
+
+- DE SOUZA, Luiz Eduardo Simões. Elementos de Demografia Econômica. São Paulo: LCTE, 2006. Governo do Brasil. Reforma da previdência: resumo. Dezembro, 2017.
+
+- LEBRÃO, Maria Lúcia. O envelhecimento no Brasil: Aspectos da Transição demográfica e epidemiológica. Saúde Coletiva, bimestral, anõ/vol 4, n 17, p135-140 – 2007.
+
+- OLIVEIRA, LAP. Síntese de indicadores sociais – uma análise das condições de vida da população brasileira. In: Estudos e Pesquisas- Informação Demográfica e Socioeconômica. IBGE. Rio de Janeiro, 2008.
+
+## Referências complementares
+
+- AZEVEDO, G. H. W., **Seguros, Matemática Atuarial e Financeira: uma abordagem introdutória.** Editora Saraiva. São Paulo, 2008.
+  
+- CONTADOR, C. R., FERRAZ, C. B. **Uma contribuição à história do seguro no Brasil.** Instituto CO PPEAD de Administração da Universidade Federal do Rio de Janeiro – Rio de Janeiro, 2000.
+  
+- ESCOLA NACIONAL DE SEGUROS. **Conceitos básicos de seguros.** Supervisão e Coordenação  metodológica   da Diretoria de Ensino Técnica de Alessandra Teixeira – 12. Ed. – Rio de Janeiros; Funenseg, 2015.
+  
+- ESCOLA NACIONAL DE SEGUROS. **Seguro DPVAT.** Supervisão e Coordenação metodológica da Diretoria de Ensino Técnica de Alessandra Teixeira – 2. Ed. – Rio de Janeiros; Funenseg, 2015.
+  
+- GUIMARÃES, S. R. Fundamentação Atuarial dos seguros de vida: um estudo comparativo entre os seguros   de vida individual e em grupo. **Série de Cadernos de Seguro: teses,** v. 9, no 20. FUNENSEG, Rio    de Janeiro, 2004.
+  
+- MENDONÇA, L. A trajetória de seguros de vida, em alguns flashes. **Cadernos de Seguro** – Coletânea   1981 – 2001.
+  
+- RIBEIRO, P. G. **História do seguro: um resumo.** Fundação Escola Nacional de Seguros. Rio de janeiro: FUNENSEG, ago. 1994.

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Hitórico da previdência social</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-102804671-3', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Portal Halley</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://atuaria.github.io/">LCA</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Notas de Aula
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="notas_ICA.html">Introdução às Ciências Atuariais</a>
+    </li>
+    <li>
+      <a href="notas_de_aula.html">Matemática Atuarial I</a>
+    </li>
+    <li class="dropdown-header">Teoria do Risco</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Materiais
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Introdução e revisão</li>
+    <li>
+      <a href="história-do-seguro.html">História do Seguro</a>
+    </li>
+    <li>
+      <a href="historico-previdencia-social.html">Historico Previdencia Social</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Demografia</li>
+    <li>
+      <a href="tabuas-mortalidade.html">Tábuas de vida</a>
+    </li>
+    <li>
+      <a href="tabua-de-mortalidade-ibge.html">Tábua de mortalidade IBGE</a>
+    </li>
+    <li>
+      <a href="função-de-sobrevivencia.html">Função de Sobrevivência</a>
+    </li>
+    <li>
+      <a href="premios.html">Prêmios</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Recursos
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recursos.html">Recursos</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Quem somos
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="quem-somos.html">Membros</a>
+    </li>
+    <li>
+      <a href="https://pt-br.facebook.com/atuaria/">Liga de Ciências Atuariais</a>
+    </li>
+    <li>
+      <a href="https://www.unifal-mg.edu.br/lar/">Laboratório de Risco Atuarial e Inovação</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="referencias.html">Referências</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://projetohalley.shinyapps.io/interface-atuarial/">
+    <span class="fa fa fa fa-calculator fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/atuaria/portalhalley/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Hitórico da previdência social</h1>
+
+</div>
+
+
+<div id="introducao" class="section level3">
+<h3>Introdução</h3>
+<p>      Com a evolução do mercado de trabalho, acentuada principalmente pela época da Revolução Industrial, houve um aumento progressivo da demanda por trabalho, e, com isso as preocupações em torno do trabalhador ganharam maior destaque. Os direitos em torno do âmbito trabalhista se fortaleceram mediante às mudanças do cenário econômico-político vivenciadas, e, no mesmo sentido, a ideia de proteção social como direito obrigatório aos cidadãos também se fortaleceu.</p>
+<p>      Neste sentido, a seguridade social baseia-se no objetivo de garantir amparo, atualmente, tanto em torno da saúde, da assistência social, e como foco do presente trabalho, da previdência social. Esta relaciona-se com a ideia de um “seguro social”, cuja prioridade é a garantia de resguardo da capacidade econômica dos contribuintes a ela envolvidos, durante situações em que os mesmos se encontram incapacitados de exercer função laboral, como a aposentadoria, invalidez, gravidez, entre outros.</p>
+<p>      Contudo, a abrangência e âmbito de atuação que a Previdência Social possui nos dias de hoje, nem sempre representaram esta mesma proporção, ou ainda, atuaram quanto aos aspectos do sistema contemporâneo. As origens do sistema previdenciário podem ser observadas de maneira gradativa e diferenciada ao longo do tempo, e, o presente trabalho visa apresentar o histórico da Previdência Social no Brasil.</p>
+<p>      O trabalho foi estruturado de forma a apresentar, uma breve conceituação acerca do objeto de estudo, a previdência Social, e, posteriormente disserta sobre o histórico da mesma à situação contemporânea, e por fim, a conclusão.</p>
+<p>      Com o desenvolvimento do presente trabalho, foi possível observar que a evolução do sistema previdenciário, sobretudo, aconteceu em torno da priorização dos interesses coletivos, como a proteção social, em detrimento de vertentes concentradas e envoltas de interesses locais, conquistando assim maior abrangência, mesmo com as dificuldades enfrentadas ao longo do tempo, e ainda com maior destaque, atualmente.</p>
+</div>
+<div id="previdencia-social" class="section level3">
+<h3>Previdência social</h3>
+<p>      A Previdência, seguro social em que o trabalhador participa por contribuições mensais, de modo a se beneficiar de uma renda durante sua aposentadoria ou invalidez, ou seja, a previdência é o sistema público que garante as aposentadorias dos trabalhadores brasileiros. Teve seu desenvolvimento de forma gradativa, onde inicialmente somente alguns setores da sociedade eram contemplados, até que através da maturidade do sistema com a universalização do direito previdenciário a todo cidadão foi alcançada. É importante ressaltar que a Previdência atualmente oferece benefícios como aposentadorias em diversas modalidades, além de auxílio- doença, salário — maternidade e pensão por morte e invalidez, entre outros auxílios.</p>
+<p>      É descrita por uma série de modalidades, entre elas: O Regime Geral da Previdência Social (RGPS), caracterizado por ser a previdência que gere a grande massa de trabalhadores brasileiros, subsidiário em relação aos regimes próprios, pois, todos que não estão vinculados a outros regimes e exerça uma atividade econômica estão automaticamente vinculados a este. Terceiro subsistema da seguridade social, faz parte do regime geral, é de caráter contributivo de filiação obrigatória, exceto o segurado facultativo, deve buscar o equilíbrio financeiro e atuarial. É regulamentado pela lei 8.212/1991, no que diz respeito ao seu custeio e a lei 8.213/1991 que aborda seu plano de benefícios; O Regime Próprio de Previdência dos Servidores (RPPS), semelhante ao RGPS, uma vez que também é organizado com base no sistema de repartição simples (regime financeiro o qual propõe um pacto entre gerações já que os segurados ativos, representando a geração atual, pagam os benefícios dos segurados inativos, geração passada, e confiam o pagamento de seus próprios benefícios à geração futura, de modo que o pacto intergeracional seja preservado.), trata da previdência dos servidores públicos titulares de cargos efetivos dos entes federados, incluindo as respectivas autarquias e fundações. Possui caráter contributivo e solidário e também busca a preservação do equilíbrio financeiro e atuarial. As regras e parâmetros mínimos encontram-se na Constituição Federal de 88, na lei 9.717/1998; E, o Regime de Previdência Complementar (RPC), de caráter privado e organizado de forma autônoma em relação ao RGPS, é facultativo e baseia-se na constituição de reservas que garantem o benefício contratado. Invés dos regimes próprios e do regime geral, funda-se no sistema de capitalização em que as contribuições do segurado garantem o seu próprio benefício. Regulamentado pelas Leis Complementarem 108 e 109, ambas de 2001.</p>
+<p>      Os Regimes financeiros, métodos adotados para prover recursos fundamentais para o cumprimento das obrigações assumidas pelo plano previdenciário, eles estabelecem apenas as formas pelas quais os recursos necessários para o pagamento dos benefícios serão obtidos. Dos diversos métodos para viabilizar o financiamento de benefícios previdenciários, são formados três regimes financeiros diferentes, são eles: o Regime de repartição simples, descrito anteriormente, no qual uma geração prove para a outra, aparado em variáveis demográficas (natalidade e longevidade) e nas taxas de emprego formal; Regime de capitalização, no qual cada geração constitui as reservas para suportar os seus próprios benefícios. A lógica do regime capitalizado consiste na acumulação, durante a fase laborativa, dos recursos necessários para pagamento das aposentadorias. No qual dois momentos distintos são constituídos: o período contributivo, no qual os recursos são acumulados, e o período de gozo do benefício, cujo objetivo é assegurar o pagamento dos compromissos assumidos. A capitalização recai sobre as alterações instáveis das taxas de juros e na longevidade; Regime de repartição de capitais de cobertura é uma conjugação do Regime de Repartição Simples com o Regime de Capitalização. A reserva garantidora é constituída no momento da concessão do benefício, através da divisão pura e simples entre os segurados contribuintes.</p>
+</div>
+<div id="historico-da-previdencia-social" class="section level3">
+<h3>Histórico da previdência social</h3>
+<p>      Sabe-se que o sistema previdenciário, sob uma perspectiva geral, organizou-se de forma gradativa em vários países, ainda que os tempos de início se diferenciem entre os mesmos. Inicialmente, o sistema previdenciário foi pensado com o objetivo de abranger o mercado de trabalho que possuíam maiores importâncias aos governos ou ainda elites locais, ou seja, os benefícios abrangiam uma população concentrada, via de regra. Como o caso da França, em 1673, que criou um sistema estatal exclusivo para os membros da Marinha Real, difundido para os demais funcionários, com o passar de muito anos. Contudo expansão da demanda de trabalho, ocasionada juntamente com os avanços advindos dos processos de industrialização e modernização do mercado de trabalho, e sobretudo, quanto à conquista de direitos trabalhistas, que atentaram para o trabalhador em si, ao invés do próprio trabalho.</p>
+<p>      Segundo Afonso (1996) já durante a época colonial existiram iniciativas com base na ideia de previdência, como por exemplo a Casa de Misericórdia de Santos, em 1543, uma organização com visão assistencial, contudo o autor aborda ainda, que há autores defensores deque a primeira iniciativa desse caráter ocorreu por volta do ano de 1835, com a instituição Montepio Geral de Economia dos Servidores do Estado (Mongeral).</p>
+<p>      Vale ressaltar que sob diferentes perspectivas, acredita-se que os primeiros indícios da Previdência Social no Brasil se deu com o fim do século XIX. Por volta do ano de 1888, foi elaborado um sistema similar ao sistema previdenciário a fim de cobrir os empregados de interesse do Império. Já em 1923, período em que os trabalhadores, sob a perspectiva do âmbito político-econômico, passaram a possuir maior representatividade.</p>
+<p>      Dadas as circunstâncias, surgiu a Lei Elói Chaves, um marco inicial da história da previdência brasileira. Um deputado federal paulista em conjunto com às companhias ferroviárias, elaboraram a base para a previdência: Caixa de Aposentadoria e Pensão (CAP). Criada e regida pelo governo, mas administrada por iniciativa privada. Ainda manteve a área de cobertura concentrada. Segundo Afonso (1996) tal sistema abrangia a área da saúde, com o fornecimento de medicamentos e ainda assistência médica aos contribuintes, bem como aos seus dependentes, além da aposentadoria e pensão em caso de morte, e, o custeio de tal sistema, ainda de acordo com o autor baseava-se nos meios de financiamento: “ O financiamento era feito através de contribuições dos empregados (3% dos salários), das empresas (1% da renda bruta), consumidores (devido ao aumento de 1,5% nas tarifas cobradas) e outras fontes menores e esporádicas.” (AFONSO, 1996. Pág. 12).</p>
+<p>      Ademais, neste mesmo ano, criou-se o Conselho Nacional do Trabalho, que desenvolveu a ideia de proteção social. Posteriormente, em 1934, devido ao processo de industrialização e do aumento da demanda de trabalho, logo o aumento da atenção ao trabalhador, houve a criação do Ministério do Trabalho, da Indústria e do Comércio, e, a substituição do sistema CAP pelos Institutos de Aposentadorias e Pensões (IAPs), em 1930, a atuação do governo federal foi centralizada e tal sistema passou a funcionar em nível nacional. A Constituição de 1934 trouxe alterações como o custeio tríplice, o qual a contribuição advinha de empregado, empregador e Estado.</p>
+<p>      Em 1946, foi elaborada uma nova Constituição, e com esta, foi possível notar uma evolução da ideia de seguro social para Previdência Social, semelhante aos objetivos dos parâmetros contemporâneos. Já em 1960, segundo Aguiar (2017), com o intuito de igualar, ou ainda, tornar mais uniforme os direitos estabelecidos entre os diversos institutos criados dentro do sistema IAP, criou-se a Lei Orgânica da Previdência Social (LOPS), com a inclusão dos auxílios: natalidade, funeral e reclusão. Posteriormente, ainda segundo o autor referido, outras alterações foram feitas, ou ainda, implementadas, “como a inclusão do trabalhador rural com oFundo de Assistência ao Trabalhador Rural (FUNRURAL), em 1963, e a criação do Fundo de Garantia por Tempo de Serviço (FGTS) e o Instituto Nacional de Previdência Social (INPS) – que hoje é conhecido como INSS – em 1966, para unificar a administração da previdência social no Brasil.” (AGUIAR, 2017).</p>
+<p>      A Constituição do ano de 1967, época da ditadura, foram definidas outras mudanças no setor trabalhista e de seguridade social, como a instituição do salário mínimo, salário família, entre outros. Até a década de 1980, houve um grande aumento do ingresso ao mercado de trabalho, e, a previdência social obteve um grande número de recursos para o pagamento dos benefícios disponibilizados, visto que havia mais trabalhadores ativos, em comparação aos inativos.</p>
+<p>      Com a nova Constituição de 1988, através dos artigos 194 a 204, instituiu o sistema de seguridade social utilizado até os dias atuais, este com o objetivo principal de garantir o amparo e proteção social aos cidadãos, dividindo-se em três vieses: a Assistência Social, a Previdência Social, e a Saúde. A previdência social, atualmente, é responsável por garantir o amparo aos cidadãos contribuintes e seus dependentes durante a incapacidade dos mesmos, seja esta de qualquer natureza, de exercer suas funções laborais. A correção monetária aplicada aos benefícios, foi sugerida no ano de 1991, no governo do presidente Fernando Collor de Mello. Posteriormente, a instituição do tempo de contribuição e do fator previdenciário foi implementada pelo Presidente Fernando Henrique, no ano de 1998. Durante o governo do presidente Luís Inácio Lula da Silva, o regime direcionado aos servidores públicos sofreram algumas adaptações, referentes aos benefícios, como um teto e a mudança de seus valores, e ainda, no que concerne às contribuições, com a inclusão de pensionistas e inativos. No governo da presidente Dilma Rousseff, foi instituído o fator 85/95, e, atualmente, durante o governo do presidente Michel Temer aguarda-se a votação para a instituição da nova reforma previdenciária.</p>
+</div>
+<div id="situacao-contemporanea" class="section level3">
+<h3>Situação contemporânea</h3>
+<p>      O Bônus Demográfico, que no Brasil tem como duração o período entre 1970 a 2030, abriu uma janela de oportunidade para o país se desenvolver em termos econômicos e socioeconômicos, que não fora aproveitada, pois, a nação ainda sobre de problemas básicos de inclusão social e de reprimarização da economia, o que é grave, pois, o país está passando por um período de recessão, agravado pela desindustrialização do país o que causou uma regressãoprodutiva, que acabou por prejudicar a Previdência, que passou a arrecadar menos com o aumento dos desempregados e o aumento dos idosos, por isso alguns pesquisadores de Economia, como o autor José Eustáquio Diniz Alves, que expôs sua opinião no artigo: “O fim do bônus demográfico e o processo de envelhecimento no Brasil.”; acreditam que o Brasil está diante de uma década perdida, sem perspectivas de crescimento, o que acabará por encurtar, juntamente com outros fatores, o período do Bônus, que terminará, segundo as previsões destes pesquisadores, entre 2015 e 2020.</p>
+<p>      Com a aproximação do fim do Bônus e o início de uma crise econômica a população brasileira chega a uma incógnita: “O que fazer para mudar o sistema Previdenciário brasileiro?”; que apresenta falhas, por ser um sistema antiquado, principalmente em relação à população feminina no mercado de trabalho. Se visto o Índice de envelhecimento, que é medido pelo número de pessoas de 60 anos ou mais anos 13 de idade, para cada 100 pessoas menores de 15 anos de idade, na população residente em determinado espaço demográfico, no ano considerado; do Brasil é possível observar a predominância do aumento, conforme o passar dos anos, da população feminina perante a masculina, conforme é apresentado no fenômeno da Feminização da Pirâmide Etária, que é observada através da Razão de Sexo.</p>
+<p>      A Razão de sexo brasileira, que segundo o IBGE, na publicação do estudo: “Síntese de Indicadores Sociais — Uma análise das condições de vida da população brasileira 2015.”; tem uma diferença mais impactante em regiões metropolitanas do que em rurais, e, em geral possuí a taxa em 51,6% para mulheres e 48,4% para homens, o que é prejudicial para a população brasileira, já que homens costumam morrer mais cedo do que as mulheres, o que acaba por impactar na Previdência já que a apesar de a população feminina contribuir somente 31 anos, em média, tempo inferior aos 39 anos contribuídos pela masculina, por viver mais anos pode e ter de forma resumida que a mulher acaba por contribuir menos e receber mais.</p>
+<p>      Estes fatores contribuíram, com a crise econômica e política do país, para o surgimento de propostas de reformas para a Previdência, no governo do presidente Michel Temer em dezembro de 2016. Essas propostas, justificadas pelo governo, são entre outras: o déficit crescente, segundo dados oficiais, em que houve um crescimento significativo do rombo nas contas da previdência. Em 2013, o déficit da previdência equivalia a 0,9% do PIB; em 2016, chegou a 2,4% do PIB (R$ 149 bilhões). Esse aumento forte e rápido se explica pela crise econômica deflagrada em 2015, que aumentou o desemprego, o que veio por diminuir o número de contribuintes. Além disso, o peso dos gastos previdenciários no orçamento também é considerado muito grande: 27% das despesas do governo foram destinadas para pagar os seusbenefícios, segundo o Mosaico do Orçamento da FGV; como fora citado acima, o envelhecimento da população brasileira: o Brasil aos poucos passa de um país de jovens para um de idosos. Conforme a expectativa de vida aumenta e a taxa vegetativa da população diminui, chegaremos em breve a um cenário de muitos trabalhadores inativos sustentados por poucos trabalhadores ativos. Assim, uma reforma da previdência é vista como inevitável, assim como foi em outros países em todo o mundo nas últimas décadas; Fora que os brasileiros se aposentam demasiadamente cedo, tendo como média de idade em que as pessoas se aposentam como 58 anos, segundo o Ministério do Trabalho. Este número é ainda menor entre os que se aposentam por tempo de contribuição: 56 anos para os homens e 53 anos para as mulheres, ao contrário da maioria dos países no senário mundial, em que as pessoas se aposentam com no mínimo 60 anos.</p>
+</div>
+<div id="reforma-brasileira" class="section level3">
+<h3>Reforma brasileira</h3>
+<p>      O governo brasileiro propões uma reforma na Previdência alegando a busca de mais igualdade entre os brasileiros, com o intuito de que políticos, juízes e o alto funcionalismo público passem a seguir regras semelhantes às dos trabalhadores da iniciativa privada. A proposta em teoria, não retiraria direitos, mas promoveria a igualdade, deixando o sistema mais justo e equilibrado para todos os trabalhadores, que causaria uma menor sobre carregamento dos cofres públicos e colocaria o Brasil no mesmo nível de países em que o bem-estar social é uma prioridade para a sociedade.</p>
+<p>      Dentre as principais mudanças, estão: o tempo de contribuição, o trabalhador teria que contribuir pelo menos por 15 anos para ter direito à aposentadoria, tempo já utilizado atualmente, mas o benefício seria alterado pelo tempo de permanência no mercado; a idade mínima, a idade subiria gradualmente até chegar aos 65 anos para os homens e 62 anos para as mulheres em 2038. Uma vez que estas regras fossem cumpridas o trabalhador passaria a ter direito a 60% do salário de contribuição. Atualmente o teto do Instituto Nacional de Seguridade Social (INSS) é de R$ 5.531,31, quanto maior a contribuição, mais próximo ficaria o trabalhador deste valor.</p>
+<p>      Durante a transição, a partir de 2020, a idade iria subir de forma gradativa, em teoria. A cada dois anos, seriam acrescentados 12 meses à idade mínima. Essa evolução seria mantida até chegar aos 65 anos. Para segurados do Regime Geral de Previdência Social (RGPS), trabalhadores regidos pela CLT, haveria um acréscimo de 30% para o tempo que faltaria paraessas pessoas se aposentarem, uma espécie de pedágio. No caso dos homens, esse pedágio seria cobrado sobre o que falta para cumprir 35 anos de contribuição. Já para as mulheres, esse acréscimo valeria sobre o que falta para completarem 30 anos de contribuição.</p>
+<p>      Mesmo após a mudança nas regras da Previdência alguns trabalhadores iriam se aposentar por regras muito semelhantes às atuais. Para quem já estaria próximo de conseguir o benefício, haveria um pequeno acréscimo no tempo que a pessoa tem de contribuir, para ter direito à aposentadoria, o que se costuma chamar de pedágio. Funcionaria desta forma: os trabalhadores teriam um acréscimo de 30% no tempo de contribuição que faltaria para conseguir a aposentadoria. Para os homens, seria um aumento no tempo que faltaria para completar 35 anos de contribuição; para as mulheres, no tempo que faltaria para completar 30 anos.</p>
+<p>      Em suma, se faltassem dois anos para um trabalhador poder se aposentar, ele teria de que trabalhar para poder se aposentar, ele teria de trabalhar mais dos 31 meses para ter direito à aposentadoria, apenas um pouco a mais do tempo original (24 meses).</p>
+</div>
+<div id="conclusao" class="section level3">
+<h3>Conclusão</h3>
+<p>      Como apontado no desenvolvimento histórico e teórico da Previdência no Brasil, sua evolução se deu de forma gradativa e diferenciada dos demais países, que tiveram suas regras previdenciárias e seus corpos estipulados mais cedo, devido à questões desenvolvimentistas, além de que inicialmente existia um monopólio de interesses por parte do governo e de elites oligárquicas, que não consideravam as necessidades da população, senário diferente se comparado com o atual, uma vez de que há a priorização da proteção social contemporânea, em detrimento dos interesses de pequenos grupos de elite. Também é possível observar que esta apresenta indícios de já estar em direção ao colapso, pois, suas contas não fecham mais. Como tratado na problematização demográfica do fim do bônus demográfico, onde sua principal preocupação, em um breve futuro, será: “A relação entre população ocupada e PIA chegou ao pico entre 2008 e 2012 (fim do bônus) e agora vai se reduzir gradualmente. Ou seja, o ritmo de crescimento da população ocupada será menor que o ritmo de crescimento da população. Haverá menor proporção de “produtores” e maior proporção de “consumidores”. (ALVES, 2015, p.16); e questões como a feminização da pirâmide etária e seu órgão da Previdência precisariam ser revistas. Portanto, o governo apresentou uma série de medidas técnicas, como sendo a solução para o fechamento de contas, prejudiciais a população por sua natureza súbita.</p>
+</div>
+<div id="referencias" class="section level3">
+<h3>Referências</h3>
+<ul>
+<li><p>AFONSO, Luís Eduardo. Previdência social e fundos de pensão. Caderno de seguros. Julho, 1996.</p></li>
+<li><p>AGUIAR, João Paulo de Vasconcelos. História da previdência no brasil: As origens do sistema público de aposentadoria brasileiro. Politize! Junho, 2017. Disponível em: <a href="http://www.politize.com.br/historia-da-previdencia-no-brasil/" class="uri">http://www.politize.com.br/historia-da-previdencia-no-brasil/</a>; Acesso em: 14/12/17 às 22:50.</p></li>
+<li><p>ALVES, José Eustáquio Diniz. O fim do bônus demográfico e o processo de envelhecimento no Brasil. Revista Portal, v V, n 45, p 6- 17, junho – agosto 2015. BLUME. Bruno André. Reforma da previdência: entenda os principais pontos. Politize! Maio, 2016.</p></li>
+<li><p>CAMARANO, A. KANSO, S. FERNANDES, D. Novo Regime Demográfico uma nova relação entre população e desenvolvimento? Instituto de Pesquisa Econômica Aplicada (IPEA). Rio de Janeiro, p. 81-82, 2014.</p></li>
+<li><p>DE SOUZA, Luiz Eduardo Simões. Elementos de Demografia Econômica. São Paulo: LCTE, 2006. Governo do Brasil. Reforma da previdência: resumo. Dezembro, 2017.</p></li>
+<li><p>LEBRÃO, Maria Lúcia. O envelhecimento no Brasil: Aspectos da Transição demográfica e epidemiológica. Saúde Coletiva, bimestral, anõ/vol 4, n 17, p135-140 – 2007.</p></li>
+<li><p>OLIVEIRA, LAP. Síntese de indicadores sociais – uma análise das condições de vida da população brasileira. In: Estudos e Pesquisas- Informação Demográfica e Socioeconômica. IBGE. Rio de Janeiro, 2008.</p></li>
+</ul>
+</div>
+
+<center>
+  <hr width="100%" size="3px">
+  <p> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR">
+      <img src="img/CC_by-nc-sa_80x15.png" alt="Licença Creative Commons 4.0"> </a>
+  </p>
+  <p> <font size="2"> Este conteúdo
+      está disponível por meio da Licença Creative Commons 4.0 </font>
+  </p>
+</center>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

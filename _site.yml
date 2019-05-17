@@ -1,0 +1,66 @@
+name: "Portal Halley"
+output_dir: "docs"
+exclude: ["README.md", "\\.sh", "cache", "scripts_teste"]
+output:
+  html_document:
+    theme: flatly
+    highlight: default
+    code_folding: hide
+    number_sections: false
+    toc: true
+    toc_depth: 4
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    includes:
+      in_header: analytics.html
+      after_body: footer.html
+navbar:
+  title: "Portal Halley"
+  left:
+    - text: "LCA"
+      href: https://atuaria.github.io/
+    - text: "Notas de Aula"
+      menu:
+      - text: "Introdução às Ciências Atuariais"
+        href: notas_ICA.html
+      - text: "Matemática Atuarial I"
+        href: notas_de_aula.html
+      - text: "Teoria do Risco"
+    - text: "Materiais"
+      menu:
+      - text: "Introdução e revisão"
+      - text: "História do Seguro"
+        href: história-do-seguro.html
+      - text: "Historico Previdencia Social"
+        href: historico-previdencia-social.html
+      - text: "----------"
+      - text: "Demografia"
+      - text: "Tábuas de vida"
+        href: tabuas-mortalidade.html
+      - text: "Tábua de mortalidade IBGE"
+        href: tabua-de-mortalidade-ibge.html
+      - text: Função de Sobrevivência
+        href: função-de-sobrevivencia.html
+      - text: "Prêmios"
+        href: premios.html
+      - text: "----------"
+    - text: "Recursos"
+      menu:
+      - text: "Recursos"
+        href: recursos.html
+    - text: "Quem somos"
+      menu:
+      - text: "Membros"
+        href: quem-somos.html
+      - text: Liga de Ciências Atuariais
+        href: https://pt-br.facebook.com/atuaria/
+      - text: Laboratório de Risco Atuarial e Inovação
+        href: https://www.unifal-mg.edu.br/lar/
+    - text: "Referências"
+      href: referencias.html
+  right:
+    - icon: fa fa-calculator fa-lg
+      href: https://projetohalley.shinyapps.io/interface-atuarial/
+    - icon: fa-github fa-lg
+      href: https://github.com/atuaria/portalhalley/

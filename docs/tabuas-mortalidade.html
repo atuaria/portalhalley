@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Tábuas de mortalidade</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-102804671-3', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Portal Halley</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://atuaria.github.io/">LCA</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Notas de Aula
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="notas_ICA.html">Introdução às Ciências Atuariais</a>
+    </li>
+    <li>
+      <a href="notas_de_aula.html">Matemática Atuarial I</a>
+    </li>
+    <li class="dropdown-header">Teoria do Risco</li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Materiais
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Introdução e revisão</li>
+    <li>
+      <a href="história-do-seguro.html">História do Seguro</a>
+    </li>
+    <li>
+      <a href="historico-previdencia-social.html">Historico Previdencia Social</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Demografia</li>
+    <li>
+      <a href="tabuas-mortalidade.html">Tábuas de vida</a>
+    </li>
+    <li>
+      <a href="tabua-de-mortalidade-ibge.html">Tábua de mortalidade IBGE</a>
+    </li>
+    <li>
+      <a href="função-de-sobrevivencia.html">Função de Sobrevivência</a>
+    </li>
+    <li>
+      <a href="premios.html">Prêmios</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Recursos
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recursos.html">Recursos</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Quem somos
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="quem-somos.html">Membros</a>
+    </li>
+    <li>
+      <a href="https://pt-br.facebook.com/atuaria/">Liga de Ciências Atuariais</a>
+    </li>
+    <li>
+      <a href="https://www.unifal-mg.edu.br/lar/">Laboratório de Risco Atuarial e Inovação</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="referencias.html">Referências</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://projetohalley.shinyapps.io/interface-atuarial/">
+    <span class="fa fa fa fa-calculator fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/atuaria/portalhalley/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Tábuas de mortalidade</h1>
+
+</div>
+
+
+<div id="as-tabuas-de-mortalidade" class="section level3">
+<h3>As Tábuas de Mortalidade</h3>
+<p>      As tábuas de mortalidade são instrumentos muito utilizados em diversas ciências como a demografia as ciências atuariais por exemplo. Conforme afirma Preston (2001, p.38), a tábua de mortalidade é uma tabela que mostra informações sobre a mortalidade de uma coorte. Em sua forma clássica, a primeira coluna desta tabela representa a idade (em anos) de uma coorte e todas as outras colunas representam funções relacionadas à mortalidade, como o número de sobreviventes em determinadas idades, taxas de mortalidade por idade, mortes em intervalos de idade etc. A tábua de mortalidade, também conhecida na literatura como tábua de vida, é uma maneira de modelar a mortalidade de uma coorte.</p>
+<div class="panel panel-primary">
+<div class="panel-heading">
+<strong>As tábuas de mortalidade nos informam:</strong>
+</div>
+<div class="panel-body">
+<ul>
+<li>Idade (em anos) de uma coorte</li>
+<li>O número de sobreviventes em determinadas idades</li>
+<li>Taxas de mortalidade por idade<br />
+</li>
+<li>Mortes em intervalos de idade etc</li>
+</ul>
+</div>
+</div>
+<p>      Apenas para ilustrar a importância deste tipo de instrumento, é através dele que se obtém as informações sobre a expectativa de vida em determinada idade. Estas por sua vez, são utilizadas para realizar projeções populacionais e com isso, é possível discutir por exemplo, os atuais problemas previdenciários. Além disso, é conveniente lembrar que muitos produtos atuariais têm seus cálculos baseados nas informações presentes nas tábuas de mortalidade.</p>
+</div>
+<div id="o-surgimento" class="section level3">
+<h3>O surgimento</h3>
+<p>      A história das tábuas de mortalidade se relaciona com a própria história do risco, que por sua vez contempla o desenvolvimento da estatística e as teorias da probabilidade. Entretanto, nem sempre a estatística foi relacionada com a demografia. Antes do século XVI por exemplo, estas eram disciplinas totalmente separadas.</p>
+<p>      Em 1662 foi publicado o livro <em>Observações naturais e políticas sobre os registros de óbito</em>, cujo autor era John Graunt, um comerciante inglês. Graunt reuniu dados de nascimentos e mortes em Londres no período entre 1604 e 1661, e além destes dados seu livro trouxe suas interpretações. A obra de Graunt foi de extrema importância para o desenvolvimento do cálculo das probabilidades e para os métodos de amostragem.</p>
+<p>      Como bom comerciante, o principal objetivo de Graunt era saber quantas pessoas haviam em Londres e suas características, como sexo, idade, religião, estado, profissão etc. e assim, possivelmente elaborar estratégias para seus negócios. Dados sobre nascimentos e mortes já eram registrados pela igreja há muito tempo mas não eram disponibilizados.</p>
+<p>      No século XVII Londres enfrentava um processo significativo de crescimento econômico e populacional. Assim, Graunt percebeu que suas estatísticas representavam apenas uma pequena parte de todos os nascimentos e mortes que ocorriam. Ainda assim, ele conseguiu chegar a muitas conclusões sobre seus dados, com a maior precisão possível que seus conhecimentos e ferramental permitiam na época. Este tipo de análise é conhecida atualmente como inferência estatística, que consiste em inferir uma estimativa para uma população com base em uma amostra.</p>
+<p>A imagem a seguir é parte do trabalho de Graunt.</p>
+<div class="figure">
+<img src="img/t1.png" alt="Fonte: Desafio aos Deuses, p.94" />
+<p class="caption">Fonte: Desafio aos Deuses, p.94</p>
+</div>
+<p>      Graunt, mesmo sem saber, foi considerado como um dos cocriadores da ciência estatística devido a importância de seu trabalho. Uma curiosidade sobre a palavra estatística é que sua etimologia nos mostra que seu significado é uma análise de fatos quantitativos sobre o Estado.</p>
+<p>      Outro personagem de extrema importância tanto para a história da administração do risco quanto para outras ciências como a astronomia, foi o cientista Edmund Halley. No final do século XVII, Halley realizou um estudo mais aprofundado do que Graunt havia feito. Umas das especificidades de seu trabalho é que ele decompõe os dados populacionais em uma distribuição etária. De acordo com Halley, essa tabela gerava informações úteis até para o governo, como por exemplo o número de homens aptos a prestar serviço militar. Além disso, a tabela informava sobre qual a probabilidade de uma pessoa de idade <span class="math inline">\(x\)</span> morrer após algum número de anos, em outras palavras, sua tabela já apresentava os cálculos de esperança de vida em cada idade.</p>
+<p>      Dessa forma, a tabela de Halley se tornou de fundamental importância para o mercado de seguros. Com as probabilidades de vida e morte de cada idade era possível então precificar de maneira economicamente justa produtos atuariais, como seguros de vida e anuidades. As tabelas que continham as expectativas de vida desenvolvidas por Halley foram publicadas em 1693, entretanto, apenas um século mais tarde os governos e as seguradoras passaram a considerá-las em seus cálculos. Sua utilização prévia poderia ter evitado problemas econômicos para os governos, relacionados a previdência.</p>
+</div>
+<div id="a-composicao-de-uma-tabua-de-mortalidade" class="section level3">
+<h3>A composição de uma tábua de mortalidade</h3>
+<p>      As tábuas de mortalidade são tabelas compostas por dez colunas, em que a primeira delas é a coluna das idades. Devido à algumas diferenças comportamentais e, em alguns casos até biológicas, existem tábuas de mortalidade que diferem o sexo feminino e masculino. Ou seja, mulheres e homens atravessam ao longo da vida, diferentes riscos de morte em todas as idades. Isso justifica a diferença de preços em produtos atuariais para ambos os sexos. Mesmo com tais diferenças, existem tábuas de mortalidade que são construídas sem diferenciar o gênero.</p>
+<p>      A segunda coluna de uma tábua de mortalidade é a probabilidade de morte à idade <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span>, representada por <span class="math inline">\(_{n}q_{x}\)</span>. É calculada através da relação entre o número de óbitos observados no intervalo de idade <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span>, representado por (<span class="math inline">\(_{n}D_{x}\)</span>) e o total da população neste intervalo de idade, representado por <span class="math inline">\(_{n}l_{x}\)</span>. Ou seja: <span class="math display">\[_{n}q_{x} = \dfrac{_{n}D_{x}}{_{n}l_{x}}\]</span>       Outra coluna importante é a que diz respeito ao tempo médio vivido no intervalo etário pelos que morreram no intervalo <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span>, representado por <span class="math inline">\(_{n}a_{x}\)</span>. É encontrado através da divisão do total do número de pessoas-ano vividos no intervalo <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span> pelo total pessoas que morreram neste mesmo intervalo, ou seja <span class="math display">\[_{n}a_{x} = \dfrac{_{n}L_{x}}{_{n}D_{x}}\]</span></p>
+<p>      Para o cálculo da coluna anterior, é necessário a coluna <span class="math inline">\(_{n}L_{x}\)</span>, que representa o número de pessoas-anos que viveram entre as idades <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span>. Esta é uma coorte hipotética que significa tempo a ser vivido pelos sobreviventes da coorte na idade x, entre esta idade e o início do próximo grupo etário. Então <span class="math display">\[_{n}L_{x} = n \cdot _{n}l_{x+n} + _{n}A_{x}\]</span></p>
+<p>em que <span class="math inline">\(_{n}A_{x}\)</span> representa o número de pessoas-ano vividos no intervalo pelos membros da coorte que morreram neste intervalo.</p>
+<p>      Assim, uma maneira de se obter <span class="math inline">\(_{n}D_{x}\)</span> é então: <span class="math display">\[_{n}D_{x} = L_{x} - L_{x+t}\]</span>       A próxima coluna representa o tempo a ser vivido da coorte de idade x até que esta coorte se extinga, representada por <span class="math inline">\(T_{x}\)</span>. É o número de pessoas-ano vividos a partir da idade x. É calculada por: <span class="math display">\[T_{x} = \sum\limits_{t=0}^\infty L_{x+t}\]</span></p>
+<p>      Por fim, com todas as colunas anteriores é possível agora calcular a experança de vida à idade x, representada por <span class="math inline">\(e_{x}^{\circ}\)</span>:</p>
+<p><span class="math display">\[e_{x}^{\circ}=\dfrac{T_{x}}{l_{x}}\]</span></p>
+<p>      A união destas seis colunas resulta nas tábuas de mortalidade atualmente utilizadas para diferentes áreas da ciência. Abaixo segue uma pequena da tábua completa de mortalidade - Ambos os Sexos - 2016, do Brasil disponibilizada pelo IBGE.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Idade</th>
+<th align="center"><span class="math inline">\(_{n}q_{x} \times 1000\)</span></th>
+<th align="center"><span class="math inline">\(_{n}D_{x}\)</span></th>
+<th align="center"><span class="math inline">\(l_{x}\)</span></th>
+<th align="center"><span class="math inline">\(_{n}L_{x}\)</span></th>
+<th align="center"><span class="math inline">\(T_{x}\)</span></th>
+<th align="center"><span class="math inline">\(e_{x}^{\circ}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">20</td>
+<td align="center">1,380</td>
+<td align="center">135</td>
+<td align="center">97665</td>
+<td align="center">97598</td>
+<td align="center">5611172</td>
+<td align="center">57,5</td>
+</tr>
+<tr class="even">
+<td align="center">21</td>
+<td align="center">1,477</td>
+<td align="center">144</td>
+<td align="center">97530</td>
+<td align="center">97458</td>
+<td align="center">5513574</td>
+<td align="center">56,5</td>
+</tr>
+<tr class="odd">
+<td align="center">22</td>
+<td align="center">1,543</td>
+<td align="center">150</td>
+<td align="center">97386</td>
+<td align="center">97311</td>
+<td align="center">5416116</td>
+<td align="center">55,6</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Normalmente as tábuas de mortalidade disponibilizadas não exibem as funções <span class="math inline">\(_{n}a_{x}\)</span>, <span class="math inline">\(_{n}m_{x}\)</span> e <span class="math inline">\(_{n}p_{x}\)</span>. Obs.: <em><span class="math inline">\(_{n}p_{x} = 1 - _{n}q_{x}\)</span></em>.</p>
+<p>      Em demografia, as probabilidades de morte entre uma pessoa de idade <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span> anos (<span class="math inline">\(_{n}q_{x}\)</span>) normalmente são multiplicadas por mil afim de que os valores se tornem mais interpretáveis. Por exemplo, na tabela acima a cada mil pessoas entre 20 e 21 anos, a ocorrência de morte era de 1,38 pessoas no ano de 2016. Entretanto, para cáculos atuariais, estes devem continuar sendo valores probabilísticos e, então, a interpretação seria: a probabilidade de uma pessoa de 21 anos morrer antes de completar 22 anos, segundo esta tabela é de <span class="math inline">\(\dfrac{1,380}{1000}=0,00138\)</span>, o que significa (por obviedade) que a probabilidade dessa mesma pessoa chegar viva aos 22 anos é de <span class="math inline">\(1-0,00138 = 0,99862 = _{1}p_{22}\)</span>.</p>
+<p>      Uma observação a ser feita é que a construção de uma tábua de mortalidade é muito parecida com a construção das tabelas que atuários antigamente utilizavam, devido a impotência computacional, para realizar as técnicas de comutação.</p>
+</div>
+<div id="tabuas-de-mortalidade-no-brasil" class="section level3">
+<h3>Tábuas de mortalidade no Brasil</h3>
+<p>      As tábuas de mortalidade no Brasil são contruídas e disponibilizadas anualmente pelo Instituto Brasileiro de Geografia e Estatística - IBGE desde o ano de 1999, em cumprimento ao Artigo 2º do Decreto Presidencial nº 3.266, de 29 de novembro de 1999:</p>
+<p><strong>“Art. 2°. Compete ao IBGE publicar, anualmente, até o dia primeiro de dezembro, no Diário Oficial da União, a tábua completa de mortalidade para o total da população brasileira referente ao ano anterior.”</strong></p>
+<p>      De acordo com o IBGE, nas tábuas de mortalidade guardam informações de condições sociais da população, como sanitárias, de saúde e de segurança. Assim, este material também tem sua importância para o desenvolvimento de políticas sociais voltadas a sociedade.</p>
+<p>      Em cada divulgação feita pelo IBGE, também está contida a interpretação dos resultados. Além disso, o instituto também disserta sobre a evolução da mortalidade no Brasil e traz alguns resultados separados por estados brasileiros.</p>
+</div>
+<div id="classificacao-das-tabuas-de-mortalidade" class="section level3">
+<h3>Classificação das tábuas de mortalidade</h3>
+<p>      Algumas tábuas de mortalidade são construídas sob a organização de alguns aspectos específicos da população estudada, como sexo, tipo de seguro, grupo de risco etc., e além disso por diferentes métodos. Assim, tábuas de mortalidade são classificadas de acordo com algumas dessas especifidades.</p>
+<p>      As <strong>tábuas contemporâneas</strong> são tábuas cuja população é fictícia, normalmente 100.000 indivíduos e é sujeita as condições de mortalidade observadas para cada idade num determinado período de tempo. Se as informações são referentes a um único ano de calendário, define-se tábuas anuais. Se as probabilidades são contruídas com base na média de dois ou mais anos, denomina-se tábuas plurianuais.</p>
+<p>      As <strong>tábuas geracionais</strong>, também chamadas de longitudinais, têm suas probabilidades calculadas com base num grupo de indivíduos (coorte) nascidos no mesmo ano. Para que isso aconteça, deve-se acompanhar estes indivíduos desde o seus nascimentos até as suas mortes.</p>
+<p>      Uma outra classificação refere-se à forma com que estão dispostos os intervalos de idade na tábua. <strong>Tábuas completas</strong> contém dados para cada idade singular, desde o nascimento até o limite superior. <strong>Tábuas abreviadas</strong> formam grupos de idade.</p>
+<p>      Há também a classificação por idades de seleção. <strong>Tábuas selecionadas</strong> são tábuas em que as probabilidades são realizadas considerando a idade do indivíduo. <strong>Tábuas finais</strong> “correspondem à última coluna de uma tábua selecionada, ou seja, aquela em que se admite que a duração (ou período de seleção) deixa de ter efeito sobre a mortalidade” (Bravo, 2007).</p>
+<p>      Quanto ao tempo, as tábuas também podem ser <strong>estáticas</strong>, ou seja, todas as funções da tábua dizem respeito apenas a idade x. E ainda, podem ser <strong>tábuas dinânimcas</strong>, que as funções são indexadas, em linha, pela idade biológica e, em coluna, pelo ano de calendário (tempo cronológico).</p>
+</div>
+<div id="referencias" class="section level3">
+<h3>Referências</h3>
+<ul>
+<li><p>BERNSTEIN, P. L. <strong>Desafio aos deuses</strong>: a fascinante história do risco. Rio de Janeiro: Campus, c1997. xiv, 389 p.</p></li>
+<li><p>BRAVO, J. M. Tábuas de mortalidade contemporâneas e prospectivas: Modelos estocásticos, aplicações actuariais e cobertura do risco de longevidade. <strong>Universidade de Évora</strong>, Évora, 2007.</p></li>
+<li><p>Intituto Brasileiro de Geografia e Estatística - IBGE. Tábua completa de mortalidade para o Brasil – 2016. Breve análise da evolução da mortalidade no Brasil. Disponível em: <a href="ftp://ftp.ibge.gov.br/Tabuas_Completas_de_Mortalidade/Tabuas_Completas_de_Mortalidade_2016/tabua_de_mortalidade_2016_analise.pdf" class="uri">ftp://ftp.ibge.gov.br/Tabuas_Completas_de_Mortalidade/Tabuas_Completas_de_Mortalidade_2016/tabua_de_mortalidade_2016_analise.pdf</a>. Acesso em 7 de Junho de 2018.</p></li>
+<li><p>PRESTON, S. H. <strong>Demography:</strong> measuring and modeling population processes. Malden, MA: Blackwell Publishers, c2001. 291 p.</p></li>
+</ul>
+</div>
+
+<center>
+  <hr width="100%" size="3px">
+  <p> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR">
+      <img src="img/CC_by-nc-sa_80x15.png" alt="Licença Creative Commons 4.0"> </a>
+  </p>
+  <p> <font size="2"> Este conteúdo
+      está disponível por meio da Licença Creative Commons 4.0 </font>
+  </p>
+</center>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

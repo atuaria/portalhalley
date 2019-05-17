@@ -1,0 +1,279 @@
+---
+title: "Revisão de conhecimento"
+author: "CE074 - Controle de Processos Industriais"
+date: "2017/2"
+fontsize: 11pt
+header-includes:
+    - \usepackage{mathpazo}
+    - \usepackage[scaled]{beramono}
+output:
+  pdf_document:
+    highlight: default
+---
+
+```{r setup, include=FALSE}
+library(knitr, quietly = TRUE)
+opts_chunk$set(size = "small",
+               comment = "#",
+               tidy = FALSE,
+               fig.align = "center"
+               )
+```
+
+1. Quais as suposições de um experimento inteiramente casualizado?
+As UEs devem ser independentes.
+```
+A determinação dos níveis dos fatores para as UEs deve ser aleatória.
+A distribuição dos dados amostrais deve ser normal (?).
+A variância deve ser homocedástica entre os níveis dos fatores (?).
+```
+1. Quais as suposições de um experimento em blocos ao acaso?
+```
+Os blocos devem ser homogêneos (as características de dentro dos blocos
+devem ser semehantes).
+As UEs devem ser independentes.
+A determinação dos níveis dos fatores para as UEs dentro dos blocos deve
+ser aleatória.
+A distribuição dos dados amostrais deve ser normal (?).
+A variância deve ser homogêmea dentro dos blocos (?).
+```
+1. O que é um experimento em blocos incompletos?
+```
+No DBC o número de UEs por bloco deve ser igual ao número de
+tratamentos, mas nem sempre isso é possível. Quando não é possível
+utilizar todos os tratamentos em cada um dos blocos deve-se utilizar um
+delineamento em blocos incompletos. Por exemplo, podemos ter um fator
+com 6 níveis, mas devido à alguma restrição (física, logística,
+orçamentária, ...) temos apenas 4 UEs por bloco.
+```
+1. O que é um experimento em blocos incompletos balanceado?
+```
+Um bloco incompleto balanceado é um delineamento em que cada um dos
+níveis do fator é repetido r vezes e ocorre no máximo uma vez em cada um
+dos b blocos.
+Todos os blocos tem o mesmo tamanho, e todos os tratamentos tem o mesmo
+número de repetições.
+```
+1. Por que agrupamos unidades experimentais (UEs) em blocos?
+```
+Para fazer o controle local. Agrupar UEs em blocos serve para
+homegeneizar as amostras em termos de variabilidade, pois o agrupamento
+é feito para que as amostras dentro de cada bloco possuam
+características similares.
+```
+1. Como se espera que sejam as UEs dentro de um bloco?
+```
+Espera-se que as UEs sejam homogêneas, ou seja, que a variabilidade
+entre as amostras de um mesmo bloco seja pequena. A variabilidade das
+amostras dentro de um bloco deve ser menor do que a variabilidade entre
+as amostras se não houvessem os blocos.
+```
+1. Por que aleatorizamos os níveis do fator às UE?
+```
+Para evitar que ocorram erros sistemáticos nas amostras. Sabemos que
+mesmo entre UEs aparentemente idênticas, existe uma particularidade
+natural de cada UE (e.g. plantas, máquinas, ...). A aleatorização entre
+as UEs garante que os níveis do fator de interesse serão aplicados
+independentemente destas características, fazendo com que qualquer
+variação observada entre as UEs seja efeito apenas do nível do fator e
+da variação aleatória intrínsica ao mecanismo gerador da resposta.
+```
+1. Em experimentos agricolas é comum não se colher a bordadura das
+parcelas. Em experimentos médicos, médicos e pacientes não sabem que
+níveis do fator foram administrados. Nas pesquisas de opinião, evita-se
+que uma pessoa conheça a avaliação das demais. Por que são adotados tais
+procedimentos?
+```
+Para garantir a independência entre as amostras.
+```
+1. (**Descreva**) Como é a aleatorização dos níveis em um experimento
+inteiramente casualizado?
+```
+Os níveis dos fatores são atribuídos aleatoriamente para cada UE. Uma
+forma simples de fazer este sorteio aleatório é definir um valor para
+cada UE.
+```
+(**Use o R**) Como você faria se tivesse um fator com 3 níveis (A, B,
+C), e quisesse fazer 4 repetições para cada nível do fator?
+```{r}
+## Dessa forma, temos 3 x 4 = 12 UEs. Associamos os valores de 1 a 12
+## para cada UE, e sorteamos os níveis dos fatores para cada uma
+nf <- 3
+r <- 4
+n <- nf * r
+fator <- rep(c("A", "B", "C"), each = r)
+set.seed(123)
+(DIC <- data.frame(UE = 1:n, Fator = sample(fator)))
+## Croqui do experimento
+matrix(DIC$Fator, ncol = nf, dimnames = list(1:r, 1:nf))
+```
+1. (**Descreva**) Como é a aleatorização dos níveis em um experimento de
+blocos ao acaso?
+```
+Quando temos blocos, a aleatorização é realizada dentro de cada
+bloco. Portanto precisamos inicialmente definir os blocos e verificar
+quantas UEs pertencem a cada bloco.  Idealmente, cada nível do fator
+deve estar presente em todos os blocos.
+```
+(**Use o R**) Suponha que temos um experimento com 4 blocos, e um fator
+com 6 níveis para ser avaliado. Como seria a aleatorização?
+```{r}
+## Nesse caso, temos 6 x 4 = 24 UEs. Associamos os valores de 1 a 24
+## para cada UE, e alocamos cada 6 UEs em cada um dos 4 blocos. Os
+## níveis dos fatores devem ser sorteados dentro de cada bloco
+nf <- 6
+b <- 4
+n <- nf * b
+fator <- rep(LETTERS[1:6], each = b)
+blocos <- rep(c("I", "II", "III", "IV"), each = nf)
+set.seed(123)
+(DBC <- data.frame(UE = 1:n, Blocos = blocos, Fator = sample(fator)))
+## Está certo o que foi feito até aqui?
+set.seed(123)
+(DBC <- data.frame(UE = 1:n, Blocos = blocos,
+                   Fator = as.vector(
+                       replicate(b, sample(unique(fator)))
+                   )))
+## Croqui do experimento
+matrix(DBC$Fator, ncol = b, dimnames = list(1:nf, paste("Bloco", 1:b)))
+```
+1. O que é um experimento fatorial $2^k$?
+```
+Experimentos fatorias são aqueles em que um mais fatores são estudados
+simultaneamente. A vantagem é que podemos analisar se existe efeito da
+interação entre estes fatores, não apenas efeitos individuais. Um
+fatorial 2^k significa que temos um experimento com k > 1 fatores cada
+um com apenas 2 níveis.
+```
+1. (**Descreva**) Estendendo a ideia: como é a aleatorização de um
+experimento inteiramente ao acaso (DIC) no esquema fatorial $2^k$?
+```
+É similar à aleatorização para um DIC com um fator, ou seja sorteamos
+aleatoriamente as UEs que receberão determinado nível do fator. A grande
+diferença é que como temos mais de um fator, devemos casualizar os
+níveis combinados dos fatores.
+```
+(**Use o R**) Suponha que temos um experimento em DIC com 2 níveis do
+fator A ($a$), 2 níveis do fator B ($b$), e sem repetições ($r$), ou
+seja, um fatorial $2^2$. Como seria a aleatorização?
+```{r}
+## Nesse caso temos 2 níveis A x 2 níveis B  = 4 possibilidades de
+## combinação. Criamos os níveis dos fatores e fazemos todas as
+## combinações possíveis. Depois aleatorizamos as combinações para cada
+## UE.
+a <- 2
+b <- 2
+r <- 1 # sem repetição
+n <- a * b * r
+fatores <- expand.grid(A = c("A1", "A2"),
+                       B = c("B1", "B2"))
+fatores$AB <- paste(fatores$A, fatores$B, sep = ":")
+fatores
+set.seed(123)
+(DICf <- data.frame(UE = 1:n, Fatores = sample(fatores$AB)))
+table(DICf$Fatores)
+## Croqui para este experimento
+matrix(DICf$Fatores, ncol = a*b,
+       dimnames = list(1:r, 1:(a*b)))
+```
+E se houvessem 4 repetições ($r$) de cada nível do fator?
+```{r}
+a <- 2
+b <- 2
+r <- 4
+n <- a * b * r
+fatores <- expand.grid(A = rep(c("A1", "A2"), each = a),
+                       B = rep(c("B1", "B2"), each = b))
+fatores$AB <- paste(fatores$A, fatores$B, sep = ":")
+fatores
+set.seed(123)
+(DICf <- data.frame(UE = 1:n, Fatores = sample(fatores$AB)))
+table(DICf$Fatores)
+## Croqui para este experimento
+matrix(DICf$Fatores, ncol = a*b,
+       dimnames = list(1:r, 1:(a*b)))
+```
+1. Einsten deseja avaliar a qualidade do café processado de duas
+maneiras diferentes (A e B). No sábado ele recebeu a visita de 4 amigos
+e serviu o café A para eles registrando as avaliações feitas. No
+domingo, sua esposa recebeu a visita de 5 amigas e serviu o café B para
+elas registrando as avaliações. Existem problemas com o experimento de
+Einsten? Identifique-os. Aconselhe-o de como realizar o experimento para
+investigar sua hipótese.
+```
+O problema neste exprimento é que os efeitos estão confundidos. O tipo
+de café está confundido com o dia, com o sexo das pessoas, e com a
+pessoa que preparou o café. Uma análise dos dados deste experimento não
+será muito informativa pois não conseguiremos separar os efeitos de
+todos os fatores.
+Uma análise para avaliar a qualidade do café poderia ser feita da
+seguinte forma: Apenas Einstein prepara o café (fixa, ou controla, o
+preparador). Ele prepara os cafés A e B para um grupo de homens e
+mulheres em um dia. No outro dia ele prepara novamente os tipos A e B
+para outro grupo de homens e mulheres. Nesse caso, os dias são os
+blocos, pois o interessse da análise é na qualidade de cada tipo de café
+avaliada por homens e mulheres.
+```
+1. O que são variáveis *dummy*?
+```
+São variáveis que servem para codificar a presença (1) ou ausência (0)
+do nível de algum fator em uma determinada UE.
+```
+1. Qual a diferença na matriz do modelo entre um modelo de regressão
+(fatores de níveis métricos) e modelo de experimento (fatores de níveis
+categóricos)?
+```
+A matriz do modelo de um modelo de regressão contém os próprios valores
+mensurados da variável resposta, enquanto que a matriz do modelo de um
+experimento com um fator contém variáveis dummy para indicar a
+presença/ausência dos níveis do fator.
+```
+```{r, out.width='60%'}
+## Um exemplo com cars
+set.seed(123)
+(carros <- cars[sample(1:nrow(cars), size = 15), ])
+plot(dist ~ speed, data = carros)
+model.matrix(dist ~ speed, data = carros)
+## Um fator com 3 níveis e 4 repetições
+fator <- factor(rep(c("A", "B", "C"), each = 4))
+X <- matrix(0, nrow = 12, ncol = 3)
+X[cbind(seq_along(fator), fator)] <- 1
+(X <- cbind(1, X))
+```
+1. Por que precisamos adotar uma restrição paramétrica nos modelos com
+fator de nível categórico?
+```
+Porque a matriz do modelo com variáveis dummy de todos os níveis do
+fator possui posto incompleto, ou seja, não é inversível. Como sabemos
+que precisamos da inversa de (X'X), então é necessário impor uma
+restrição para que essa matriz possa ser invertida, e assim podemos
+estimar os parâmetros do modelo.
+```
+```{r, error=TRUE}
+## Fator com 3 níveis e 4 repetições
+fator <- factor(rep(c("A", "B", "C"), each = 4))
+## Cria a matriz do modelo sem nenhuma restrição
+X <- matrix(0, nrow = 12, ncol = 3)
+X[cbind(seq_along(fator), fator)] <- 1
+(X <- cbind(1, X))
+## X'
+Xt <- t(X)
+## X'X
+(Xt %*% X)
+## (X'X)^-1
+solve(Xt %*% X)
+## Impondo uma restrição: remove a coluna do primeiro nível -
+## equivalente a zerar o primeiro nível do fator
+(X <- X[, -2])
+## X'
+Xt <- t(X)
+## X'X
+Xt %*% X
+## (X'X)^-1
+solve(Xt %*% X)
+MASS::fractions(solve(Xt %*% X))
+```
+1. Por que fazemos análise dos resíduos?
+```
+Para verificar as suposições feitas para o modelo.
+```

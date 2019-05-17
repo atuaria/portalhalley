@@ -1,0 +1,168 @@
+---
+title: "Exercícios: experimentos fatoriais"
+author: "CE074 - Controle de Processos Industriais"
+date: "2017/2"
+fontsize: 11pt
+header-includes:
+    - \usepackage{mathpazo}
+    - \usepackage[scaled]{beramono}
+output:
+  pdf_document:
+    highlight: default
+---
+
+```{r setup, include=FALSE}
+library(knitr, quietly = TRUE)
+opts_chunk$set(size = "small",
+               comment = "#",
+               tidy = FALSE,
+               fig.align = "center"
+               )
+```
+
+1. O que são experimentos fatoriais? Quais as vantagens de se utilizar
+   estes experimentos?
+1. Como se analisa um experimento fatorial (descreva os passos).
+1. Quais são as formas de restrição ou reparametrizações adotadas (no
+   geral) em modelos de análise de variância? Por que isso é necessário?
+1. Por que é mais comum utilizar a restrição do tipo soma zero na
+   análise de experimentos fatoriais?
+1. O que é o pricípio da marginalidade e porque ele é importante?
+1. Considere o seguinte modelo para um experimento com apenas um
+   fator
+$$
+y_{ij} = \mu + \tau_i + \epsilon_{ij}, \qquad i = 1,2, \quad j = 1,2
+$$
+onde $y_{ij}$ denota uma observação com o $i$-ésimo tratamento e a
+   $j$-ésima repetição, $\mu$ é a média geral, $\tau_i$ é o efeito do
+   $i$-ésimo tratamento, e $\epsilon_{ij}$ e o erro aleatório.
+    a. Escreva esse modelo na forma matricial
+    b. Usando a restrição de zerar o primeiro nível, mostre que a
+   solução de mínimos quadrados $\boldsymbol{\hat{\beta}} =
+   \mathbf{(X'X)^{-1} X'y}$ é
+$$
+\boldsymbol{\hat{\beta}} =
+\begin{bmatrix}
+\bar{y}_{1j} \\
+\bar{y}_{2j} - \bar{y}_{1j} \\
+\end{bmatrix}
+$$
+Qual a interpretação desse resultado?
+    c. Usando a restrição soma zero, mostre que a solução de mínimos
+   quadrados é
+$$
+\boldsymbol{\hat{\beta}} =
+\begin{bmatrix}
+\bar{y} \\
+\bar{y}_{1j} - \bar{y}_{2j} \\
+\end{bmatrix}
+$$
+Qual a interpretação desse resultado?
+1. Considere o seguinte modelo para um experimento com dois fatores e
+   sem repetição
+$$
+y_{ij} = \mu + \alpha_i + \beta_j + \gamma_{ij} + \epsilon_{ij}, \qquad
+   i = 1,2, \quad j = 1,2
+$$
+onde $y_{ij}$ denota uma observação com o $i$-ésimo nível do fator A e o
+   $j$-ésimo nível do fator B, $\mu$ é a média geral, $\alpha_i$ é o
+   efeito do $i$-ésimo nível do fator A, $\beta_j$ é o efeito do
+   $j$-ésimo nível do fator B, $\gamma_{ij}$ é o efeito da interação do
+   $i$-ésimo nível do fator A com o $j$-ésimo nível do fator B, e
+   $\epsilon_{ij}$ e o erro aleatório.
+    a. Escreva esse modelo na forma matricial
+    b. Usando a restrição de zerar o primeiro nível, mostre que a
+   solução de mínimos quadrados $\boldsymbol{\hat{\beta}} =
+   \mathbf{(X'X)^{-1} X'y}$ é
+$$
+\boldsymbol{\hat{\beta}} =
+\begin{bmatrix}
+y_{11} \\
+y_{21} - y_{11} \\
+y_{12} - y_{11} \\
+y_{11} - y_{12} - y_{21} + y_{22}
+\end{bmatrix}
+$$
+Qual a interpretação desse resultado?
+    c. Usando a restrição soma zero, mostre que a solução de mínimos
+   quadrados é
+$$
+\boldsymbol{\hat{\beta}} =
+\frac{1}{2}
+\begin{bmatrix}
+\bar{y} \\
+\bar{y}_{1j} - \bar{y}_{2j} \\
+\bar{y}_{i1} - \bar{y}_{i2} \\
+\bar{y}_{ii} - \bar{y}_{ij}
+\end{bmatrix}
+$$
+Qual a interpretação desse resultado?
+    d. Usando o esquema de sinais, faça a representação geométrica do
+   experimento. Considere o vetor de respostas como
+$$
+\mathbf{y} =
+\begin{bmatrix}
+1 \\
+a \\
+b \\
+ab
+\end{bmatrix}
+$$
+Mostre que a solução de mínimos quadrados nesse caso pode ser escrita
+   como
+$$
+\boldsymbol{\hat{\beta}} =
+\frac{1}{2}
+\begin{bmatrix}
+\bar{y} \\
+\bar{y}_{A+} - \bar{y}_{A-} \\
+\bar{y}_{B+} - \bar{y}_{B-} \\
+\bar{y}_{AB+} - \bar{y}_{AB-}
+\end{bmatrix}
+$$
+    e. Qual a diferença, em termos de interpretação, entre os resultados
+   das letras (c) e (d)? Por que isso acontece?
+1. Considere o seguinte modelo para um experimento com dois fatores e
+   com duas repetições ($k = 1, 2$)
+$$
+y_{ijk} = \mu + \alpha_i + \beta_j + \gamma_{ij} + \epsilon_{ijk}, \qquad
+   i = 1,2, \quad j = 1,2, \quad k = 1,2
+$$
+onde $y_{ijk}$ denota uma observação com o $i$-ésimo nível do fator A, o
+   $j$-ésimo nível do fator B e a $k$-ésima repetição, $\mu$ é a média
+   geral, $\alpha_i$ é o efeito do $i$-ésimo nível do fator A, $\beta_j$
+   é o efeito do $j$-ésimo nível do fator B, $\gamma_{ij}$ é o efeito da
+   interação do $i$-ésimo nível do fator A com o $j$-ésimo nível do
+   fator B, e $\epsilon_{ijk}$ e o erro aleatório.
+    a. Escreva esse modelo na forma matricial
+    b. Usando a restrição de zerar o primeiro nível, mostre que a
+   solução de mínimos quadrados $\boldsymbol{\hat{\beta}} =
+   \mathbf{(X'X)^{-1} X'y}$ é
+$$
+\boldsymbol{\hat{\beta}} =
+\frac{1}{2}
+\begin{bmatrix}
+\bar{y}_{11k} \\
+\bar{y}_{21k} - \bar{y}_{11k} \\
+\bar{y}_{12k} - \bar{y}_{11k} \\
+\bar{y}_{11k} - \bar{y}_{12k} - \bar{y}_{21k} + \bar{y}_{22k}
+\end{bmatrix}
+$$
+Qual a interpretação desse resultado?
+    c. Usando a restrição soma zero, mostre que a solução de mínimos
+   quadrados é
+$$
+\boldsymbol{\hat{\beta}} =
+\frac{1}{2}
+\begin{bmatrix}
+\bar{y} \\
+\bar{y}_{1jk} - \bar{y}_{2jk} \\
+\bar{y}_{i1k} - \bar{y}_{i2k} \\
+\bar{y}_{iik} - \bar{y}_{ijk}
+\end{bmatrix}
+$$
+Qual a interpretação desse resultado?
+1. Quando utilizmos a retrição soma zero, porque as estimativas dos
+   parâmetros (o vetor $\boldsymbol{\hat{\beta}}$) são sempre dividias por
+   2?
+1. O que são os contrastes e os efeitos em experimentos fatoriais?

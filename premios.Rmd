@@ -1,0 +1,118 @@
+---
+title: "Prêmios"
+---
+
+### Prêmios   
+
+
+\ \ \ \ \ \ A definição geral de Prêmio é a presentada pela SUSEP como o valor correspondente para cada um dos pagamentos que o detentor de uma apólice realiza para cobrir determinado risco. No entanto, pode-se realizar ainda algumas ramificações neste conceito, tal como o Prêmio Puro, o qual trata apenas do risco inerente à seguradora, o Prêmio Nivelado, que nada mais é do que o valor do Prêmio parcelado e o Prêmio Carregado que considera as despesas da seguradora.  
+
+
+#### Prêmio Puro  
+
+\ \ \ \ \ \ O **Prêmio Puro** consiste na parcela do prêmio suficiente para se pagar as despesas relacionadas aos riscos assumidos pela seguradora, de maneira que é calculado como o valor esperado das possı́veis indemnizações a serem assumidas pela seguradora sendo, portanto, igual ao prêmio cobrado para cobrir o risco X.  
+
+
+\ \ \ \ \ \ Desta forma,como caracterı́stica este prêmio, não protege a seguradora contra indemnizações elevadas e não leva em consideração o intento de obtenção de lucro.  
+
+\ \ \ \ \ \ O termo *puro* relaciona-se ao fato de que ao valor considerado não foram adicionados quaisquer cargas técnicas, sendo de gestão ou comercial. Pode ser dividido em duas categorias: o Prêmio Puro Único, o qual consiste na totalidade do sendo paga em uma única parcela pelo segurado, e o Prêmio Puro Nivelado.  
+
+#### Prêmio Puro Nivelado   
+
+\ \ \ \ \ \ Não é muito usual considerar que o segurado realize o pagamento do Prêmio em uma única parcela, portanto a grande maioria dos contratos de seguro permite seu pagamento possa ocorrer de forma periódica, sendo os pagamentos normalmente considerando-se a a função de sobrevivência do indivı́duo segurado (REF. Mat atu vid e pens)  
+
+\ \ \ \ \ \ Podemos considerar um Prêmio Puro de periodicidade anual, em que o segurado paga um prêmio constante (nivelado) P no inı́cio de cada ano enquanto o mesmo sobreviva. O primeiro pagamento realizado será uma fração do prêmio, pois este será capitalizado pela seguradora enquanto o último será correspondente ao próprio prêmio. Assim, se descartamos a aleatoriedade presente no tempo de vida adicional do segurado, o compromisso do mesmo $(Y)$ em valor presente será igual a:  
+
+$$ Y = P v^k + P v^{k−1} + · · · + P v^2 + P v + P $$
+$$= P (v^k+ v^{k−1}  + · · · + v^2+ v + 1) $$
+
+\ \ \ \ \ \  Ao inserirmos a aleatoriedade do tempo de vida adicional do segurado e realizando um paralelo com o cálculo para uma anuidade de vitalı́cia temporária:  
+
+$$ ä_{\overline{x}|} = 1 + v + · · · + v^{k−1} = \frac{1 − v^k}{1 − v} $$ 
+\ \ \ \ \ \ Assim: 
+
+$$ Y = P \bigg(\frac{1 − v^{k+1}}{ 1 − v}\bigg) $$  
+$$= P ä_{\overline{k+1}|}$$  
+\ \ \ \ \ \ De maneira análoga, podemos analisar o compromisso da seguradora $(Z)$. Consideremos, por exemplo um seguro de vida inteiro o qual paga um benefı́cio b ao final do ano de morte do segurado, o compromisso em valor presente do segurador será:   
+
+$$ Z_n = bv^{n+1} = b\bigg(\frac{1}{1+ i}\bigg)^{n+1} $$ 
+\ \ \ \ \ \  Em que n número de anos inteiros de vida adicional do segurado.  
+
+\ \ \ \ \ \  Através do Princı́pio de Equivalência, em que o valor total do  compromissos do segurado no tempo t deve ser igual ao valor total dos compromissos da seguradora no tempo t. Deste modo é possı́vel escolher um valor de prêmio $P$ de modo que:  
+
+$$ \text{Compromissodo Segurado} = \text{Compromissodo Segurador} $$  
+
+$$ Y=Z $$
+\ \ \ \ \ \  Considerando que $L$ representa a variável aleatória associada a perda da seguradora, o princípio da equivalência estabeleca que $L=Z-Y$, de modo que:  
+
+$$ E(L) = 0$$ 
+$$ E(Z − Y ) = 0 $$ 
+$$ E(Z) − E(Y ) = 0 $$ 
+$$ E(bv^{n+1}) = E\big(Pä_{\overline{k+1}|}\big) $$   
+\ \ \ \ \ \ Assim obtemos o Prêmio Nivelado para pagamentos vitalícios, se no entando, nacessitarmos de pagamentos limitados a um período $k$, teremos:  
+
+$$ P_{\overline{x:k}|} = \frac{A_x}{ä_{\overline{x:k}|}} $$   
+### Prêmios Carregados  
+
+\ \ \ \ \ \  O Prêmio Puro Único e o Prêmio Nivelado, fora calculado o o prêmio de risco, ou seja, o prêmio a ser cobrado do segurado de modo que a seguradora consiga pagar todas as indenizações associadas aos sinistros ocorridos. No entanto, tais prêmios não são capazes de pagar as despesas administrativas e comerciais da seguradora.   
+
+\ \ \ \ \ As despesas associadas à seguradora podem ser divididas quanto sua incidência:  
+
+- Ocorridas no momento de aquisição, como: comissão de carretagem e despesas com examinadores; 
+
+- Ocorridas durante o perı́odo do contrato, como: despesas operacionais, impostos. Os Prêmios Carregados podem ser divididos em três tipos: 
+
+  1. Prêmio de Inventário;
+  2. Prêmio ”Zilmerado”;
+  3. Prêmio Comercial ou de tarifa.  
+  
+#### Prêmio de Inventário  
+
+\ \ \ \ \ \ Este tipo de Prêmio é mensurado com o intuito de atender às despesas que incidem ao longo do contrato de seguros, como as de administração, além do prêmio de risco.   
+
+\ \ \ \ \ \ Portanto, temos como objetivo encontrar um prêmio do segurado que, em média, seja suficiente para cobrir os riscos e as despesas da seguradora. Assim, queremos encontrar $P^{\gamma}$ (Prêmio de Inventário) tal que $E(L) = 0$.  
+
+\ \ \ \ \ \ De maneira análoga ao apresentado no cálculo do Prêmio Nivelado, podemos obter que:  
+
+$$ P^γ ä_{\overline{x}|} = A_x + γ ä_x $$ 
+$$ P^γ = \frac{Ax + γ ä_x}{ä_x} $$  
+\ \ \ \ \ Ou ainda, como visto também na literatura:  
+
+$$ P^γ = \frac{\Pi'}{ä_x}$$  
+#### Prêmio Zilmerado  
+
+\ \ \ \ \ \ O Prêmio Zilmerado quantifica as despesas de aquisição, e o segurado deseja pagá-la em um perı́odo menor do que o a vigência do contrato. O gasto relativo ao seguro e àdespesa da seguradora no momento de aquisição do contrato pode ser dado como:   
+
+$$ E(Z) = A_x + α $$ 
+\ \ \ \ \ \ Em que α é o gasto inicial da seguradora. O compromisso do segurado pode ser dado como:  
+
+$$ E(Y) = P^α ä_{x:\overline{s}|} + P_{s|} ä_x $$   
+\ \ \ \ \ \  Onde $s$ representa um tempo inferior ao perı́odo de cobertura. De maneira análoga ao realizado anteriormente, podemos encontrar:  
+
+$$ P^α = \frac{A_x}{ä_{x:\overline{s}|}} + \frac{\alpha}{ä_{x:\overline{s}|}}+ \frac{P(ä_x - ä_{x:\overline{s}|})}{ä_{x:\overline{s}|}}  $$ 
+$$ P^α = \frac{\alpha}{ä_{x:\overline{s}|}} + P $$  
+\ \ \ \ \ \ Onde $P$ representa um Prêmio periódico constante, puro de uma dada modalidade.   
+
+#### Prêmio Comercial  
+
+\ \ \ \ \  O Prêmio Comercial $(P^c)$ é o Prêmio que contempla as duas despesas apontadas anteriormente, ou seja, todas as cargas comerciais.  
+
+$$ P^c = P + γ + \frac{α}{ä_{x:\overline{x}|}}$$  
+\ \ \ \ \  Onde $P$ representa um Prêmio periódico constante, puro de uma dada modalidade.
+
+### Referências 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

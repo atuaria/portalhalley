@@ -1,0 +1,267 @@
+---
+title: "Quem somos"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+#source("setup_knitr.R")
+```
+
+***
+ 
+
+Membros do projeto Portal Halley de Educação Atuarial, da [Universidade Federal de Alfenas](https://www.unifal-mg.edu.br).
+
+***
+
+<!-- Se o endereço web ou email for o próprio texto, pode-se utilizá-lo direto entre setas. -->
+
+######Contato: Envie um e-mail para <lca.portal.halley@gmail.com>
+
+***
+
+<center>
+
+<!-- Imagem em HTML -->
+
+<!-- As imagens estão hospedadas no Google Photos, porém os links estão hospedados no bit.ly para deixar o código mais limpo. Se necessário trocar as imagens, basta substituir o link que está entre aspas após "src=" -->
+
+
+<!-- ALICE ================================================================================= -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2yi43Qo"/>
+
+<b>Alice Silva Duarte</b> - Discente
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+Membra do Laboratório de Risco Atuarial e Inovação
+
+<a href="mailto:alice_sduarte@hotmail.com">E-mail</a>, [Lattes](http://lattes.cnpq.br/4313284650448866)
+
+<br></br>
+<br></br>
+
+<!-- ANA CAROLINA OLIVEIRA ============================================================================= -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2yjoPPy"/>
+
+<b>Ana Carolina Oliveira</b> - Discente [inativa]
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+Membra do Laboratório de Risco Atuarial e Inovação
+
+<a href="mailto:ana_coliveira@outlook.com">E-mail</a>
+
+<br></br>
+<br></br>
+
+
+ <!-- ANA CAROLINA ORRICO ======================================================================== --> 
+
+<img align="center" width="300px" height="300px" src="http://bit.ly/2DmRWko"/>
+
+<justify><p>
+<b>Ana Carolina Orrico e Silva</b> - Discente [inativa]
+
+Equipe técnica de programação.
+
+Membra da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial e Inovação
+</p>
+</justify>
+
+<!-- Email em HTML. Links em Markdown -->
+<!-- Para incluir um texto com link para email, utilize html. -->
+
+<a href="mailto:carollorrico@gmail.com">E-mail</a>,  [GitHub](https://github.com/CarolOrrico), [LinkedIn](https://www.linkedin.com/in/ana-carolina-orrico-e-silva-66359212b/)
+
+<br></br>
+<br></br>
+
+
+<!-- DANILO ================================================================================ -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2FE5PwV"/>
+
+<b>Danilo Machado Pires</b> - Docente - Orientação
+
+<a href="mailto:dmachadopires@gmail.com">E-mail</a>,  [GitHub](https://github.com/danilomachadopires),  [Lattes](http://lattes.cnpq.br/3803750382508105)
+
+<br></br>
+<br></br>
+
+
+<!-- LEONARDO ============================================================================== -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2Dlq9kD"/>
+
+<b>Leonardo Henrique Costa</b> - Docente - Orientação
+
+<a href="mailto:leo.atuaria@gmail.com">E-mail</a>,  [Lattes](http://lattes.cnpq.br/6033072370650666)
+
+<br></br>
+<br></br>
+
+
+<!-- MÁRCIA ================================================================================= -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2tCSTpu"/>
+
+<b>Márcia Sales Ribeiro</b> - Discente [inativa]
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+Membra da Liga de Ciências Atuariais
+
+<a href="mailto:marcia-p4@hotmail.com">E-mail</a>,  [Lattes](http://lattes.cnpq.br/1589632931643422)
+
+<br></br>
+<br></br>
+
+
+<!-- MATHEUS ================================================================================ -->
+
+<img align="center" width="300px" height="300px" src="http://bit.ly/2Gl5dNx"/>
+
+<b>Matheus Saraiva Alcino</b>- Discente
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+Membro do Laboratório de Risco Atuarial e Inovação
+
+<a href="mailto:osaraivamatheus@gmail.com">E-mail</a>
+
+<br></br>
+<br></br>
+
+
+<!-- PABLO ================================================================================= -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2ykqapk"/>
+
+<b>Pablo Henrique Vieira Rabelo</b> - Discente
+
+<b>Gerente do Projeto Portal Halley.</b>
+
+Equipes técnicas de desenvolvimento de conteúdo didático e de programação.
+
+Membro da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial e Inovação
+
+<a href="mailto:pablorabelo@live.com">E-mail</a>,  [GitHub](https://github.com/pablorabelo), [Lattes](http://lattes.cnpq.br/0226923090121959), [LinkedIn](https://www.linkedin.com/in/pablohrabelo/)
+
+<br></br>
+<br></br>
+
+
+<!-- PEDRO ================================================================================== -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2FxCQP0"/>
+
+<b>Pedro Henrique Rezende Oliveira</b> - Discente [inativo]
+
+Equipe técnica de programação.
+
+Egresso do Curso de Ciências Atuariais
+
+<a href="mailto:pedrohenriquero@hotmail.com">E-mail</a>, [LinkedIn](https://www.linkedin.com/in/pedro-henrique-rezende-oliveira-659914133/)
+
+<br></br>
+<br></br>
+
+
+<!-- POLIANA ================================================================================= -->
+
+<img align="center" width="300px" height="300px" src="http://bit.ly/2pbFtw3"/>
+
+<b>Poliana Maria Benelli</b> - Discente
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+Membra do Laboratório de Risco Atuarial e Inovação
+
+<a href="mailto:poli_benelli@hotmail.com">E-mail</a>, [LinkedIn](https://www.linkedin.com/in/poliana-benelli-41615a139/)
+
+<br></br>
+<br></br>
+
+
+<!-- RAPHAELA ================================================================================= -->
+
+<img align="center" width="300px" height="300px" src="http://bit.ly/2FwkLRp"/>
+
+<b>Raphaela Ribeiro Siviero de Mattos</b> - Discente [inativa]
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+<a href="mailto:raphaelarsmattos@gmail.com">E-mail</a>, [LinkedIn](https://www.linkedin.com/in/raphaela-ribeiro-siviero-de-mattos-169781140/)
+
+<br></br>
+<br></br>
+
+
+<!-- SABRINA =============================================================================== -->
+
+<img align="center" width="300px" height="300px" src="http://bit.ly/2tDPO8q"/>
+
+<b>Sabrina Ribeiro Marciano</b> - Discente [inativa]
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+Egressa do Curso de Bacharelado Interdisciplinar em Ciência e Economia
+
+Ex-Membra de Liga de Ciências Atuariais
+
+<a href="mailto:ribeiro.sabrina96@gmail.com">E-mail</a>, [LinkedIn](https://www.linkedin.com/in/sabrina-ribeiro-27ab02122/)
+
+<br></br>
+<br></br>
+
+
+<!-- WALEF ================================================================================== -->
+
+<img align="center" width="300px" height="300px" src="http://bit.ly/2DmTUSa"/>
+
+<b>Walef Machado de Mendonça</b> - Discente
+
+Equipe técnica de programação.
+
+<a href="mailto:walefm2@hotmail.com">E-mail</a>, [GitHub](https://github.com/walefmachado)
+
+<br></br>
+<br></br>
+
+<!-- WILLIAM ================================================================================= -->
+
+<img align="center"  width="300px" height="300px" src="http://bit.ly/2yHG2lb"/>
+
+<b>William Oliveira Santos</b> - Discente [inativo]
+
+Equipe técnica de desenvolvimento de conteúdo didático.
+
+Membro da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial e Inovação
+
+<a href="mailto:william.osantos96@gmail.com">E-mail</a>, [Lattes](http://lattes.cnpq.br/0582142355235573), [LinkedIn](https://www.linkedin.com/in/william-santos-477668137/)
+
+<br></br>
+<br></br>
+
+<!-- YAGHO ================================================================================= -->
+
+<img align="center" width="300px" height="300px" src="http://bit.ly/2DozdVF"/>
+
+<b>Yagho Lemes Carvalho</b> - Discente
+
+Equipe técnica de programação.
+
+Membro do Laboratório de Risco Atuarial e Inovação
+
+<a href="mailto:yagholc@hotmail.com">E-mail</a>, [GitHub](https://github.com/yagholc)
+
+<br></br>
+<br></br>
+
+
+***

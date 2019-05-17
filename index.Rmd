@@ -1,0 +1,57 @@
+---
+title: "Portal Halley de Educação Atuarial"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+source("setup_knitr.R")
+```
+
+<p></p>
+<p></p>
+
+[![Build Status](https://travis-ci.org/atuaria/portalhalley.svg?branch=master)](https://travis-ci.org/atuaria/portalhalley)
+
+<br></br>
+
+## O Portal Halley
+
+<p></p>
+<p></p>
+
+\ \ \ \ \ \ Este portal é fruto de um trabalho conjunto de alunos e professores do curso de ciências atuarias da universidade federal de Alfenas (campus Varginha/MG ), o projeto foi desenvolvido em parceria com a Liga de Ciências Atuariais e o Laboratório de Risco Atuarial e Inovação.
+
+\ \ \ \ \ \  O objetivo central desse projeto é a produção de um material de apoio a estudantes, professores e profissionais em geral interessados na análise de risco do ramo vida.  Adicionalmente o portal servirá como material didático a disciplina de matemática atuarial ministrado aos alunos do curso Bacharelado Interdisciplinar em Ciência e Economia como disciplina diretiva ao curso de Ciências Atuariais. 
+
+\ \ \ \ \ \    Com o intuito de fornecer uma base educacional, os principais objetivos deste trabalho são integrar teoria dos produtos atuariais, demonstrando sua grande variedade, com uma abordagem mais prática e interativa.
+
+<br></br>
+
+## Atuária – o que é isso?
+
+<p></p>
+<p></p>
+
+\ \ \ \ \ \      Essa ciência surgiu há cerca de 150 anos na Inglaterra, estudando basicamente a mortalidade da população. A partir de então, ela voltava-se para o cálculo da expectativa de vida, com interesse nas questões de aposentadoria e pensão.
+
+\ \ \ \ \ \      No século XX, a área de seguros expandiu a abrangência do estudo atuarial, e a inserção cada vez mais frequente das empresas de seguro e pensão no mercado financeiro, fez com que a ciência atuarial se especializasse cada vez mais em campos econômicos e financeiros. A partir de então as empresas seguradoras passaram a oferecer programas de seguro de vida e outras especializações, o que gerou cada vez maior necessidade do desenvolvimento das ciências atuariais.
+
+\ \ \ \ \ \ Em resumo a ciência atuarial ou atuária é a ciência das técnicas específicas de análise de riscos e expectativas financeiros e econômicos, principalmente na administração de seguros, fundos de pensão e operadoras de saúde, logo o atuário  é o profissional que realiza os cálculos matemáticos e opera no mercado econômico e financeiro, realizando pesquisas e estabelecendo políticas de investimentos e amortizações e, em seguro privado e social, calculando probabilidade de eventos, analisando riscos e estabelecendo prêmios, indenizações, benefícios e reservas. O atuário pode ainda fiscalizar e orientar as atividades técnicas de empresas de seguro, capitalização e investimento.
+
+<br></br>
+
+## Apoio:
+```{r, echo=FALSE, fig.align='center', dpi = 60}
+knitr::include_graphics("img/logos.png")
+```
+
+
+<p>
+
+</p>
+
+<!-- Adicionar contador de visitas -->
+
+***
