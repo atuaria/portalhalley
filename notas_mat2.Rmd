@@ -19,7 +19,7 @@ Notas de aula elaboradas pelos professores Iury Ângelo Gonçalves e Silvio Anto
 
 #### Matemática 2
 
-- <a href="https://atuaria.github.io/portalhalley/Matemática 2/PDF/Notas_Aula.pdf"target="_blank">**Matemática 2 - 2019**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica2/PDF/Notas_Aula.pdf"target="_blank">**Matemática 2 - 2019**</a>
 
 
 <br></br>
