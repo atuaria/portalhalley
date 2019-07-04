@@ -23,9 +23,12 @@ navbar:
       menu:
       - text: "Introdução às Ciências Atuariais"
         href: notas_ICA.html
+      - text: "Matemática 2"
+        href: notas_mat2.html
       - text: "Matemática Atuarial I"
         href: notas_de_aula.html
       - text: "Teoria do Risco"
+        href: notas_TR.html
     - text: "Materiais"
       menu:
       - text: "Introdução e revisão"

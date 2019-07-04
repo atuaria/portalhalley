@@ -1,5 +1,5 @@
 ---
-title: "Notas de aula"
+title: "Matemática Atuarial 1"
 output:
   html_document:
     toc: false
@@ -11,55 +11,55 @@ source("setup_knitr.R")
 
 <br></br>
 
-Notas de aula do curso de Matemática Atuarial I da Universidade Federal de Alfenas, elaboradas pelos professores Danilo Machado Pires e Leonardo Henrique Costa.
+Notas de aula do curso de Matemática Atuarial 1 da Universidade Federal de Alfenas, elaboradas pelos professores Danilo Machado Pires e Leonardo Henrique Costa.
 
 <br></br>
 
 #### Revisão
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/RevisaoProbabilidade.pdf"target="_blank">**Revisão de Probabilidade**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/RevisaoProbabilidade.pdf"target="_blank">**Revisão de Probabilidade**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/RevisaoJurosSimpleseComposto.pdf"target="_blank">**Revisão de Juros Simples e Composto**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/RevisaoJurosSimpleseComposto.pdf"target="_blank">**Revisão de Juros Simples e Composto**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/RevisaoInflacaoeDepositosemSerie.pdf"target="_blank">**Revisão de Inflação e Depósitos em Série**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/RevisaoInflacaoeDepositosemSerie.pdf"target="_blank">**Revisão de Inflação e Depósitos em Série**</a>
 
 #### Seguros
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/SegurosDeVida.pdf"target="_blank">**Seguros de Vida**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/SegurosDeVida.pdf"target="_blank">**Seguros de Vida**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/SegurosDotais.pdf"target="_blank">**Seguros Dotais**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/SegurosDotais.pdf"target="_blank">**Seguros Dotais**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/SegurosDiferidos.pdf"target="_blank">**Seguros Diferidos**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/SegurosDiferidos.pdf"target="_blank">**Seguros Diferidos**</a>
 
 #### Anuidades
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/AnuidadesVitalicias.pdf"target="_blank">**Anuidades Vitalicias**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/AnuidadesVitalicias.pdf"target="_blank">**Anuidades Vitalicias**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/AnuidadesTemporarias.pdf"target="_blank">**Anuidades Temporárias**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/AnuidadesTemporarias.pdf"target="_blank">**Anuidades Temporárias**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/AnuidadesDiferidas.pdf"target="_blank">**Anuidades Diferidas**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/AnuidadesDiferidas.pdf"target="_blank">**Anuidades Diferidas**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/AnuidadesFracionadas.pdf"target="_blank">**Anuidades Fracionadas**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/AnuidadesFracionadas.pdf"target="_blank">**Anuidades Fracionadas e Relações**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/AnuidadesContinuas.pdf"target="_blank">**Anuidades Contínuas**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/AnuidadesContinuas.pdf"target="_blank">**Anuidades Contínuas**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/AnuidadesContinuasDiferidas.pdf"target="_blank">**Anuidades Contínuas Diferidas**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/AnuidadesContinuasDiferidas.pdf"target="_blank">**Anuidades Contínuas Diferidas**</a>
 
 #### Comutação
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/Comutacao.pdf"target="_blank">**Comutação**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/Comutacao.pdf"target="_blank">**Comutação**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/FuncoesComutacao.pdf"target="_blank">**Funções de Comutação**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/FuncoesComutacao.pdf"target="_blank">**Funções de Comutação**</a>
 
 #### Prêmios e Benefícios
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/PremiosPeriodicos.pdf"target="_blank">**Prêmios Periódicos**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/PremiosPeriodicos.pdf"target="_blank">**Prêmios Periódicos**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/PremioseBeneficios.pdf"target="_blank">**Prêmios e Benefícios**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/PremioseBeneficios.pdf"target="_blank">**Prêmios e Benefícios**</a>
 
 #### Reservas
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/Reservas.pdf"target="_blank">**Reservas**</a>
+- <a href="https://atuaria.github.io/portalhalley/Matematica Atuarial 1/PDF/Reservas.pdf"target="_blank">**Reservas**</a>
 
 <br></br>
 <br></br>

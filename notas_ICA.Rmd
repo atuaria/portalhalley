@@ -17,19 +17,19 @@ Notas de aula do curso de Introdução às Ciências Atuariais da Universidade F
 
 #### Introdução
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_INTRODUCAO.pdf"target="_blank">**Introdução**</a>
+- <a href="https://atuaria.github.io/portalhalley/introdução a Atuaria/PDF/ICA_aula_INTRODUCAO.pdf"target="_blank">**Introdução**</a>
 
 #### Riscos
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_RISCO.pdf"target="_blank">**Riscos**</a>
+- <a href="https://atuaria.github.io/portalhalley/introdução a Atuaria/PDF/ICA_aula_RISCO.pdf"target="_blank">**Riscos**</a>
 
 #### Seguros
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_SEGUROS.pdf"target="_blank">**Seguros**</a>
+- <a href="https://atuaria.github.io/portalhalley/introdução a Atuaria/PDF/ICA_aula_SEGUROS.pdf"target="_blank">**Seguros**</a>
 
 #### Introdução à Demografia
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/ICA_aula_Demografia.pdf"target="_blank">**Introdução à Demografia**</a>
+- <a href="https://atuaria.github.io/portalhalley/introdução a Atuaria/PDF/ICA_aula_Demografia.pdf"target="_blank">**Introdução à Demografia**</a>
 
 <br></br>
 <br></br>

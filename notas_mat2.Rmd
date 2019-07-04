@@ -1,0 +1,28 @@
+---
+title: "Matemática 2"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+source("setup_knitr.R")
+```
+
+<br></br>
+
+Estas notas de aula são resultados das aulas de Matemática II, as quais são ministradas na Universidade Federal de Alfenas - UNIFAL, campus de Varginha. O objetivo dessas notas é auxiliar o aluno na aprendizagem dos conceitos matemáticos durante o curso. Para elaboração dessa notas, foram utilizados os livros intitulados “Curso de Análise” (LIMA, 1989) e “Cálculo” (APOSTOL, 1981).
+
+Notas de aula elaboradas pelos professores Iury Ângelo Gonçalves e Silvio Antonio Bueno Salgado
+
+<br></br>
+
+#### Matemática 2
+
+- <a href="https://atuaria.github.io/portalhalley/Matemática 2/PDF/Notas_Aula.pdf"target="_blank">**Matemática 2 - 2019**</a>
+
+
+<br></br>
+<br></br>
+
+
