@@ -63,6 +63,6 @@ navbar:
       href: referencias.html
   right:
     - icon: fa fa-calculator fa-lg
-      href: https://projetohalley.shinyapps.io/interface-atuarial/
+      href:  https://phalley.shinyapps.io/interface-atuarial/
     - icon: fa-github fa-lg
       href: https://github.com/atuaria/portalhalley/
