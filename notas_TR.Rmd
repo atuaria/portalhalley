@@ -43,29 +43,31 @@ Notas de aula do curso de Teoria do Risco da Universidade Federal de Alfenas, el
 
 #### Modelo de risco coletivo
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 11 - Funcao Geradora de momentos de S.pdf"target="_blank">**Função Geradora de momentos de S**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 11 - Modelo de risco.pdf"target="_blank">**Modelo de risco**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 12 - A distribuicao de S.pdf"target="_blank">**A distribuição de S**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 12 - Funcao Geradora de momentos de S.pdf"target="_blank">**Função Geradora de momentos de S**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 13 - A distribuicao para N.pdf"target="_blank">**A distribuição para N**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 13 - A distribuicao de S.pdf"target="_blank">**A distribuição de S**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 14 - A distribuicao para N.pdf"target="_blank">**A distribuição para N**</a>
 
 #### Cálculo de prêmios
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 14 - Calculo de premios.pdf"target="_blank">**Cálculo de prêmios**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 15 - Calculo de premios.pdf"target="_blank">**Cálculo de prêmios**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 15 - Propriedades desejaveis.pdf"target="_blank">**Propriedades desejáveis**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Propriedades desejaveis.pdf"target="_blank">**Propriedades desejáveis**</a>
 
 #### Processo de Poisson para frequência de sinistros
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - O processo de Poisson.pdf"target="_blank">**O processo de Poisson**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 17 - O processo de Poisson.pdf"target="_blank">**O processo de Poisson**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 17 - Processo para Sinistros agregados.pdf"target="_blank">**Processo para Sinistros agregados**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 18 - Processo para Sinistros agregados.pdf"target="_blank">**Processo para Sinistros agregados**</a>
 
 #### Probabilidade de Ruína
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 18 - Probabilidade de Ruina.pdf"target="_blank">**Probabilidade de Ruína**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 19 - Probabilidade de Ruina.pdf"target="_blank">**Probabilidade de Ruína**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 19 - Probabilidade de Ruina no horizonte infinito no caso Poisson Composto.pdf"target="_blank">**Probabilidade de Ruína no horizonte infinito no caso Poisson Composto**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 20 - Probabilidade de Ruina no horizonte infinito no caso Poisson Composto.pdf"target="_blank">**Probabilidade de Ruína no horizonte infinito no caso Poisson Composto**</a>
 
 <br></br>
 <br></br>
