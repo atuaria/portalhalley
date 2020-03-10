@@ -9,6 +9,16 @@ output:
 source("setup_knitr.R")
 ```
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160184561-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160184561-1');
+</script>
+
 <p></p>
 <p></p>
 
@@ -52,5 +62,9 @@ knitr::include_graphics("img/logos.png")
 </p>
 
 <!-- Adicionar contador de visitas -->
+
+<div id="sfctap8eezqlcd1jjml7qjm3cauhzbqxcp5"></div>
+<script type="text/javascript" src="https://counter10.stat.ovh/private/counter.js?c=tap8eezqlcd1jjml7qjm3cauhzbqxcp5&down=async" async></script>
+
 
 ***
