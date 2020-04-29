@@ -31,6 +31,10 @@ Notas de aula do curso de Introdução às Ciências Atuariais da Universidade F
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/IntroducaoAtuaria/ICA_aula_Demografia.pdf"target="_blank">**Introdução à Demografia**</a>
 
+#### Comutação
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/IntroducaoAtuaria/ICA_aula_Comutacao.pdf"target="_blank">**Comutação**</a>
+
 <br></br>
 <br></br>
 
