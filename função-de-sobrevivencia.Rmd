@@ -4,39 +4,41 @@ title: "Função de Sobrevivência"
 
 ### Função de Sobrevivência  
 
-\ \ \ \ \ \ Esta é uma das principais funções probabilísticas usadas para descrever estudos de sobrevivência. A função de sobrevivência é definida como a probabilidade de uma observação não falhar até um certo tempo t, ou seja, a probabilidade de uma observação sobreviver ao tempo t. Em termos probabilísticos, isto é escrito como:  
+\ \ \ \ \ \ Nos estudos de sobrevivência, um dos principais interesses está na sobrevida, ou no tempo de vida adicional de um dado indivíduo.
+Seja $T$ a variável aleatória positiva, que indica o tempo de vida adicional  de uma pessoa qualquer . Então a função de sobrevivência corresponde a probabilidade de que essa pessoa ultrapasse um tempo pré determinado $t$. Ou seja:
 
-$$ S(t) = P(T ≥ t) $$   
-\ \ \ \ \ \ Em consequência, a função de distribuição acumulada é definida como a probabilidade de uma observação não sobreviver ao tempo t, isto é, $F(t) = 1 − S(t)$.   
-\ \ \ \ \ \ Ou seja, em um estudo médico onde o evento de interesse é a morte, a função de sobrevivência fornece a probabilidade de um indivíduo sobreviver além de um tempo $t$. A função de sobrevivência é uma função não crescente no tempo com as propriedades de que a probabilidade de sobreviver pelo menos ao tempo zero é $1$ e a probabilidade de sobreviver no tempo infinito é $0$. Para descrever a função de sobrevivência é geralmente utilizada uma representação gráfica de $S(t)$, ou seja, o gráfico de $S(t)$ versus $t$ que é chamado de curva de sobrevivência. Uma curva íngreme representa razão de sobrevivência baixo ou curto tempo de sobrevivência e uma curva de sobrevivência gradual ou plana representam taxa de sobrevivência alta ou sobrevivência longa.   
+
+$$ S(t) = P(T > t) $$   
+\ \ \ \ \ \ Em contrapartida o complementar a função sobrevivência é a função acumulada, que nesse contexto indica a probabilidade que a morte ocorra antes de $t$ , ou seja,  $F(t) = 1 − S(t)$.   
+\ \ \ \ \ \ Como exemplo em um estudo médico onde o evento de interesse é a morte, a função de sobrevivência fornece a probabilidade de um indivíduo  de idade $x$ sobreviver a $x+t$. 
+
+
+A função de sobrevivência é uma função não crescente tal que $S(0)=1$ e $\lim_{t\rightarrow \infty} S(t)=0$. A notação utilizada para função de sobrevivência é variada, aparecendo na litaratura como $S(t)$ , $\bar{F}(t)$ ou $_xp_t$. 
 
 #### Função Sobrevivência  
 
-\ \ \ \ \ \ Considere um indivíduo recém-nascido. A idade de morte desse indivíduo, $X$, é uma variável aleatória do tipo contínua. Seja $F(x)$ a função de distribuição de $X$  
+\ \ \ \ \ \ Considere um indivíduo recém-nascido, $x=0$. A sobrevida, $T_x$, é uma variável aleatória do tipo contínua, Então  $F_{T}(t)$ representa a função de distribuição de $T$ tal que   
 
-$$ F(x) = P (X ≤ x ) \text{,   }x ≥0 $$ 
+$$ F_{T}(t) = P (T ≤ t ) \text{,   }t ≥0 $$ 
 e seja 
 
-$$s(x) = 1 − F(x) = P(X > x )  \text{,   } x ≥ 0 $$  
-\ \ \ \ \ \  Vamos assumir sempre que $F(0) = 0$, que implica em $s(0) = 1$. A função $s(x)$ é chamada de função de sobrevivência. Para qualquer positivo $x$, $s(x)$ é a probabilidade de um nascido atingir a idade $x$. A distribuição de $X$ pode ser definida tanto pela função $F(x)$ como pela função $s(x)$.  
+$$S(t) = 1 − F(t) = P(T > t )  \text{,   } t ≥ 0 $$  
 
-\ \ \ \ \ \ Usando as leis de probabilidade, podemos definir as probabilidades sobre a idade de morte em termos da função de sobrevivência ou em termos da função de distribuição. Por exemplo, a probabilidade de um recém-nascido morrer entre as idades $x$ e $z (x < z)$ é:  
+\ \ \ \ \ \ Já a idade desse mesmo indivíduo após ter atingido $x$ anos pode ser calculada por $S_{T_x}(t)=P(T>x+t|T>x)$, assim
 
-$$  P(x < X ≤ ≤ z) = F(z) − F(x) $$   
 
-\ \ \ \ \ \ ou 
+$$  S_{T_x}(t)=P(T>x+t|T>x)=\frac{S(t+x)}{S(x)}  $$   
 
-$$ P(x < X ≤ z) = s(x) − s(z) $$  
 
-\ \ \ \ \ \  Abaixo apresentaremos um exemplo de função de sobrevivência moldando uma coorte hipotética de 100.000 indivíduos através das probabilidades de sobrevivência e morte da população brasileira para 4 anos distindos (1998, 2004,2008 e 2012).  
+\ \ \ \ \ \  Abaixo  um exemplo de função de sobrevivência moldando uma coorte hipotética de 100.000 indivíduos através das probabilidades de sobrevivência e morte da população brasileira para 4 anos distindos (1998, 2004,2008 e 2012).  
 
 ![Fonte: Elaboração própria](img/t2.png)
 
-\ \ \ \ \ \ Observe que a função se inicia num determinado momento no tempo, com 100% da população ainda viva e com saúde e nos permite calcular qual a percentagem dessa população ainda viva e com saúde noutros momentos ao longo do  tempo. 
+\ \ \ \ \ \ Observe que a função se inicia num determinado momento no tempo, com 100% da população ainda viva e com saúde e nos permite calcular qual a porcentagem dessa população ainda viva e com saúde noutros momentos ao longo do  tempo. 
 
-\ \ \ \ \ \ A função de sobrevivência pode ser feita através da tábua de vida, tomaremos como exemplo 5 anos de uma coorte hipotética de 100000 habitantes cuja probabilidade de morte é dada por $\text{ }_n q_x$ . A função $S(t)$ calcula a probabilidadede um individuo de idade $x$ sobreviver até a idade $x+1$.   
+\ \ \ \ \ \ A função de sobrevivência pode ser feita através da tábua de vida, tomaremos como exemplo 5 anos de uma coorte hipotética de 100000 habitantes cuja probabilidade de morte é dada por $\text{ }_n q_x=F_{T_x}(n) $ . A função  $S_{T_x}(t)$ calcula a probabilidadede um individuo de idade $x$ sobreviver até a idade $x+1$.   
 
-| $X$ | $\text{ }_n q_x$ | $l_x$     | $S(t)$     |
+| $X$ | $\text{ }_1q_x$ | $l_x$     | $S_{T_x}(1)$     |
 |:---:|:----------------:|:---------:|:----------:|
 |0    | 0,01260          | 100000    | 1          |
 |1    | 0,00093          | 98740     | 0,9874     |

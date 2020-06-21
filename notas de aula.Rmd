@@ -33,9 +33,7 @@ Notas de aula do curso de Matemática Atuarial 1 da Universidade Federal de Alfe
 
 #### Anuidades
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesVitalicias.pdf"target="_blank">**Anuidades Vitalicias**</a>
-
-- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesTemporarias.pdf"target="_blank">**Anuidades Temporárias**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Anuidades.pdf"target="_blank">**Anuidades**</a>
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesDiferidas.pdf"target="_blank">**Anuidades Diferidas**</a>
 
@@ -43,13 +41,11 @@ Notas de aula do curso de Matemática Atuarial 1 da Universidade Federal de Alfe
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesContinuas.pdf"target="_blank">**Anuidades Contínuas**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesContinuasDiferidas.pdf"target="_blank">**Anuidades Contínuas Diferidas**</a>
-
 #### Comutação
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Comutacao.pdf"target="_blank">**Comutação**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/FuncoesComutacao.pdf"target="_blank">**Funções de Comutação**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Comutacao_Seguros_anuidades.pdf"target="_blank">**Comutação: Seguros e anuidades**</a>
 
 #### Prêmios e Benefícios
 

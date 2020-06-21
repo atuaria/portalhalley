@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -25,8 +25,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
 <script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -84,7 +85,9 @@ h6 {
 </style>
 
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -98,6 +101,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -107,9 +111,6 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
-}
-summary {
-  display: list-item;
 }
 </style>
 
@@ -125,6 +126,7 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
+
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -144,43 +146,6 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -202,66 +167,47 @@ $(document).ready(function () {
 });
 </script>
 
+
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
 
 <!-- code folding -->
 
 
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <style type="text/css">
 
@@ -275,12 +221,6 @@ $(document).ready(function () {
 }
 }
 
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
 
 .toc-content {
   padding-left: 30px;
@@ -316,6 +256,8 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -330,16 +272,6 @@ div.tocify {
 }
 
 </style>
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -481,7 +413,7 @@ div.tocify {
 </div>
 
 
-<div id="introdução" class="section level3">
+<div id="introducao" class="section level3">
 <h3>Introdução</h3>
 <p>      Com a evolução do mercado de trabalho, acentuada principalmente pela época da Revolução Industrial, houve um aumento progressivo da demanda por trabalho, e, com isso as preocupações em torno do trabalhador ganharam maior destaque. Os direitos em torno do âmbito trabalhista se fortaleceram mediante às mudanças do cenário econômico-político vivenciadas, e, no mesmo sentido, a ideia de proteção social como direito obrigatório aos cidadãos também se fortaleceu.</p>
 <p>      Neste sentido, a seguridade social baseia-se no objetivo de garantir amparo, atualmente, tanto em torno da saúde, da assistência social, e como foco do presente trabalho, da previdência social. Esta relaciona-se com a ideia de um “seguro social”, cuja prioridade é a garantia de resguardo da capacidade econômica dos contribuintes a ela envolvidos, durante situações em que os mesmos se encontram incapacitados de exercer função laboral, como a aposentadoria, invalidez, gravidez, entre outros.</p>
@@ -489,13 +421,13 @@ div.tocify {
 <p>      O trabalho foi estruturado de forma a apresentar, uma breve conceituação acerca do objeto de estudo, a previdência Social, e, posteriormente disserta sobre o histórico da mesma à situação contemporânea, e por fim, a conclusão.</p>
 <p>      Com o desenvolvimento do presente trabalho, foi possível observar que a evolução do sistema previdenciário, sobretudo, aconteceu em torno da priorização dos interesses coletivos, como a proteção social, em detrimento de vertentes concentradas e envoltas de interesses locais, conquistando assim maior abrangência, mesmo com as dificuldades enfrentadas ao longo do tempo, e ainda com maior destaque, atualmente.</p>
 </div>
-<div id="previdência-social" class="section level3">
+<div id="previdencia-social" class="section level3">
 <h3>Previdência social</h3>
 <p>      A Previdência, seguro social em que o trabalhador participa por contribuições mensais, de modo a se beneficiar de uma renda durante sua aposentadoria ou invalidez, ou seja, a previdência é o sistema público que garante as aposentadorias dos trabalhadores brasileiros. Teve seu desenvolvimento de forma gradativa, onde inicialmente somente alguns setores da sociedade eram contemplados, até que através da maturidade do sistema com a universalização do direito previdenciário a todo cidadão foi alcançada. É importante ressaltar que a Previdência atualmente oferece benefícios como aposentadorias em diversas modalidades, além de auxílio- doença, salário — maternidade e pensão por morte e invalidez, entre outros auxílios.</p>
 <p>      É descrita por uma série de modalidades, entre elas: O Regime Geral da Previdência Social (RGPS), caracterizado por ser a previdência que gere a grande massa de trabalhadores brasileiros, subsidiário em relação aos regimes próprios, pois, todos que não estão vinculados a outros regimes e exerça uma atividade econômica estão automaticamente vinculados a este. Terceiro subsistema da seguridade social, faz parte do regime geral, é de caráter contributivo de filiação obrigatória, exceto o segurado facultativo, deve buscar o equilíbrio financeiro e atuarial. É regulamentado pela lei 8.212/1991, no que diz respeito ao seu custeio e a lei 8.213/1991 que aborda seu plano de benefícios; O Regime Próprio de Previdência dos Servidores (RPPS), semelhante ao RGPS, uma vez que também é organizado com base no sistema de repartição simples (regime financeiro o qual propõe um pacto entre gerações já que os segurados ativos, representando a geração atual, pagam os benefícios dos segurados inativos, geração passada, e confiam o pagamento de seus próprios benefícios à geração futura, de modo que o pacto intergeracional seja preservado.), trata da previdência dos servidores públicos titulares de cargos efetivos dos entes federados, incluindo as respectivas autarquias e fundações. Possui caráter contributivo e solidário e também busca a preservação do equilíbrio financeiro e atuarial. As regras e parâmetros mínimos encontram-se na Constituição Federal de 88, na lei 9.717/1998; E, o Regime de Previdência Complementar (RPC), de caráter privado e organizado de forma autônoma em relação ao RGPS, é facultativo e baseia-se na constituição de reservas que garantem o benefício contratado. Invés dos regimes próprios e do regime geral, funda-se no sistema de capitalização em que as contribuições do segurado garantem o seu próprio benefício. Regulamentado pelas Leis Complementarem 108 e 109, ambas de 2001.</p>
 <p>      Os Regimes financeiros, métodos adotados para prover recursos fundamentais para o cumprimento das obrigações assumidas pelo plano previdenciário, eles estabelecem apenas as formas pelas quais os recursos necessários para o pagamento dos benefícios serão obtidos. Dos diversos métodos para viabilizar o financiamento de benefícios previdenciários, são formados três regimes financeiros diferentes, são eles: o Regime de repartição simples, descrito anteriormente, no qual uma geração prove para a outra, aparado em variáveis demográficas (natalidade e longevidade) e nas taxas de emprego formal; Regime de capitalização, no qual cada geração constitui as reservas para suportar os seus próprios benefícios. A lógica do regime capitalizado consiste na acumulação, durante a fase laborativa, dos recursos necessários para pagamento das aposentadorias. No qual dois momentos distintos são constituídos: o período contributivo, no qual os recursos são acumulados, e o período de gozo do benefício, cujo objetivo é assegurar o pagamento dos compromissos assumidos. A capitalização recai sobre as alterações instáveis das taxas de juros e na longevidade; Regime de repartição de capitais de cobertura é uma conjugação do Regime de Repartição Simples com o Regime de Capitalização. A reserva garantidora é constituída no momento da concessão do benefício, através da divisão pura e simples entre os segurados contribuintes.</p>
 </div>
-<div id="histórico-da-previdência-social" class="section level3">
+<div id="historico-da-previdencia-social" class="section level3">
 <h3>Histórico da previdência social</h3>
 <p>      Sabe-se que o sistema previdenciário, sob uma perspectiva geral, organizou-se de forma gradativa em vários países, ainda que os tempos de início se diferenciem entre os mesmos. Inicialmente, o sistema previdenciário foi pensado com o objetivo de abranger o mercado de trabalho que possuíam maiores importâncias aos governos ou ainda elites locais, ou seja, os benefícios abrangiam uma população concentrada, via de regra. Como o caso da França, em 1673, que criou um sistema estatal exclusivo para os membros da Marinha Real, difundido para os demais funcionários, com o passar de muito anos. Contudo expansão da demanda de trabalho, ocasionada juntamente com os avanços advindos dos processos de industrialização e modernização do mercado de trabalho, e sobretudo, quanto à conquista de direitos trabalhistas, que atentaram para o trabalhador em si, ao invés do próprio trabalho.</p>
 <p>      Segundo Afonso (1996) já durante a época colonial existiram iniciativas com base na ideia de previdência, como por exemplo a Casa de Misericórdia de Santos, em 1543, uma organização com visão assistencial, contudo o autor aborda ainda, que há autores defensores deque a primeira iniciativa desse caráter ocorreu por volta do ano de 1835, com a instituição Montepio Geral de Economia dos Servidores do Estado (Mongeral).</p>
@@ -506,7 +438,7 @@ div.tocify {
 <p>      A Constituição do ano de 1967, época da ditadura, foram definidas outras mudanças no setor trabalhista e de seguridade social, como a instituição do salário mínimo, salário família, entre outros. Até a década de 1980, houve um grande aumento do ingresso ao mercado de trabalho, e, a previdência social obteve um grande número de recursos para o pagamento dos benefícios disponibilizados, visto que havia mais trabalhadores ativos, em comparação aos inativos.</p>
 <p>      Com a nova Constituição de 1988, através dos artigos 194 a 204, instituiu o sistema de seguridade social utilizado até os dias atuais, este com o objetivo principal de garantir o amparo e proteção social aos cidadãos, dividindo-se em três vieses: a Assistência Social, a Previdência Social, e a Saúde. A previdência social, atualmente, é responsável por garantir o amparo aos cidadãos contribuintes e seus dependentes durante a incapacidade dos mesmos, seja esta de qualquer natureza, de exercer suas funções laborais. A correção monetária aplicada aos benefícios, foi sugerida no ano de 1991, no governo do presidente Fernando Collor de Mello. Posteriormente, a instituição do tempo de contribuição e do fator previdenciário foi implementada pelo Presidente Fernando Henrique, no ano de 1998. Durante o governo do presidente Luís Inácio Lula da Silva, o regime direcionado aos servidores públicos sofreram algumas adaptações, referentes aos benefícios, como um teto e a mudança de seus valores, e ainda, no que concerne às contribuições, com a inclusão de pensionistas e inativos. No governo da presidente Dilma Rousseff, foi instituído o fator 85/95, e, atualmente, durante o governo do presidente Michel Temer aguarda-se a votação para a instituição da nova reforma previdenciária.</p>
 </div>
-<div id="situação-contemporânea" class="section level3">
+<div id="situacao-contemporanea" class="section level3">
 <h3>Situação contemporânea</h3>
 <p>      O Bônus Demográfico, que no Brasil tem como duração o período entre 1970 a 2030, abriu uma janela de oportunidade para o país se desenvolver em termos econômicos e socioeconômicos, que não fora aproveitada, pois, a nação ainda sobre de problemas básicos de inclusão social e de reprimarização da economia, o que é grave, pois, o país está passando por um período de recessão, agravado pela desindustrialização do país o que causou uma regressãoprodutiva, que acabou por prejudicar a Previdência, que passou a arrecadar menos com o aumento dos desempregados e o aumento dos idosos, por isso alguns pesquisadores de Economia, como o autor José Eustáquio Diniz Alves, que expôs sua opinião no artigo: “O fim do bônus demográfico e o processo de envelhecimento no Brasil.”; acreditam que o Brasil está diante de uma década perdida, sem perspectivas de crescimento, o que acabará por encurtar, juntamente com outros fatores, o período do Bônus, que terminará, segundo as previsões destes pesquisadores, entre 2015 e 2020.</p>
 <p>      Com a aproximação do fim do Bônus e o início de uma crise econômica a população brasileira chega a uma incógnita: “O que fazer para mudar o sistema Previdenciário brasileiro?”; que apresenta falhas, por ser um sistema antiquado, principalmente em relação à população feminina no mercado de trabalho. Se visto o Índice de envelhecimento, que é medido pelo número de pessoas de 60 anos ou mais anos 13 de idade, para cada 100 pessoas menores de 15 anos de idade, na população residente em determinado espaço demográfico, no ano considerado; do Brasil é possível observar a predominância do aumento, conforme o passar dos anos, da população feminina perante a masculina, conforme é apresentado no fenômeno da Feminização da Pirâmide Etária, que é observada através da Razão de Sexo.</p>
@@ -521,11 +453,11 @@ div.tocify {
 <p>      Mesmo após a mudança nas regras da Previdência alguns trabalhadores iriam se aposentar por regras muito semelhantes às atuais. Para quem já estaria próximo de conseguir o benefício, haveria um pequeno acréscimo no tempo que a pessoa tem de contribuir, para ter direito à aposentadoria, o que se costuma chamar de pedágio. Funcionaria desta forma: os trabalhadores teriam um acréscimo de 30% no tempo de contribuição que faltaria para conseguir a aposentadoria. Para os homens, seria um aumento no tempo que faltaria para completar 35 anos de contribuição; para as mulheres, no tempo que faltaria para completar 30 anos.</p>
 <p>      Em suma, se faltassem dois anos para um trabalhador poder se aposentar, ele teria de que trabalhar para poder se aposentar, ele teria de trabalhar mais dos 31 meses para ter direito à aposentadoria, apenas um pouco a mais do tempo original (24 meses).</p>
 </div>
-<div id="conclusão" class="section level3">
+<div id="conclusao" class="section level3">
 <h3>Conclusão</h3>
 <p>      Como apontado no desenvolvimento histórico e teórico da Previdência no Brasil, sua evolução se deu de forma gradativa e diferenciada dos demais países, que tiveram suas regras previdenciárias e seus corpos estipulados mais cedo, devido à questões desenvolvimentistas, além de que inicialmente existia um monopólio de interesses por parte do governo e de elites oligárquicas, que não consideravam as necessidades da população, senário diferente se comparado com o atual, uma vez de que há a priorização da proteção social contemporânea, em detrimento dos interesses de pequenos grupos de elite. Também é possível observar que esta apresenta indícios de já estar em direção ao colapso, pois, suas contas não fecham mais. Como tratado na problematização demográfica do fim do bônus demográfico, onde sua principal preocupação, em um breve futuro, será: “A relação entre população ocupada e PIA chegou ao pico entre 2008 e 2012 (fim do bônus) e agora vai se reduzir gradualmente. Ou seja, o ritmo de crescimento da população ocupada será menor que o ritmo de crescimento da população. Haverá menor proporção de “produtores” e maior proporção de “consumidores”. (ALVES, 2015, p.16); e questões como a feminização da pirâmide etária e seu órgão da Previdência precisariam ser revistas. Portanto, o governo apresentou uma série de medidas técnicas, como sendo a solução para o fechamento de contas, prejudiciais a população por sua natureza súbita.</p>
 </div>
-<div id="referências" class="section level3">
+<div id="referencias" class="section level3">
 <h3>Referências</h3>
 <ul>
 <li><p>AFONSO, Luís Eduardo. Previdência social e fundos de pensão. Caderno de seguros. Julho, 1996.</p></li>
@@ -579,49 +511,6 @@ $(document).ready(function () {
 });
 
 
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3,h4",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = false;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
