@@ -1,0 +1,63 @@
+---
+title: "Matemática Atuarial 1"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+source("setup_knitr.R")
+```
+
+<br></br>
+
+Notas de aula do curso de Matemática Atuarial 1 da Universidade Federal de Alfenas, elaboradas pelos professores Danilo Machado Pires e Leonardo Henrique Costa.
+
+<br></br>
+
+#### Revisão
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/RevisaoProbabilidade.pdf"target="_blank">**Revisão de Probabilidade**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/RevisaoJurosSimpleseComposto.pdf"target="_blank">**Revisão de Juros Simples e Composto**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/RevisaoInflacaoeDepositosemSerie.pdf"target="_blank">**Revisão de Inflação e Depósitos em Série**</a>
+
+#### Seguros
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/SegurosDeVida.pdf"target="_blank">**Seguros de Vida**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/SegurosDotais.pdf"target="_blank">**Seguros Dotais**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/SegurosDiferidos.pdf"target="_blank">**Seguros Diferidos**</a>
+
+#### Anuidades
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Anuidades.pdf"target="_blank">**Anuidades**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesDiferidas.pdf"target="_blank">**Anuidades Diferidas**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesFracionadas.pdf"target="_blank">**Anuidades Fracionadas e Relações**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesContinuas.pdf"target="_blank">**Anuidades Contínuas**</a>
+
+#### Comutação
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Comutacao.pdf"target="_blank">**Comutação**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Comutacao_Seguros_anuidades.pdf"target="_blank">**Comutação: Seguros e anuidades**</a>
+
+#### Prêmios e Benefícios
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/PremiosPeriodicos.pdf"target="_blank">**Prêmios Periódicos**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/PremioseBeneficiosCarregados.pdf"target="_blank">**Prêmios Carregados**</a>
+
+#### Reservas
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Reservas.pdf"target="_blank">**Reservas**</a>
+
+<br></br>
+<br></br>
+
+

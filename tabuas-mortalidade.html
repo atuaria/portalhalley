@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -25,9 +25,10 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -38,6 +39,15 @@
  ga('send', 'pageview');
 
 </script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -85,9 +95,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -101,7 +109,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -111,6 +118,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -126,7 +136,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -146,6 +155,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -167,47 +213,66 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
-
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3,h4",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = false;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -221,6 +286,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -256,8 +327,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -272,6 +341,16 @@ div.tocify {
 }
 
 </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -413,7 +492,7 @@ div.tocify {
 </div>
 
 
-<div id="as-tabuas-de-mortalidade" class="section level3">
+<div id="as-tábuas-de-mortalidade" class="section level3">
 <h3>As Tábuas de Mortalidade</h3>
 <p>      As tábuas de mortalidade são instrumentos muito utilizados em diversas ciências como a demografia as ciências atuariais por exemplo. Conforme afirma Preston (2001, p.38), a tábua de mortalidade é uma tabela que mostra informações sobre a mortalidade de uma coorte. Em sua forma clássica, a primeira coluna desta tabela representa a idade (em anos) de uma coorte e todas as outras colunas representam funções relacionadas à mortalidade, como o número de sobreviventes em determinadas idades, taxas de mortalidade por idade, mortes em intervalos de idade etc. A tábua de mortalidade, também conhecida na literatura como tábua de vida, é uma maneira de modelar a mortalidade de uma coorte.</p>
 <div class="panel panel-primary">
@@ -440,14 +519,14 @@ div.tocify {
 <p>      No século XVII Londres enfrentava um processo significativo de crescimento econômico e populacional. Assim, Graunt percebeu que suas estatísticas representavam apenas uma pequena parte de todos os nascimentos e mortes que ocorriam. Ainda assim, ele conseguiu chegar a muitas conclusões sobre seus dados, com a maior precisão possível que seus conhecimentos e ferramental permitiam na época. Este tipo de análise é conhecida atualmente como inferência estatística, que consiste em inferir uma estimativa para uma população com base em uma amostra.</p>
 <p>A imagem a seguir é parte do trabalho de Graunt.</p>
 <div class="figure">
-<img src="img/t1.png" alt="Fonte: Desafio aos Deuses, p.94" />
+<img src="img/t1.png" alt="" />
 <p class="caption">Fonte: Desafio aos Deuses, p.94</p>
 </div>
 <p>      Graunt, mesmo sem saber, foi considerado como um dos cocriadores da ciência estatística devido a importância de seu trabalho. Uma curiosidade sobre a palavra estatística é que sua etimologia nos mostra que seu significado é uma análise de fatos quantitativos sobre o Estado.</p>
 <p>      Outro personagem de extrema importância tanto para a história da administração do risco quanto para outras ciências como a astronomia, foi o cientista Edmund Halley. No final do século XVII, Halley realizou um estudo mais aprofundado do que Graunt havia feito. Umas das especificidades de seu trabalho é que ele decompõe os dados populacionais em uma distribuição etária. De acordo com Halley, essa tabela gerava informações úteis até para o governo, como por exemplo o número de homens aptos a prestar serviço militar. Além disso, a tabela informava sobre qual a probabilidade de uma pessoa de idade <span class="math inline">\(x\)</span> morrer após algum número de anos, em outras palavras, sua tabela já apresentava os cálculos de esperança de vida em cada idade.</p>
 <p>      Dessa forma, a tabela de Halley se tornou de fundamental importância para o mercado de seguros. Com as probabilidades de vida e morte de cada idade era possível então precificar de maneira economicamente justa produtos atuariais, como seguros de vida e anuidades. As tabelas que continham as expectativas de vida desenvolvidas por Halley foram publicadas em 1693, entretanto, apenas um século mais tarde os governos e as seguradoras passaram a considerá-las em seus cálculos. Sua utilização prévia poderia ter evitado problemas econômicos para os governos, relacionados a previdência.</p>
 </div>
-<div id="a-composicao-de-uma-tabua-de-mortalidade" class="section level3">
+<div id="a-composição-de-uma-tábua-de-mortalidade" class="section level3">
 <h3>A composição de uma tábua de mortalidade</h3>
 <p>      As tábuas de mortalidade são tabelas compostas por dez colunas, em que a primeira delas é a coluna das idades. Devido à algumas diferenças comportamentais e, em alguns casos até biológicas, existem tábuas de mortalidade que diferem o sexo feminino e masculino. Ou seja, mulheres e homens atravessam ao longo da vida, diferentes riscos de morte em todas as idades. Isso justifica a diferença de preços em produtos atuariais para ambos os sexos. Mesmo com tais diferenças, existem tábuas de mortalidade que são construídas sem diferenciar o gênero.</p>
 <p>      A segunda coluna de uma tábua de mortalidade é a probabilidade de morte à idade <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span>, representada por <span class="math inline">\(_{n}q_{x}\)</span>. É calculada através da relação entre o número de óbitos observados no intervalo de idade <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span>, representado por (<span class="math inline">\(_{n}D_{x}\)</span>) e o total da população neste intervalo de idade, representado por <span class="math inline">\(_{n}l_{x}\)</span>. Ou seja: <span class="math display">\[_{n}q_{x} = \dfrac{_{n}D_{x}}{_{n}l_{x}}\]</span>       Outra coluna importante é a que diz respeito ao tempo médio vivido no intervalo etário pelos que morreram no intervalo <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span>, representado por <span class="math inline">\(_{n}a_{x}\)</span>. É encontrado através da divisão do total do número de pessoas-ano vividos no intervalo <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span> pelo total pessoas que morreram neste mesmo intervalo, ou seja <span class="math display">\[_{n}a_{x} = \dfrac{_{n}L_{x}}{_{n}D_{x}}\]</span></p>
@@ -512,14 +591,14 @@ div.tocify {
 <p>      Em demografia, as probabilidades de morte entre uma pessoa de idade <span class="math inline">\(x\)</span> e <span class="math inline">\(x+n\)</span> anos (<span class="math inline">\(_{n}q_{x}\)</span>) normalmente são multiplicadas por mil afim de que os valores se tornem mais interpretáveis. Por exemplo, na tabela acima a cada mil pessoas entre 20 e 21 anos, a ocorrência de morte era de 1,38 pessoas no ano de 2016. Entretanto, para cáculos atuariais, estes devem continuar sendo valores probabilísticos e, então, a interpretação seria: a probabilidade de uma pessoa de 21 anos morrer antes de completar 22 anos, segundo esta tabela é de <span class="math inline">\(\dfrac{1,380}{1000}=0,00138\)</span>, o que significa (por obviedade) que a probabilidade dessa mesma pessoa chegar viva aos 22 anos é de <span class="math inline">\(1-0,00138 = 0,99862 = _{1}p_{22}\)</span>.</p>
 <p>      Uma observação a ser feita é que a construção de uma tábua de mortalidade é muito parecida com a construção das tabelas que atuários antigamente utilizavam, devido a impotência computacional, para realizar as técnicas de comutação.</p>
 </div>
-<div id="tabuas-de-mortalidade-no-brasil" class="section level3">
+<div id="tábuas-de-mortalidade-no-brasil" class="section level3">
 <h3>Tábuas de mortalidade no Brasil</h3>
 <p>      As tábuas de mortalidade no Brasil são contruídas e disponibilizadas anualmente pelo Instituto Brasileiro de Geografia e Estatística - IBGE desde o ano de 1999, em cumprimento ao Artigo 2º do Decreto Presidencial nº 3.266, de 29 de novembro de 1999:</p>
 <p><strong>“Art. 2°. Compete ao IBGE publicar, anualmente, até o dia primeiro de dezembro, no Diário Oficial da União, a tábua completa de mortalidade para o total da população brasileira referente ao ano anterior.”</strong></p>
 <p>      De acordo com o IBGE, nas tábuas de mortalidade guardam informações de condições sociais da população, como sanitárias, de saúde e de segurança. Assim, este material também tem sua importância para o desenvolvimento de políticas sociais voltadas a sociedade.</p>
 <p>      Em cada divulgação feita pelo IBGE, também está contida a interpretação dos resultados. Além disso, o instituto também disserta sobre a evolução da mortalidade no Brasil e traz alguns resultados separados por estados brasileiros.</p>
 </div>
-<div id="classificacao-das-tabuas-de-mortalidade" class="section level3">
+<div id="classificação-das-tábuas-de-mortalidade" class="section level3">
 <h3>Classificação das tábuas de mortalidade</h3>
 <p>      Algumas tábuas de mortalidade são construídas sob a organização de alguns aspectos específicos da população estudada, como sexo, tipo de seguro, grupo de risco etc., e além disso por diferentes métodos. Assim, tábuas de mortalidade são classificadas de acordo com algumas dessas especifidades.</p>
 <p>      As <strong>tábuas contemporâneas</strong> são tábuas cuja população é fictícia, normalmente 100.000 indivíduos e é sujeita as condições de mortalidade observadas para cada idade num determinado período de tempo. Se as informações são referentes a um único ano de calendário, define-se tábuas anuais. Se as probabilidades são contruídas com base na média de dois ou mais anos, denomina-se tábuas plurianuais.</p>
@@ -528,10 +607,10 @@ div.tocify {
 <p>      Há também a classificação por idades de seleção. <strong>Tábuas selecionadas</strong> são tábuas em que as probabilidades são realizadas considerando a idade do indivíduo. <strong>Tábuas finais</strong> “correspondem à última coluna de uma tábua selecionada, ou seja, aquela em que se admite que a duração (ou período de seleção) deixa de ter efeito sobre a mortalidade” (Bravo, 2007).</p>
 <p>      Quanto ao tempo, as tábuas também podem ser <strong>estáticas</strong>, ou seja, todas as funções da tábua dizem respeito apenas a idade x. E ainda, podem ser <strong>tábuas dinânimcas</strong>, que as funções são indexadas, em linha, pela idade biológica e, em coluna, pelo ano de calendário (tempo cronológico).</p>
 </div>
-<div id="referencias" class="section level3">
+<div id="referências" class="section level3">
 <h3>Referências</h3>
 <ul>
-<li><p>BERNSTEIN, P. L. <strong>Desafio aos deuses</strong>: a fascinante história do risco. Rio de Janeiro: Campus, c1997. xiv, 389 p.</p></li>
+<li><p>BERNSTEIN, P. L. <strong>Desafio aos deuses</strong>: a fascinante história do risco. Rio de Janeiro: Campus, c1997. xiv, 389 p. </p></li>
 <li><p>BRAVO, J. M. Tábuas de mortalidade contemporâneas e prospectivas: Modelos estocásticos, aplicações actuariais e cobertura do risco de longevidade. <strong>Universidade de Évora</strong>, Évora, 2007.</p></li>
 <li><p>Intituto Brasileiro de Geografia e Estatística - IBGE. Tábua completa de mortalidade para o Brasil – 2016. Breve análise da evolução da mortalidade no Brasil. Disponível em: <a href="ftp://ftp.ibge.gov.br/Tabuas_Completas_de_Mortalidade/Tabuas_Completas_de_Mortalidade_2016/tabua_de_mortalidade_2016_analise.pdf" class="uri">ftp://ftp.ibge.gov.br/Tabuas_Completas_de_Mortalidade/Tabuas_Completas_de_Mortalidade_2016/tabua_de_mortalidade_2016_analise.pdf</a>. Acesso em 7 de Junho de 2018.</p></li>
 <li><p>PRESTON, S. H. <strong>Demography:</strong> measuring and modeling population processes. Malden, MA: Blackwell Publishers, c2001. 291 p.</p></li>
@@ -572,13 +651,56 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
