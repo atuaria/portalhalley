@@ -35,7 +35,7 @@ Notas de aula do curso de Teoria do Risco da Universidade Federal de Alfenas, el
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 7 - Convolucao para S.pdf"target="_blank">**Convolução para S**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 8 - Momentos de S.pdf"target="_blank">**Momentos de S**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 8 - Momentos de S.pdf"target="_blank">**Função geradora de momentos de S**</a>
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 9 - Aproximacao de S pela normal.pdf"target="_blank">**Aproximação de S pela normal**</a>
 
