@@ -17,7 +17,7 @@ Notas de aula do curso de Teoria do Risco da Universidade Federal de Alfenas, el
 
 #### Revisão
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 1 - Variaveis aleatorias.pdf"target="_blank">**Variáveis aleatórias**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 1 -Variaveis aleatorias.pdf"target="_blank">**Variáveis aleatórias**</a>
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 2 - Valor Esperado e propriedades.pdf"target="_blank">**Valor Esperado e propriedades**</a>
 
@@ -58,7 +58,7 @@ Notas de aula do curso de Teoria do Risco da Universidade Federal de Alfenas, el
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Medida de Risco.pdf"target="_blank">**Propriedades desejáveis**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Propriedades desejaveis.pdf"target="_blank">**Medida de Risco**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Medida de Risco.pdf"target="_blank">**Medida de Risco**</a>
 
 
 
