@@ -56,7 +56,7 @@ Notas de aula do curso de Teoria do Risco da Universidade Federal de Alfenas, el
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 14 - Calculo de premios.pdf"target="_blank">**Cálculo de prêmios**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Medida de Risco.pdf"target="_blank">**Propriedades desejáveis**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 15 - Propriedades desejaveis.pdf"target="_blank">**Propriedades desejáveis**</a>
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Medida de Risco.pdf"target="_blank">**Medida de Risco**</a>
 
