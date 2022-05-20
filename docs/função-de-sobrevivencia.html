@@ -13,7 +13,7 @@
 
 <title>Função de Sobrevivência</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -75,6 +75,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -95,6 +96,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -326,7 +330,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -339,7 +343,7 @@ div.tocify {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -360,7 +364,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -391,7 +395,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -403,7 +407,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -453,30 +457,71 @@ div.tocify {
 
 <div id="função-de-sobrevivência" class="section level3">
 <h3>Função de Sobrevivência</h3>
-<p>      Nos estudos de sobrevivência, um dos principais interesses está na sobrevida, ou no tempo de vida adicional de um dado indivíduo. Seja <span class="math inline">\(T\)</span> a variável aleatória positiva, que indica o tempo de vida adicional de uma pessoa qualquer . Então a função de sobrevivência corresponde a probabilidade de que essa pessoa ultrapasse um tempo pré determinado <span class="math inline">\(t\)</span>. Ou seja:</p>
+<p>      Nos estudos de sobrevivência, um dos principais interesses está
+na sobrevida, ou no tempo de vida adicional de um dado indivíduo. Seja
+<span class="math inline">\(T\)</span> a variável aleatória positiva,
+que indica o tempo de vida adicional de uma pessoa qualquer . Então a
+função de sobrevivência corresponde a probabilidade de que essa pessoa
+ultrapasse um tempo pré determinado <span
+class="math inline">\(t\)</span>. Ou seja:</p>
 <p><span class="math display">\[ S(t) = P(T &gt; t) \]</span><br />
-      Em contrapartida o complementar a função sobrevivência é a função acumulada, que nesse contexto indica a probabilidade que a morte ocorra antes de <span class="math inline">\(t\)</span> , ou seja, <span class="math inline">\(F(t) = 1 − S(t)\)</span>.<br />
-      Como exemplo em um estudo médico onde o evento de interesse é a morte, a função de sobrevivência fornece a probabilidade de um indivíduo de idade <span class="math inline">\(x\)</span> sobreviver a <span class="math inline">\(x+t\)</span>.</p>
-<p>A função de sobrevivência é uma função não crescente tal que <span class="math inline">\(S(0)=1\)</span> e <span class="math inline">\(\lim_{t\rightarrow \infty} S(t)=0\)</span>. A notação utilizada para função de sobrevivência é variada, aparecendo na litaratura como <span class="math inline">\(S(t)\)</span> , <span class="math inline">\(\bar{F}(t)\)</span> ou <span class="math inline">\(_xp_t\)</span>.</p>
+      Em contrapartida o complementar a função sobrevivência é a função
+acumulada, que nesse contexto indica a probabilidade que a morte ocorra
+antes de <span class="math inline">\(t\)</span> , ou seja, <span
+class="math inline">\(F(t) = 1 − S(t)\)</span>.<br />
+      Como exemplo em um estudo médico onde o evento de interesse é a
+morte, a função de sobrevivência fornece a probabilidade de um indivíduo
+de idade <span class="math inline">\(x\)</span> sobreviver a <span
+class="math inline">\(x+t\)</span>.</p>
+<p>A função de sobrevivência é uma função não crescente tal que <span
+class="math inline">\(S(0)=1\)</span> e <span
+class="math inline">\(\lim_{t\rightarrow \infty} S(t)=0\)</span>. A
+notação utilizada para função de sobrevivência é variada, aparecendo na
+litaratura como <span class="math inline">\(S(t)\)</span> , <span
+class="math inline">\(\bar{F}(t)\)</span> ou <span
+class="math inline">\(_xp_t\)</span>.</p>
 <div id="função-sobrevivência" class="section level4">
 <h4>Função Sobrevivência</h4>
-<p>      Considere um indivíduo recém-nascido, <span class="math inline">\(x=0\)</span>. A sobrevida, <span class="math inline">\(T_x\)</span>, é uma variável aleatória do tipo contínua, Então <span class="math inline">\(F_{T}(t)\)</span> representa a função de distribuição de <span class="math inline">\(T\)</span> tal que</p>
-<p><span class="math display">\[ F_{T}(t) = P (T ≤ t ) \text{,   }t ≥0 \]</span> e seja</p>
-<p><span class="math display">\[S(t) = 1 − F(t) = P(T &gt; t )  \text{,   } t ≥ 0 \]</span></p>
-<p>      Já a idade desse mesmo indivíduo após ter atingido <span class="math inline">\(x\)</span> anos pode ser calculada por <span class="math inline">\(S_{T_x}(t)=P(T&gt;x+t|T&gt;x)\)</span>, assim</p>
-<p><span class="math display">\[  S_{T_x}(t)=P(T&gt;x+t|T&gt;x)=\frac{S(t+x)}{S(x)}  \]</span></p>
-<p>       Abaixo um exemplo de função de sobrevivência moldando uma coorte hipotética de 100.000 indivíduos através das probabilidades de sobrevivência e morte da população brasileira para 4 anos distindos (1998, 2004,2008 e 2012).</p>
+<p>      Considere um indivíduo recém-nascido, <span
+class="math inline">\(x=0\)</span>. A sobrevida, <span
+class="math inline">\(T_x\)</span>, é uma variável aleatória do tipo
+contínua, Então <span class="math inline">\(F_{T}(t)\)</span> representa
+a função de distribuição de <span class="math inline">\(T\)</span> tal
+que</p>
+<p><span class="math display">\[ F_{T}(t) = P (T ≤ t ) \text{,   }t ≥0
+\]</span> e seja</p>
+<p><span class="math display">\[S(t) = 1 − F(t) = P(T &gt; t
+)  \text{,   } t ≥ 0 \]</span></p>
+<p>      Já a idade desse mesmo indivíduo após ter atingido <span
+class="math inline">\(x\)</span> anos pode ser calculada por <span
+class="math inline">\(S_{T_x}(t)=P(T&gt;x+t|T&gt;x)\)</span>, assim</p>
+<p><span
+class="math display">\[  S_{T_x}(t)=P(T&gt;x+t|T&gt;x)=\frac{S(t+x)}{S(x)}  \]</span></p>
+<p>       Abaixo um exemplo de função de sobrevivência moldando uma
+coorte hipotética de 100.000 indivíduos através das probabilidades de
+sobrevivência e morte da população brasileira para 4 anos distindos
+(1998, 2004,2008 e 2012).</p>
 <div class="figure">
 <img src="img/t2.png" alt="" />
 <p class="caption">Fonte: Elaboração própria</p>
 </div>
-<p>      Observe que a função se inicia num determinado momento no tempo, com 100% da população ainda viva e com saúde e nos permite calcular qual a porcentagem dessa população ainda viva e com saúde noutros momentos ao longo do tempo.</p>
-<p>      A função de sobrevivência pode ser feita através da tábua de vida, tomaremos como exemplo 5 anos de uma coorte hipotética de 100000 habitantes cuja probabilidade de morte é dada por $<em>n q_x=F</em>{T_x}(n) $ . A função <span class="math inline">\(S_{T_x}(t)\)</span> calcula a probabilidadede um individuo de idade <span class="math inline">\(x\)</span> sobreviver até a idade <span class="math inline">\(x+1\)</span>.</p>
+<p>      Observe que a função se inicia num determinado momento no
+tempo, com 100% da população ainda viva e com saúde e nos permite
+calcular qual a porcentagem dessa população ainda viva e com saúde
+noutros momentos ao longo do tempo.</p>
+<p>      A função de sobrevivência pode ser feita através da tábua de
+vida, tomaremos como exemplo 5 anos de uma coorte hipotética de 100000
+habitantes cuja probabilidade de morte é dada por $<em>n
+q_x=F</em>{T_x}(n) $ . A função <span
+class="math inline">\(S_{T_x}(t)\)</span> calcula a probabilidadede um
+individuo de idade <span class="math inline">\(x\)</span> sobreviver até
+a idade <span class="math inline">\(x+1\)</span>.</p>
 <table>
 <thead>
 <tr class="header">
 <th align="center"><span class="math inline">\(X\)</span></th>
-<th align="center"><span class="math inline">\(\text{ }_1q_x\)</span></th>
+<th align="center"><span class="math inline">\(\text{
+}_1q_x\)</span></th>
 <th align="center"><span class="math inline">\(l_x\)</span></th>
 <th align="center"><span class="math inline">\(S_{T_x}(1)\)</span></th>
 </tr>
@@ -526,7 +571,18 @@ div.tocify {
 </tr>
 </tbody>
 </table>
-<p>      Tomemos como exemplo o segundo ano, se esperamos que <span class="math inline">\(0,00065\)</span> da coorte morram antes de completar <span class="math inline">\(3\)</span> anos uma vez que <span class="math inline">\(98648\)</span> indivíduos estão vivos, calculamos: <span class="math inline">\(0,00065.98648 = 641212\)</span> (são os indivíduos da coorte que sobreviveram até <span class="math inline">\(2\)</span> anos mas morrem antes de completar <span class="math inline">\(3\)</span>), <span class="math inline">\(98648 – 641212 = 98584\)</span> (são os que chegaram vivos ao terceiro ano, sendo então <span class="math inline">\(98584/100000\)</span> a probabilidade de um indivíduo que desta corte chegar vivo ao terceiro ano.</p>
+<p>      Tomemos como exemplo o segundo ano, se esperamos que <span
+class="math inline">\(0,00065\)</span> da coorte morram antes de
+completar <span class="math inline">\(3\)</span> anos uma vez que <span
+class="math inline">\(98648\)</span> indivíduos estão vivos, calculamos:
+<span class="math inline">\(0,00065.98648 = 641212\)</span> (são os
+indivíduos da coorte que sobreviveram até <span
+class="math inline">\(2\)</span> anos mas morrem antes de completar
+<span class="math inline">\(3\)</span>), <span
+class="math inline">\(98648 – 641212 = 98584\)</span> (são os que
+chegaram vivos ao terceiro ano, sendo então <span
+class="math inline">\(98584/100000\)</span> a probabilidade de um
+indivíduo que desta corte chegar vivo ao terceiro ano.</p>
 </div>
 </div>
 <div id="referências" class="section level3">

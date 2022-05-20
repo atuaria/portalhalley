@@ -13,7 +13,7 @@
 
 <title>Referências Bibliográficas</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -72,6 +72,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -92,6 +93,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -244,7 +248,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +261,7 @@ $(document).ready(function () {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -278,7 +282,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -309,7 +313,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -321,7 +325,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -372,26 +376,60 @@ $(document).ready(function () {
 <div id="referências-básicas" class="section level2">
 <h2>Referências básicas</h2>
 <ul>
-<li><p>AFONSO, Luís Eduardo. Previdência social e fundos de pensão. <b>Caderno de seguros</b>. Julho, 1996.</p></li>
-<li><p>AGUIAR, João Paulo de Vasconcelos. História da previdência no brasil: As origens do sistema público de aposentadoria brasileiro. Politize! Junho, 2017. Disponível <a href="http://www.politize.com.br/historia-da-previdencia-no-brasil/">aqui</a>; Acesso em: 14/12/17 às 22:50.</p></li>
-<li><p>ALVES, José Eustáquio Diniz. O fim do bônus demográfico e o processo de envelhecimento no Brasil. Revista Portal, v V, n 45, p 6- 17, junho – agosto 2015. BLUME. Bruno André. Reforma da previdência: entenda os principais pontos. Politize! Maio, 2016.</p></li>
-<li><p>CAMARANO, A. KANSO, S. FERNANDES, D. Novo Regime Demográfico uma nova relação entre população e desenvolvimento? Instituto de Pesquisa Econômica Aplicada (IPEA). Rio de Janeiro, p. 81-82, 2014.</p></li>
-<li><p>DE SOUZA, Luiz Eduardo Simões. Elementos de Demografia Econômica. São Paulo: LCTE, 2006. Governo do Brasil. Reforma da previdência: resumo. Dezembro, 2017.</p></li>
-<li><p>FERREIRA, Paulo Pereira. <b>Modelos de Precificação e Ruína para Seguros de Curto Prazo</b>. Rio de Janeiro: FUNENSEG, 2002.</p></li>
-<li><p>LEBRÃO, Maria Lúcia. O envelhecimento no Brasil: Aspectos da Transição demográfica e epidemiológica. Saúde Coletiva, bimestral, anõ/vol 4, n 17, p135-140 – 2007.</p></li>
-<li><p>OLIVEIRA, LAP. Síntese de indicadores sociais – uma análise das condições de vida da população brasileira. In: Estudos e Pesquisas- Informação Demográfica e Socioeconômica. IBGE. Rio de Janeiro, 2008.</p></li>
+<li><p>AFONSO, Luís Eduardo. Previdência social e fundos de pensão.
+<b>Caderno de seguros</b>. Julho, 1996.</p></li>
+<li><p>AGUIAR, João Paulo de Vasconcelos. História da previdência no
+brasil: As origens do sistema público de aposentadoria brasileiro.
+Politize! Junho, 2017. Disponível <a
+href="http://www.politize.com.br/historia-da-previdencia-no-brasil/">aqui</a>;
+Acesso em: 14/12/17 às 22:50.</p></li>
+<li><p>ALVES, José Eustáquio Diniz. O fim do bônus demográfico e o
+processo de envelhecimento no Brasil. Revista Portal, v V, n 45, p 6-
+17, junho – agosto 2015. BLUME. Bruno André. Reforma da previdência:
+entenda os principais pontos. Politize! Maio, 2016.</p></li>
+<li><p>CAMARANO, A. KANSO, S. FERNANDES, D. Novo Regime Demográfico uma
+nova relação entre população e desenvolvimento? Instituto de Pesquisa
+Econômica Aplicada (IPEA). Rio de Janeiro, p. 81-82, 2014.</p></li>
+<li><p>DE SOUZA, Luiz Eduardo Simões. Elementos de Demografia Econômica.
+São Paulo: LCTE, 2006. Governo do Brasil. Reforma da previdência:
+resumo. Dezembro, 2017.</p></li>
+<li><p>FERREIRA, Paulo Pereira. <b>Modelos de Precificação e Ruína para
+Seguros de Curto Prazo</b>. Rio de Janeiro: FUNENSEG, 2002.</p></li>
+<li><p>LEBRÃO, Maria Lúcia. O envelhecimento no Brasil: Aspectos da
+Transição demográfica e epidemiológica. Saúde Coletiva, bimestral,
+anõ/vol 4, n 17, p135-140 – 2007.</p></li>
+<li><p>OLIVEIRA, LAP. Síntese de indicadores sociais – uma análise das
+condições de vida da população brasileira. In: Estudos e Pesquisas-
+Informação Demográfica e Socioeconômica. IBGE. Rio de Janeiro,
+2008.</p></li>
 </ul>
 </div>
 <div id="referências-complementares" class="section level2">
 <h2>Referências complementares</h2>
 <ul>
-<li><p>AZEVEDO, G. H. W., <strong>Seguros, Matemática Atuarial e Financeira: uma abordagem introdutória.</strong> Editora Saraiva. São Paulo, 2008.</p></li>
-<li><p>CONTADOR, C. R., FERRAZ, C. B. <strong>Uma contribuição à história do seguro no Brasil.</strong> Instituto CO PPEAD de Administração da Universidade Federal do Rio de Janeiro – Rio de Janeiro, 2000.</p></li>
-<li><p>ESCOLA NACIONAL DE SEGUROS. <strong>Conceitos básicos de seguros.</strong> Supervisão e Coordenação metodológica da Diretoria de Ensino Técnica de Alessandra Teixeira – 12. Ed. – Rio de Janeiros; Funenseg, 2015.</p></li>
-<li><p>ESCOLA NACIONAL DE SEGUROS. <strong>Seguro DPVAT.</strong> Supervisão e Coordenação metodológica da Diretoria de Ensino Técnica de Alessandra Teixeira – 2. Ed. – Rio de Janeiros; Funenseg, 2015.</p></li>
-<li><p>GUIMARÃES, S. R. Fundamentação Atuarial dos seguros de vida: um estudo comparativo entre os seguros de vida individual e em grupo. <strong>Série de Cadernos de Seguro: teses,</strong> v. 9, no 20. FUNENSEG, Rio de Janeiro, 2004.</p></li>
-<li><p>MENDONÇA, L. A trajetória de seguros de vida, em alguns flashes. <strong>Cadernos de Seguro</strong> – Coletânea 1981 – 2001.</p></li>
-<li><p>RIBEIRO, P. G. <strong>História do seguro: um resumo.</strong> Fundação Escola Nacional de Seguros. Rio de janeiro: FUNENSEG, ago. 1994.</p></li>
+<li><p>AZEVEDO, G. H. W., <strong>Seguros, Matemática Atuarial e
+Financeira: uma abordagem introdutória.</strong> Editora Saraiva. São
+Paulo, 2008.</p></li>
+<li><p>CONTADOR, C. R., FERRAZ, C. B. <strong>Uma contribuição à
+história do seguro no Brasil.</strong> Instituto CO PPEAD de
+Administração da Universidade Federal do Rio de Janeiro – Rio de
+Janeiro, 2000.</p></li>
+<li><p>ESCOLA NACIONAL DE SEGUROS. <strong>Conceitos básicos de
+seguros.</strong> Supervisão e Coordenação metodológica da Diretoria de
+Ensino Técnica de Alessandra Teixeira – 12. Ed. – Rio de Janeiros;
+Funenseg, 2015.</p></li>
+<li><p>ESCOLA NACIONAL DE SEGUROS. <strong>Seguro DPVAT.</strong>
+Supervisão e Coordenação metodológica da Diretoria de Ensino Técnica de
+Alessandra Teixeira – 2. Ed. – Rio de Janeiros; Funenseg, 2015.</p></li>
+<li><p>GUIMARÃES, S. R. Fundamentação Atuarial dos seguros de vida: um
+estudo comparativo entre os seguros de vida individual e em grupo.
+<strong>Série de Cadernos de Seguro: teses,</strong> v. 9, no 20.
+FUNENSEG, Rio de Janeiro, 2004.</p></li>
+<li><p>MENDONÇA, L. A trajetória de seguros de vida, em alguns flashes.
+<strong>Cadernos de Seguro</strong> – Coletânea 1981 – 2001.</p></li>
+<li><p>RIBEIRO, P. G. <strong>História do seguro: um resumo.</strong>
+Fundação Escola Nacional de Seguros. Rio de janeiro: FUNENSEG, ago.
+1994.</p></li>
 </ul>
 </div>
 

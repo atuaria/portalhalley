@@ -13,7 +13,7 @@
 
 <title>Teoria do Risco</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -72,6 +72,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -92,6 +93,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -244,7 +248,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +261,7 @@ $(document).ready(function () {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -278,7 +282,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -309,7 +313,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -321,7 +325,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -370,56 +374,79 @@ $(document).ready(function () {
 
 
 <p><br></br></p>
-<p>Notas de aula do curso de Teoria do Risco da Universidade Federal de Alfenas, elaboradas pelo professor Danilo Machado Pires.</p>
+<p>Notas de aula do curso de Teoria do Risco da Universidade Federal de
+Alfenas, elaboradas pelo professor Danilo Machado Pires.</p>
 <p><br></br></p>
 <div id="revisão" class="section level4">
 <h4>Revisão</h4>
 <ul>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 1 -Variaveis aleatorias.pdf"target="_blank"><strong>Variáveis aleatórias</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 2 - Valor Esperado e propriedades.pdf"target="_blank"><strong>Valor Esperado e propriedades</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 3 - Funcoes de Distribuicao.pdf"target="_blank"><strong>Funções de Distribuição</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 4 - Funcao Geradora de Momentos.pdf"target="_blank"><strong>Função Geradora de Momentos</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 1 -Variaveis aleatorias.pdf"target="_blank"><strong>Variáveis
+aleatórias</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 2 - Valor Esperado e propriedades.pdf"target="_blank"><strong>Valor
+Esperado e propriedades</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 3 - Funcoes de Distribuicao.pdf"target="_blank"><strong>Funções
+de Distribuição</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 4 - Funcao Geradora de Momentos.pdf"target="_blank"><strong>Função
+Geradora de Momentos</strong></a></p></li>
 </ul>
 </div>
 <div id="modelo-de-risco-individual" class="section level4">
 <h4>Modelo de risco individual</h4>
 <ul>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 5 - Modelo de risco.pdf"target="_blank"><strong>Modelo de risco</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 6 - Convolucao para S.pdf"target="_blank"><strong>Convolução para S</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 7 - Momentos de S.pdf"target="_blank"><strong>Função geradora de momentos de S</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 8 - Aproximacao de S pela normal.pdf"target="_blank"><strong>Aproximação de S pela normal</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 5 - Modelo de risco.pdf"target="_blank"><strong>Modelo
+de risco</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 6 - Convolucao para S.pdf"target="_blank"><strong>Convolução
+para S</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 7 - Momentos de S.pdf"target="_blank"><strong>Função
+geradora de momentos de S</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 8 - Aproximacao de S pela normal.pdf"target="_blank"><strong>Aproximação
+de S pela normal</strong></a></p></li>
 </ul>
 </div>
 <div id="modelo-de-risco-coletivo" class="section level4">
 <h4>Modelo de risco coletivo</h4>
 <ul>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 9 - Modelo de risco.pdf"target="_blank"><strong>Modelo de risco</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 10 - Funcao Geradora de momentos de S.pdf"target="_blank"><strong>Função Geradora de momentos de S</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 11 - A distribuicao de S.pdf"target="_blank"><strong>A distribuição de S</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 12 - A distribuicao para N.pdf"target="_blank"><strong>A distribuição para N</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 9 - Modelo de risco.pdf"target="_blank"><strong>Modelo
+de risco</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 10 - Funcao Geradora de momentos de S.pdf"target="_blank"><strong>Função
+Geradora de momentos de S</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 11 - A distribuicao de S.pdf"target="_blank"><strong>A
+distribuição de S</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 12 - A distribuicao para N.pdf"target="_blank"><strong>A
+distribuição para N</strong></a></p></li>
 </ul>
 </div>
 <div id="cálculo-de-prêmios" class="section level4">
 <h4>Cálculo de prêmios</h4>
 <ul>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 13 - Seguro e Utilidade.pdf"target="_blank"><strong>Seguro e Utilidade</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 14 - Calculo de premios.pdf"target="_blank"><strong>Cálculo de prêmios</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 15 - Propriedades desejaveis.pdf"target="_blank"><strong>Propriedades desejáveis</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Medida de Risco.pdf"target="_blank"><strong>Medida de Risco</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 13 - Seguro e Utilidade.pdf"target="_blank"><strong>Seguro
+e Utilidade</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 14 - Calculo de premios.pdf"target="_blank"><strong>Cálculo
+de prêmios</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 15 - Propriedades desejaveis.pdf"target="_blank"><strong>Propriedades
+desejáveis</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 16 - Medida de Risco.pdf"target="_blank"><strong>Medida
+de Risco</strong></a></p></li>
 </ul>
 </div>
-<div id="processo-de-poisson-para-frequência-de-sinistros" class="section level4">
+<div id="processo-de-poisson-para-frequência-de-sinistros"
+class="section level4">
 <h4>Processo de Poisson para frequência de sinistros</h4>
 <ul>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 17 - O processo de Poisson.pdf"target="_blank"><strong>O processo de Poisson</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 18 - Processo para Sinistros agregados.pdf"target="_blank"><strong>Processo para Sinistros agregados</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 17 - O processo de Poisson.pdf"target="_blank"><strong>O
+processo de Poisson</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 18 - Processo para Sinistros agregados.pdf"target="_blank"><strong>Processo
+para Sinistros agregados</strong></a></p></li>
 </ul>
 </div>
 <div id="probabilidade-de-ruína" class="section level4">
 <h4>Probabilidade de Ruína</h4>
 <ul>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 19 - Probabilidade de Ruina.pdf"target="_blank"><strong>Probabilidade de Ruína</strong></a></p></li>
-<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 20 - Probabilidade de Ruina no horizonte infinito no caso Poisson Composto.pdf"target="_blank"><strong>Probabilidade de Ruína no horizonte infinito no caso Poisson Composto</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 19 - Probabilidade de Ruina.pdf"target="_blank"><strong>Probabilidade
+de Ruína</strong></a></p></li>
+<li><p><a href="https://atuaria.github.io/portalhalley/PDF/TeoriadoRisco/aula 20 - Probabilidade de Ruina no horizonte infinito no caso Poisson Composto.pdf"target="_blank"><strong>Probabilidade
+de Ruína no horizonte infinito no caso Poisson
+Composto</strong></a></p></li>
 </ul>
 <p><br></br> <br></br></p>
 </div>

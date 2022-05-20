@@ -13,7 +13,7 @@
 
 <title>Portal Halley de Educação Atuarial</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -72,6 +72,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -92,6 +93,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -244,7 +248,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +261,7 @@ $(document).ready(function () {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -278,7 +282,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -309,7 +313,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -321,7 +325,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -389,9 +393,21 @@ $(document).ready(function () {
 </p>
 <p>
 </p>
-<p>      Este portal é fruto de um trabalho conjunto de alunos e professores do curso de ciências atuarias da universidade federal de Alfenas (campus Varginha/MG ), o projeto foi desenvolvido em parceria com a Liga de Ciências Atuariais e o Laboratório de Risco Atuarial e Inovação.</p>
-<p>       O objetivo central desse projeto é a produção de um material de apoio a estudantes, professores e profissionais em geral interessados na análise de risco do ramo vida. Adicionalmente o portal servirá como material didático a disciplina de matemática atuarial ministrado aos alunos do curso Bacharelado Interdisciplinar em Ciência e Economia como disciplina diretiva ao curso de Ciências Atuariais.</p>
-<p>       Com o intuito de fornecer uma base educacional, os principais objetivos deste trabalho são integrar teoria dos produtos atuariais, demonstrando sua grande variedade, com uma abordagem mais prática e interativa.</p>
+<p>      Este portal é fruto de um trabalho conjunto de alunos e
+professores do curso de ciências atuarias da universidade federal de
+Alfenas (campus Varginha/MG ), o projeto foi desenvolvido em parceria
+com a Liga de Ciências Atuariais e o Laboratório de Risco Atuarial e
+Inovação.</p>
+<p>       O objetivo central desse projeto é a produção de um material
+de apoio a estudantes, professores e profissionais em geral interessados
+na análise de risco do ramo vida. Adicionalmente o portal servirá como
+material didático a disciplina de matemática atuarial ministrado aos
+alunos do curso Bacharelado Interdisciplinar em Ciência e Economia como
+disciplina diretiva ao curso de Ciências Atuariais.</p>
+<p>       Com o intuito de fornecer uma base educacional, os principais
+objetivos deste trabalho são integrar teoria dos produtos atuariais,
+demonstrando sua grande variedade, com uma abordagem mais prática e
+interativa.</p>
 <p><br></br></p>
 </div>
 <div id="atuária-o-que-é-isso" class="section level2">
@@ -400,9 +416,28 @@ $(document).ready(function () {
 </p>
 <p>
 </p>
-<p>       Essa ciência surgiu há cerca de 150 anos na Inglaterra, estudando basicamente a mortalidade da população. A partir de então, ela voltava-se para o cálculo da expectativa de vida, com interesse nas questões de aposentadoria e pensão.</p>
-<p>       No século XX, a área de seguros expandiu a abrangência do estudo atuarial, e a inserção cada vez mais frequente das empresas de seguro e pensão no mercado financeiro, fez com que a ciência atuarial se especializasse cada vez mais em campos econômicos e financeiros. A partir de então as empresas seguradoras passaram a oferecer programas de seguro de vida e outras especializações, o que gerou cada vez maior necessidade do desenvolvimento das ciências atuariais.</p>
-<p>      Em resumo a ciência atuarial ou atuária é a ciência das técnicas específicas de análise de riscos e expectativas financeiros e econômicos, principalmente na administração de seguros, fundos de pensão e operadoras de saúde, logo o atuário é o profissional que realiza os cálculos matemáticos e opera no mercado econômico e financeiro, realizando pesquisas e estabelecendo políticas de investimentos e amortizações e, em seguro privado e social, calculando probabilidade de eventos, analisando riscos e estabelecendo prêmios, indenizações, benefícios e reservas. O atuário pode ainda fiscalizar e orientar as atividades técnicas de empresas de seguro, capitalização e investimento.</p>
+<p>       Essa ciência surgiu há cerca de 150 anos na Inglaterra,
+estudando basicamente a mortalidade da população. A partir de então, ela
+voltava-se para o cálculo da expectativa de vida, com interesse nas
+questões de aposentadoria e pensão.</p>
+<p>       No século XX, a área de seguros expandiu a abrangência do
+estudo atuarial, e a inserção cada vez mais frequente das empresas de
+seguro e pensão no mercado financeiro, fez com que a ciência atuarial se
+especializasse cada vez mais em campos econômicos e financeiros. A
+partir de então as empresas seguradoras passaram a oferecer programas de
+seguro de vida e outras especializações, o que gerou cada vez maior
+necessidade do desenvolvimento das ciências atuariais.</p>
+<p>      Em resumo a ciência atuarial ou atuária é a ciência das
+técnicas específicas de análise de riscos e expectativas financeiros e
+econômicos, principalmente na administração de seguros, fundos de pensão
+e operadoras de saúde, logo o atuário é o profissional que realiza os
+cálculos matemáticos e opera no mercado econômico e financeiro,
+realizando pesquisas e estabelecendo políticas de investimentos e
+amortizações e, em seguro privado e social, calculando probabilidade de
+eventos, analisando riscos e estabelecendo prêmios, indenizações,
+benefícios e reservas. O atuário pode ainda fiscalizar e orientar as
+atividades técnicas de empresas de seguro, capitalização e
+investimento.</p>
 <p><br></br></p>
 </div>
 <div id="apoio" class="section level2">

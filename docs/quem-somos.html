@@ -13,7 +13,7 @@
 
 <title>Quem somos</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -72,6 +72,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -92,6 +93,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -244,7 +248,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +261,7 @@ $(document).ready(function () {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -278,7 +282,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -309,7 +313,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -321,7 +325,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -370,10 +374,14 @@ $(document).ready(function () {
 
 
 <hr />
-<p>Membros do projeto Portal Halley de Educação Atuarial, da <a href="https://www.unifal-mg.edu.br">Universidade Federal de Alfenas</a>.</p>
+<p>Membros do projeto Portal Halley de Educação Atuarial, da <a
+href="https://www.unifal-mg.edu.br">Universidade Federal de
+Alfenas</a>.</p>
 <hr />
 <!-- Se o endereço web ou email for o próprio texto, pode-se utilizá-lo direto entre setas. -->
-<p>######Contato: Envie um e-mail para <a href="mailto:lca.portal.halley@gmail.com" class="email">lca.portal.halley@gmail.com</a></p>
+<p>######Contato: Envie um e-mail para <a
+href="mailto:lca.portal.halley@gmail.com"
+class="email">lca.portal.halley@gmail.com</a></p>
 <hr />
 <center>
 <!-- Imagem em HTML -->
@@ -383,7 +391,8 @@ $(document).ready(function () {
 <p><b>Alice Silva Duarte</b> - Discente</p>
 <p>Equipe técnica de desenvolvimento de conteúdo didático.</p>
 <p>Membra do Laboratório de Risco Atuarial e Inovação</p>
-<p><a href="mailto:alice_sduarte@hotmail.com">E-mail</a>, <a href="http://lattes.cnpq.br/4313284650448866">Lattes</a></p>
+<p><a href="mailto:alice_sduarte@hotmail.com">E-mail</a>, <a
+href="http://lattes.cnpq.br/4313284650448866">Lattes</a></p>
 <p><br></br> <br></br></p>
 <!-- ANA CAROLINA OLIVEIRA ============================================================================= -->
 <p><img align="center"  width="300px" height="300px" src="http://bit.ly/2yjoPPy"/></p>
@@ -398,29 +407,36 @@ $(document).ready(function () {
 <p>
 <p><b>Ana Carolina Orrico e Silva</b> - Discente [inativa]</p>
 <p>Equipe técnica de programação.</p>
-Membra da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial e Inovação
+Membra da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial
+e Inovação
 </p>
 <p></justify></p>
 <!-- Email em HTML. Links em Markdown -->
 <!-- Para incluir um texto com link para email, utilize html. -->
-<p><a href="mailto:carollorrico@gmail.com">E-mail</a>, <a href="https://github.com/CarolOrrico">GitHub</a>, <a href="https://www.linkedin.com/in/ana-carolina-orrico-e-silva-66359212b/">LinkedIn</a></p>
+<p><a href="mailto:carollorrico@gmail.com">E-mail</a>, <a
+href="https://github.com/CarolOrrico">GitHub</a>, <a
+href="https://www.linkedin.com/in/ana-carolina-orrico-e-silva-66359212b/">LinkedIn</a></p>
 <p><br></br> <br></br></p>
 <!-- DANILO ================================================================================ -->
 <p><img align="center"  width="300px" height="300px" src="http://bit.ly/2FE5PwV"/></p>
 <p><b>Danilo Machado Pires</b> - Docente - Orientação</p>
-<p><a href="mailto:dmachadopires@gmail.com">E-mail</a>, <a href="https://github.com/danilomachadopires">GitHub</a>, <a href="http://lattes.cnpq.br/3803750382508105">Lattes</a></p>
+<p><a href="mailto:dmachadopires@gmail.com">E-mail</a>, <a
+href="https://github.com/danilomachadopires">GitHub</a>, <a
+href="http://lattes.cnpq.br/3803750382508105">Lattes</a></p>
 <p><br></br> <br></br></p>
 <!-- LEONARDO ============================================================================== -->
 <p><img align="center"  width="300px" height="300px" src="http://bit.ly/2Dlq9kD"/></p>
 <p><b>Leonardo Henrique Costa</b> - Docente - Orientação</p>
-<p><a href="mailto:leo.atuaria@gmail.com">E-mail</a>, <a href="http://lattes.cnpq.br/6033072370650666">Lattes</a></p>
+<p><a href="mailto:leo.atuaria@gmail.com">E-mail</a>, <a
+href="http://lattes.cnpq.br/6033072370650666">Lattes</a></p>
 <p><br></br> <br></br></p>
 <!-- MÁRCIA ================================================================================= -->
 <p><img align="center"  width="300px" height="300px" src="http://bit.ly/2tCSTpu"/></p>
 <p><b>Márcia Sales Ribeiro</b> - Discente [inativa]</p>
 <p>Equipe técnica de desenvolvimento de conteúdo didático.</p>
 <p>Membra da Liga de Ciências Atuariais</p>
-<p><a href="mailto:marcia-p4@hotmail.com">E-mail</a>, <a href="http://lattes.cnpq.br/1589632931643422">Lattes</a></p>
+<p><a href="mailto:marcia-p4@hotmail.com">E-mail</a>, <a
+href="http://lattes.cnpq.br/1589632931643422">Lattes</a></p>
 <p><br></br> <br></br></p>
 <!-- MATHEUS ================================================================================ -->
 <p><img align="center" width="300px" height="300px" src="http://bit.ly/2Gl5dNx"/></p>
@@ -433,57 +449,72 @@ Membra da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial e Inov
 <p><img align="center"  width="300px" height="300px" src="http://bit.ly/2ykqapk"/></p>
 <p><b>Pablo Henrique Vieira Rabelo</b> - Discente</p>
 <p><b>Gerente do Projeto Portal Halley.</b></p>
-<p>Equipes técnicas de desenvolvimento de conteúdo didático e de programação.</p>
-<p>Membro da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial e Inovação</p>
-<p><a href="mailto:pablorabelo@live.com">E-mail</a>, <a href="https://github.com/pablorabelo">GitHub</a>, <a href="http://lattes.cnpq.br/0226923090121959">Lattes</a>, <a href="https://www.linkedin.com/in/pablohrabelo/">LinkedIn</a></p>
+<p>Equipes técnicas de desenvolvimento de conteúdo didático e de
+programação.</p>
+<p>Membro da Liga de Ciências Atuariais e do Laboratório de Risco
+Atuarial e Inovação</p>
+<p><a href="mailto:pablorabelo@live.com">E-mail</a>, <a
+href="https://github.com/pablorabelo">GitHub</a>, <a
+href="http://lattes.cnpq.br/0226923090121959">Lattes</a>, <a
+href="https://www.linkedin.com/in/pablohrabelo/">LinkedIn</a></p>
 <p><br></br> <br></br></p>
 <!-- PEDRO ================================================================================== -->
 <p><img align="center"  width="300px" height="300px" src="http://bit.ly/2FxCQP0"/></p>
 <p><b>Pedro Henrique Rezende Oliveira</b> - Discente [inativo]</p>
 <p>Equipe técnica de programação.</p>
 <p>Egresso do Curso de Ciências Atuariais</p>
-<p><a href="mailto:pedrohenriquero@hotmail.com">E-mail</a>, <a href="https://www.linkedin.com/in/pedro-henrique-rezende-oliveira-659914133/">LinkedIn</a></p>
+<p><a href="mailto:pedrohenriquero@hotmail.com">E-mail</a>, <a
+href="https://www.linkedin.com/in/pedro-henrique-rezende-oliveira-659914133/">LinkedIn</a></p>
 <p><br></br> <br></br></p>
 <!-- POLIANA ================================================================================= -->
 <p><img align="center" width="300px" height="300px" src="http://bit.ly/2pbFtw3"/></p>
 <p><b>Poliana Maria Benelli</b> - Discente</p>
 <p>Equipe técnica de desenvolvimento de conteúdo didático.</p>
 <p>Membra do Laboratório de Risco Atuarial e Inovação</p>
-<p><a href="mailto:poli_benelli@hotmail.com">E-mail</a>, <a href="https://www.linkedin.com/in/poliana-benelli-41615a139/">LinkedIn</a></p>
+<p><a href="mailto:poli_benelli@hotmail.com">E-mail</a>, <a
+href="https://www.linkedin.com/in/poliana-benelli-41615a139/">LinkedIn</a></p>
 <p><br></br> <br></br></p>
 <!-- RAPHAELA ================================================================================= -->
 <p><img align="center" width="300px" height="300px" src="http://bit.ly/2FwkLRp"/></p>
 <p><b>Raphaela Ribeiro Siviero de Mattos</b> - Discente [inativa]</p>
 <p>Equipe técnica de desenvolvimento de conteúdo didático.</p>
-<p><a href="mailto:raphaelarsmattos@gmail.com">E-mail</a>, <a href="https://www.linkedin.com/in/raphaela-ribeiro-siviero-de-mattos-169781140/">LinkedIn</a></p>
+<p><a href="mailto:raphaelarsmattos@gmail.com">E-mail</a>, <a
+href="https://www.linkedin.com/in/raphaela-ribeiro-siviero-de-mattos-169781140/">LinkedIn</a></p>
 <p><br></br> <br></br></p>
 <!-- SABRINA =============================================================================== -->
 <p><img align="center" width="300px" height="300px" src="http://bit.ly/2tDPO8q"/></p>
 <p><b>Sabrina Ribeiro Marciano</b> - Discente [inativa]</p>
 <p>Equipe técnica de desenvolvimento de conteúdo didático.</p>
-<p>Egressa do Curso de Bacharelado Interdisciplinar em Ciência e Economia</p>
+<p>Egressa do Curso de Bacharelado Interdisciplinar em Ciência e
+Economia</p>
 <p>Ex-Membra de Liga de Ciências Atuariais</p>
-<p><a href="mailto:ribeiro.sabrina96@gmail.com">E-mail</a>, <a href="https://www.linkedin.com/in/sabrina-ribeiro-27ab02122/">LinkedIn</a></p>
+<p><a href="mailto:ribeiro.sabrina96@gmail.com">E-mail</a>, <a
+href="https://www.linkedin.com/in/sabrina-ribeiro-27ab02122/">LinkedIn</a></p>
 <p><br></br> <br></br></p>
 <!-- WALEF ================================================================================== -->
 <p><img align="center" width="300px" height="300px" src="http://bit.ly/2DmTUSa"/></p>
 <p><b>Walef Machado de Mendonça</b> - Discente</p>
 <p>Equipe técnica de programação.</p>
-<p><a href="mailto:walefm2@hotmail.com">E-mail</a>, <a href="https://github.com/walefmachado">GitHub</a></p>
+<p><a href="mailto:walefm2@hotmail.com">E-mail</a>, <a
+href="https://github.com/walefmachado">GitHub</a></p>
 <p><br></br> <br></br></p>
 <!-- WILLIAM ================================================================================= -->
 <p><img align="center"  width="300px" height="300px" src="http://bit.ly/2yHG2lb"/></p>
 <p><b>William Oliveira Santos</b> - Discente [inativo]</p>
 <p>Equipe técnica de desenvolvimento de conteúdo didático.</p>
-<p>Membro da Liga de Ciências Atuariais e do Laboratório de Risco Atuarial e Inovação</p>
-<p><a href="mailto:william.osantos96@gmail.com">E-mail</a>, <a href="http://lattes.cnpq.br/0582142355235573">Lattes</a>, <a href="https://www.linkedin.com/in/william-santos-477668137/">LinkedIn</a></p>
+<p>Membro da Liga de Ciências Atuariais e do Laboratório de Risco
+Atuarial e Inovação</p>
+<p><a href="mailto:william.osantos96@gmail.com">E-mail</a>, <a
+href="http://lattes.cnpq.br/0582142355235573">Lattes</a>, <a
+href="https://www.linkedin.com/in/william-santos-477668137/">LinkedIn</a></p>
 <p><br></br> <br></br></p>
 <!-- YAGHO ================================================================================= -->
 <p><img align="center" width="300px" height="300px" src="http://bit.ly/2DozdVF"/></p>
 <p><b>Yagho Lemes Carvalho</b> - Discente</p>
 <p>Equipe técnica de programação.</p>
 <p>Membro do Laboratório de Risco Atuarial e Inovação</p>
-<p><a href="mailto:yagholc@hotmail.com">E-mail</a>, <a href="https://github.com/yagholc">GitHub</a></p>
+<p><a href="mailto:yagholc@hotmail.com">E-mail</a>, <a
+href="https://github.com/yagholc">GitHub</a></p>
 <p><br></br> <br></br></p>
 <hr />
 

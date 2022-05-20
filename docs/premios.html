@@ -13,7 +13,7 @@
 
 <title>Prêmios</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -75,6 +75,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -95,6 +96,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -326,7 +330,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -339,7 +343,7 @@ div.tocify {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -360,7 +364,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -391,7 +395,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -403,7 +407,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -453,23 +457,59 @@ div.tocify {
 
 <div id="prêmios" class="section level3">
 <h3>Prêmios</h3>
-<p>      A definição geral de Prêmio é apresentada pela SUSEP como o valor correspondente para cada um dos pagamentos que o detentor de uma apólice realiza para cobrir determinado risco. No entanto, pode-se realizar ainda algumas ramificações neste conceito, tal como o Prêmio Puro único, o qual trata apenas do risco inerente à seguradora pago em única parcela, o Prêmio puro periódico (Nivelado), como o nome diz o prêmio é dividido em parcelas regulares e o Prêmio Carregado que considera carregamentos ao valor atuarial.</p>
+<p>      A definição geral de Prêmio é apresentada pela SUSEP como o
+valor correspondente para cada um dos pagamentos que o detentor de uma
+apólice realiza para cobrir determinado risco. No entanto, pode-se
+realizar ainda algumas ramificações neste conceito, tal como o Prêmio
+Puro único, o qual trata apenas do risco inerente à seguradora pago em
+única parcela, o Prêmio puro periódico (Nivelado), como o nome diz o
+prêmio é dividido em parcelas regulares e o Prêmio Carregado que
+considera carregamentos ao valor atuarial.</p>
 <div id="prêmio-puro" class="section level4">
 <h4>Prêmio Puro</h4>
-<p>      O <strong>Prêmio Puro</strong> consiste na parcela do prêmio suficiente para se pagar as despesas relacionadas aos riscos assumidos pela seguradora, de maneira que é calculado como o valor esperado das possı́veis indemnizações a serem assumidas pela seguradora sendo, portanto, igual ao prêmio cobrado para cobrir o risco X.</p>
-<p>      Desta forma,como caracterı́stica este prêmio, não protege a seguradora contra indemnizações elevadas e não leva em consideração o intento de obtenção de lucro.</p>
-<p>      O termo <em>puro</em> relaciona-se ao fato de que ao valor considerado não foram adicionados quaisquer cargas técnicas, sendo de gestão ou comercial. Pode ser dividido em duas categorias: o Prêmio Puro Único, o qual consiste na totalidade do sendo paga em uma única parcela pelo segurado, e o Prêmio Puro Nivelado.</p>
+<p>      O <strong>Prêmio Puro</strong> consiste na parcela do prêmio
+suficiente para se pagar as despesas relacionadas aos riscos assumidos
+pela seguradora, de maneira que é calculado como o valor esperado das
+possı́veis indemnizações a serem assumidas pela seguradora sendo,
+portanto, igual ao prêmio cobrado para cobrir o risco X.</p>
+<p>      Desta forma,como caracterı́stica este prêmio, não protege a
+seguradora contra indemnizações elevadas e não leva em consideração o
+intento de obtenção de lucro.</p>
+<p>      O termo <em>puro</em> relaciona-se ao fato de que ao valor
+considerado não foram adicionados quaisquer cargas técnicas, sendo de
+gestão ou comercial. Pode ser dividido em duas categorias: o Prêmio Puro
+Único, o qual consiste na totalidade do sendo paga em uma única parcela
+pelo segurado, e o Prêmio Puro Nivelado.</p>
 </div>
 <div id="prêmio-puro-nivelado" class="section level4">
 <h4>Prêmio Puro Nivelado</h4>
-<p>      Não é muito usual considerar que o segurado realize o pagamento do Prêmio em uma única parcela, portanto a grande maioria dos contratos de seguro permite seu pagamento possa ocorrer de forma periódica, sendo os pagamentos normalmente considerando-se a a função de sobrevivência do indivı́duo segurado (REF. Mat atu vid e pens)</p>
-<p>      Podemos considerar um Prêmio Puro de periodicidade anual, em que o segurado paga um prêmio constante (nivelado) P no inı́cio de cada ano enquanto o mesmo sobreviva. O primeiro pagamento realizado será uma fração do prêmio, pois este será capitalizado pela seguradora enquanto o último será correspondente ao próprio prêmio. O valor de P poderá ser determinado através do princípio da equivalencia, em que se estabelece que no tempo <span class="math inline">\(0\)</span> o valor esperado do compromisso da seguradora com benefício deva ser igual ao valor esperado do compromisso do segurado com o prêmio.</p>
+<p>      Não é muito usual considerar que o segurado realize o pagamento
+do Prêmio em uma única parcela, portanto a grande maioria dos contratos
+de seguro permite seu pagamento possa ocorrer de forma periódica, sendo
+os pagamentos normalmente considerando-se a a função de sobrevivência do
+indivı́duo segurado (REF. Mat atu vid e pens)</p>
+<p>      Podemos considerar um Prêmio Puro de periodicidade anual, em
+que o segurado paga um prêmio constante (nivelado) P no inı́cio de cada
+ano enquanto o mesmo sobreviva. O primeiro pagamento realizado será uma
+fração do prêmio, pois este será capitalizado pela seguradora enquanto o
+último será correspondente ao próprio prêmio. O valor de P poderá ser
+determinado através do princípio da equivalencia, em que se estabelece
+que no tempo <span class="math inline">\(0\)</span> o valor esperado do
+compromisso da seguradora com benefício deva ser igual ao valor esperado
+do compromisso do segurado com o prêmio.</p>
 </div>
 </div>
 <div id="prêmios-carregados" class="section level3">
 <h3>Prêmios Carregados</h3>
-<p>       Ao se acrescentar carregamentos adicionais ao prêmio puro ( único ou nivelado) obtém-se o chamado prêmio carregado.      Os carregamentos inclusos ao valor do prêmio, podem ser divididos quanto a incidência da despesas associada, dos quais se destacam</p>
-<p>Carregamentos de aquisição, como comissão de corretagem e despesas com examinadores; Carregamentos de inventário, como : despesas operacionais, impostos. Carregamentos comerciais ( a soma de todos os carregamentos , relativos a apólice). Dessa forma os prêmios resultantes a esses carregamentos são:</p>
+<p>       Ao se acrescentar carregamentos adicionais ao prêmio puro (
+único ou nivelado) obtém-se o chamado prêmio carregado.      Os
+carregamentos inclusos ao valor do prêmio, podem ser divididos quanto a
+incidência da despesas associada, dos quais se destacam</p>
+<p>Carregamentos de aquisição, como comissão de corretagem e despesas
+com examinadores; Carregamentos de inventário, como : despesas
+operacionais, impostos. Carregamentos comerciais ( a soma de todos os
+carregamentos , relativos a apólice). Dessa forma os prêmios resultantes
+a esses carregamentos são:</p>
 <ol style="list-style-type: decimal">
 <li>Prêmio de Inventário;</li>
 <li>Prêmio ”Zilmerado”;</li>

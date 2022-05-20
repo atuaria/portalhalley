@@ -13,7 +13,7 @@
 
 <title>Recursos computacionais</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -72,6 +72,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -92,6 +93,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -244,7 +248,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +261,7 @@ $(document).ready(function () {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -278,7 +282,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -309,7 +313,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -321,7 +325,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -371,19 +375,32 @@ $(document).ready(function () {
 
 <div id="r" class="section level2">
 <h2>R</h2>
-<p>O R é um programa para análise estatística de livre distribuição e de código aberto. Isso significa que você pode baixar, instalar, repassar para seus amigos e até mesmo alterar o código fonte de acordo com suas necessidades. Ele pode ser instalado em diversas arquiteturas e sistemas operacionais diferentes, incluindo Windows, Linux, Macintosh e outros.</p>
-<p>Para instalar o R, veja este <a href="R-instalacao.html">guia de instalação</a>.</p>
-<p><a href="http://www.r-project.org">The R project for Statistical Computing</a>: página do programa <strong>R</strong></p>
+<p>O R é um programa para análise estatística de livre distribuição e de
+código aberto. Isso significa que você pode baixar, instalar, repassar
+para seus amigos e até mesmo alterar o código fonte de acordo com suas
+necessidades. Ele pode ser instalado em diversas arquiteturas e sistemas
+operacionais diferentes, incluindo Windows, Linux, Macintosh e
+outros.</p>
+<p>Para instalar o R, veja este <a href="R-instalacao.html">guia de
+instalação</a>.</p>
+<p><a href="http://www.r-project.org">The R project for Statistical
+Computing</a>: página do programa <strong>R</strong></p>
 <ul>
-<li><a href="http://www.leg.ufpr.br/doku.php/sofware:material-r">Curso sobre o uso do R</a> do LEG (UFPR)</li>
-<li><a href="https://www.analisededados.org/r.html">Analise de dados em R</a> uma introdução ao uso do R</li>
-<li><a href="http://www.rstudio.org">R-Studio</a> um ambiente para facilitar uso do R</li>
-<li><a href="https://listas.inf.ufpr.br/cgi-bin/mailman/listinfo/r-br">R-br</a> é a lista de discussão em português sobre o uso do R</li>
+<li><a href="http://www.leg.ufpr.br/doku.php/sofware:material-r">Curso
+sobre o uso do R</a> do LEG (UFPR)</li>
+<li><a href="https://www.analisededados.org/r.html">Analise de dados em
+R</a> uma introdução ao uso do R</li>
+<li><a href="http://www.rstudio.org">R-Studio</a> um ambiente para
+facilitar uso do R</li>
+<li><a
+href="https://listas.inf.ufpr.br/cgi-bin/mailman/listinfo/r-br">R-br</a>
+é a lista de discussão em português sobre o uso do R</li>
 </ul>
 </div>
 <div id="outros-programas" class="section level2">
 <h2>Outros programas</h2>
-<p>Estes programas não serão abordados no curso, mas podem ser úteis.</p>
+<p>Estes programas não serão abordados no curso, mas podem ser
+úteis.</p>
 <div id="programas-para-matemática-simbólica" class="section level3">
 <h3>Programas para matemática simbólica</h3>
 <ul>
@@ -392,9 +409,12 @@ $(document).ready(function () {
 </div>
 <div id="planilhas" class="section level3">
 <h3>Planilhas</h3>
-<p>Planilhas eletrônicas são úteis para digitação e organização de dados, mas não são recomendadas para estatística.</p>
+<p>Planilhas eletrônicas são úteis para digitação e organização de
+dados, mas não são recomendadas para estatística.</p>
 <ul>
-<li><a href="https://pt-br.libreoffice.org">LibreOffice</a> suíte de programas semelhante ao MS-Office (editor de texto, banco de dados, apresentação e planilha) gratuito</li>
+<li><a href="https://pt-br.libreoffice.org">LibreOffice</a> suíte de
+programas semelhante ao MS-Office (editor de texto, banco de dados,
+apresentação e planilha) gratuito</li>
 <li><a href="https://www.google.com/sheets/about">Google sheets</a></li>
 </ul>
 </div>

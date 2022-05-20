@@ -13,7 +13,7 @@
 
 <title>Planejamento de experimentos: aspectos gerais</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -75,6 +75,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -95,6 +96,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -326,7 +330,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -339,7 +343,7 @@ div.tocify {
   <a href="https://atuaria.github.io/">LCA</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Notas de Aula
      
     <span class="caret"></span>
@@ -360,7 +364,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Materiais
      
     <span class="caret"></span>
@@ -391,7 +395,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Recursos
      
     <span class="caret"></span>
@@ -403,7 +407,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Quem somos
      
     <span class="caret"></span>
@@ -446,28 +450,36 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Planejamento de experimentos: aspectos gerais</h1>
+<h1 class="title toc-ignore">Planejamento de experimentos: aspectos
+gerais</h1>
 
 </div>
 
 
 <div id="considerações-gerais" class="section level1">
 <h1>Considerações gerais</h1>
-<p>Experimentos, ao contrário de pesquisas amostrais, envolvem pesquisadores manipulando situações. Ao aplicar tratamentos, o o bjetivo é tirar conclusões sobre o que suas manipulações causaram.</p>
+<p>Experimentos, ao contrário de pesquisas amostrais, envolvem
+pesquisadores manipulando situações. Ao aplicar tratamentos, o o bjetivo
+é tirar conclusões sobre o que suas manipulações causaram.</p>
 <div id="própositos-básicos-da-experimentação" class="section level2">
 <h2>Própositos básicos da experimentação</h2>
 <ul>
 <li>Fornecer comparações válidas dos efeitos de tratamentos</li>
-<li>Forncer informações válidas sobre o relacionamento entre variáveis de</li>
+<li>Forncer informações válidas sobre o relacionamento entre variáveis
+de</li>
 <li>interesse</li>
 </ul>
 </div>
 <div id="requisitos-básicos" class="section level2">
 <h2>Requisitos básicos</h2>
 <ul>
-<li>As condições experimentais devem representar a situação do problema de interesse</li>
-<li>A comparação de tratamentos deve ser livre de outras explicações devido à presença de outras variáveis (<strong>confundimento</strong>)</li>
-<li>A comparação de tratamentos deve ser feita com a menor influência possível de fatores aleatórios</li>
+<li>As condições experimentais devem representar a situação do problema
+de interesse</li>
+<li>A comparação de tratamentos deve ser livre de outras explicações
+devido à presença de outras variáveis
+(<strong>confundimento</strong>)</li>
+<li>A comparação de tratamentos deve ser feita com a menor influência
+possível de fatores aleatórios</li>
 <li>O nível de incerteza nas conclusões deve ser acessível</li>
 <li>O experimento deve o mais simples possível</li>
 </ul>
@@ -475,17 +487,26 @@ div.tocify {
 <div id="definições-de-termos-chave" class="section level2">
 <h2>Definições de termos chave</h2>
 <ul>
-<li><strong>Fator</strong>: a variável explicativa manipulada ou fixada pelo pesquisador</li>
-<li><strong>Níveis do fator</strong>: os valores que um fator individual pode assumir</li>
-<li><strong>Tratamento</strong>: as combinações dos níveis dos fatores, aplicadas às unidades experimentais</li>
-<li><strong>Unidade observacional</strong>: a entidade física que fornece um único valor da variável resposta</li>
-<li><strong>Unidade experimental</strong>: a unidade (que pode ser uma coleção de unidades observacionais), à qual um único tratamento é aleatoriamente aplicado</li>
+<li><strong>Fator</strong>: a variável explicativa manipulada ou fixada
+pelo pesquisador</li>
+<li><strong>Níveis do fator</strong>: os valores que um fator individual
+pode assumir</li>
+<li><strong>Tratamento</strong>: as combinações dos níveis dos fatores,
+aplicadas às unidades experimentais</li>
+<li><strong>Unidade observacional</strong>: a entidade física que
+fornece um único valor da variável resposta</li>
+<li><strong>Unidade experimental</strong>: a unidade (que pode ser uma
+coleção de unidades observacionais), à qual um único tratamento é
+aleatoriamente aplicado</li>
 </ul>
 </div>
 </div>
-<div id="os-três-princípios-básicos-da-experimentação" class="section level1">
+<div id="os-três-princípios-básicos-da-experimentação"
+class="section level1">
 <h1>Os três princípios básicos da experimentação</h1>
-<p>Os três princípios estatísticos básicos da experimentação, introduzidos por RA Fisher em 1935 são: <strong>replicação</strong>, <strong>aleatorização</strong>, e <strong>blocagem</strong>.</p>
+<p>Os três princípios estatísticos básicos da experimentação,
+introduzidos por RA Fisher em 1935 são: <strong>replicação</strong>,
+<strong>aleatorização</strong>, e <strong>blocagem</strong>.</p>
 </div>
 
 <center>
