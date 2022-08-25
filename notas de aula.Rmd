@@ -43,7 +43,7 @@ Notas de aula do curso de Matemática Atuarial 1 da Universidade Federal de Alfe
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesContinuas.pdf"target="_blank">**Anuidades Contínuas**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AAnuidadespagamentosCertoEbeneficioCrescente.pdf"target="_blank">**Anuidades com pagamentos certos/ Anuidades com benefício crescente**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadespagamentosCertoEbeneficioCrescente.pdf"target="_blank">**Anuidades com pagamentos certos/ Anuidades com benefício crescente**</a>
 
 #### Comutação
 
