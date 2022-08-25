@@ -31,15 +31,19 @@ Notas de aula do curso de Matemática Atuarial 1 da Universidade Federal de Alfe
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/SegurosDiferidos.pdf"target="_blank">**Seguros Diferidos**</a>
 
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Re_seguros.pdf"target="_blank">**Seguro com benefício cresente/relações entre seguros**</a>
+
 #### Anuidades
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Anuidades.pdf"target="_blank">**Anuidades**</a>
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesDiferidas.pdf"target="_blank">**Anuidades Diferidas**</a>
 
-- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesFracionadas.pdf"target="_blank">**Anuidades Fracionadas e Relações**</a>
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/Seguros_anuidades_Fracionadas.pdf"target="_blank">**Relações entre seguros e anuidades/Anuidades Fracionadas**</a>
 
 - <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AnuidadesContinuas.pdf"target="_blank">**Anuidades Contínuas**</a>
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial1/AAnuidadespagamentosCertoEbeneficioCrescente.pdf"target="_blank">**Anuidades com pagamentos certos/ Anuidades com benefício crescente**</a>
 
 #### Comutação
 
