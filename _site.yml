@@ -18,7 +18,7 @@ navbar:
   title: "Portal Halley"
   left:
     - text: "LCA"
-      href: https://atuaria.github.io/
+      href: https://atuaria.org/
     - text: "Notas de Aula"
       menu:
       - text: "Introdução às Ciências Atuariais"
@@ -26,7 +26,9 @@ navbar:
       - text: "Matemática 2"
         href: notas_mat2.html
       - text: "Matemática Atuarial I"
-        href: notas_de_aula.html
+        href: notas_MatAtuarial1.html
+      - text: "Matemática Atuarial II"
+        href: notas_MatAtuarial2.html
       - text: "Teoria do Risco"
         href: notas_TR.html
     - text: "Materiais"
@@ -56,7 +58,7 @@ navbar:
       - text: "Membros"
         href: quem-somos.html
       - text: Liga de Ciências Atuariais
-        href: https://pt-br.facebook.com/atuaria/
+        href: https://atuaria.org
       - text: Laboratório de Risco Atuarial e Inovação
         href: https://www.unifal-mg.edu.br/lar/
     - text: "Referências"

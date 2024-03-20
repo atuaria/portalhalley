@@ -1,0 +1,32 @@
+---
+title: "Matemática Atuarial II"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+source("setup_knitr.R")
+```
+
+<br></br>
+
+Notas de aula do curso de Matemática Atuarial II da Universidade Federal de Alfenas, elaboradas pelos professores Danilo Machado Pires e Leonardo Henrique Costa.
+
+<br></br>
+
+## Em construção
+
+<p> Este material está em construção. Ainda não está completo. </p>
+
+<br></br>
+
+#### Revisão
+
+- <a href="https://atuaria.github.io/portalhalley/PDF/MatematicaAtuarial2/PDF_DE_AMOSTRA.pdf"target="_blank">**PDF DE AMOSTRA**</a>
+
+
+<br></br>
+<br></br>
+
+

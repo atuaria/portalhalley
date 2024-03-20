@@ -13,7 +13,7 @@
 
 <title>Prêmios</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -29,14 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 <script>
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -193,8 +193,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -202,16 +202,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -344,7 +337,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="https://atuaria.github.io/">LCA</a>
+  <a href="https://atuaria.org/">LCA</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -360,7 +353,10 @@ div.tocify {
       <a href="notas_mat2.html">Matemática 2</a>
     </li>
     <li>
-      <a href="notas_de_aula.html">Matemática Atuarial I</a>
+      <a href="notas_MatAtuarial1.html">Matemática Atuarial I</a>
+    </li>
+    <li>
+      <a href="notas_MatAtuarial2.html">Matemática Atuarial II</a>
     </li>
     <li>
       <a href="notas_TR.html">Teoria do Risco</a>
@@ -421,7 +417,7 @@ div.tocify {
       <a href="quem-somos.html">Membros</a>
     </li>
     <li>
-      <a href="https://pt-br.facebook.com/atuaria/">Liga de Ciências Atuariais</a>
+      <a href="https://atuaria.org">Liga de Ciências Atuariais</a>
     </li>
     <li>
       <a href="https://www.unifal-mg.edu.br/lar/">Laboratório de Risco Atuarial e Inovação</a>
@@ -534,14 +530,9 @@ a esses carregamentos são:</p>
   
    <p> <font size="2"> LIGA DE CIÊNCIAS ATUARIAIS </font>
   </p>
-  
-  <p>Av. Celina Ferreira Ottoni, 4000
+
+   <p> <font size="2"> CNPJ 44.515.919/0001-93 </font>
   </p>
-  
-  <p>Padre Vitor - Varginha/MG
-  </p>
-  
-  <p>CEP: 37048-395</p>
   
 </center>
 
